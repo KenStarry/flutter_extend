@@ -1,6 +1,6 @@
 name: flutter_extend
 description: "Simple, Efficient Flutter Extensions for any project!Code quicker and more efficiently by making use of these carefully curated Dart and Flutter extension methods for your Flutter Project."
-version: 0.0.1
+version: 0.0.2
 homepage: https://github.com/KenStarry/flutter_extend
 
 environment:
