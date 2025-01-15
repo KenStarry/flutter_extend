@@ -26,7 +26,7 @@ Effortless Flutter Development with Prebuilt Extension Methods
 1. Add this package to your pubspec.yaml file:
 ```yaml
 dependencies:
-  your_package_name: ^1.0.0
+  flutter_extend: ^0.0.1
 ```
 2. Run the following command to get the package:
 ```bash
@@ -35,21 +35,42 @@ dependencies:
 
 3. Import the package in your Dart file:
 ```dart
-import 'package:your_package_name/your_package_name.dart';
+import 'package:flutter_extend/flutter_extend.dart';
 ```
 
 ## Usage
 
-Below you'll find some useful tips and tricks for working with `snazzy_extensions`.
+Below you'll find some useful tips and tricks for working with `flutter_extend`.
 
-You need to call the extension methods starting with the `sz` prefix as outlined below.
+You need to call the extension methods starting with the `x` prefix as outlined below.
 
-### String Extensions
-#### 1. Capitalize
-Use the extension method `szCapitalize` to capitalize words in a String.
+### Context Extensions
+#### 1. Get ThemeData
+Use the extension method `xTheme` to capitalize words in a String.
 
 ```
-String text = "hello world";
-print(text.szCapitalize()); // Output: Hello World
+context.xTheme // Output: Theme.of(context)
 ```
+
+#### 2. Get ColorScheme
+Use the extension method `xColorScheme` to capitalize words in a String.
+
+```
+context.xColorScheme // Output: Theme.of(context).colorScheme
+```
+
+[//]: # (### String Extensions)
+
+[//]: # (#### 1. Capitalize)
+
+[//]: # (Use the extension method `szCapitalize` to capitalize words in a String.)
+
+[//]: # ()
+[//]: # (```)
+
+[//]: # (String text = "hello world";)
+
+[//]: # (print&#40;text.xCapitalize&#40;&#41;&#41;; // Output: Hello World)
+
+[//]: # (```)
 

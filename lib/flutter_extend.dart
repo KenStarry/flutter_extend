@@ -19,3 +19,6 @@ part 'colors/global_color_extensions.dart';
 /// Widget Extensions
 part 'widgets/scaffold_extensions.dart';
 part 'widgets/text_extensions.dart';
+
+/// Context Extensions
+part 'widgets/context_extensions.dart';

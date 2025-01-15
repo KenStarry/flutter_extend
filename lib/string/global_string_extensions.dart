@@ -2,7 +2,7 @@ part of '../flutter_extend.dart';
 
 extension GlobalStringExtensions on String {
   /// Truncate Name
-  String szTruncateName() {
+  String xTruncateName() {
     final wordArray = split(' ');
 
     return wordArray.length > 1
