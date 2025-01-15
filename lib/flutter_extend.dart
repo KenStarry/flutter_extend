@@ -3,8 +3,9 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-/// Duration Extensions
+/// DateTime Extensions
 part 'date_time/duration_extensions.dart';
+part 'date_time/date_time_extensions.dart';
 
 /// String Extensions
 part 'string/global_string_extensions.dart';
