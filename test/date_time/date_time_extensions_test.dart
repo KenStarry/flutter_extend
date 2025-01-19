@@ -73,4 +73,44 @@ void main() {
       expect(isToday, true);
     });
   });
+
+  //  get Month Name
+  group('DateTime Month Name', () {
+    
+    test("Should Return January as the month name", (){
+      final dateTime = DateTime(2025, 1);
+
+      final name = dateTime.monthName;
+      
+      expect(name, 'January');
+    });
+
+    test("Should Return March as the month name", (){
+      final dateTime = DateTime(2025, 3);
+
+      final name = dateTime.monthName;
+
+      expect(name, 'March');
+    });
+  });
+
+  //  get Month Name Short
+  group('DateTime Month Name Short', () {
+
+    test("Should Return Jan as the month name", (){
+      final dateTime = DateTime(2025, 1);
+
+      final name = dateTime.monthNameShort;
+
+      expect(name, 'Jan');
+    });
+
+    test("Should Return Mar as the month name", (){
+      final dateTime = DateTime(2025, 3);
+
+      final name = dateTime.monthNameShort;
+
+      expect(name, 'Mar');
+    });
+  });
 }
