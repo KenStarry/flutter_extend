@@ -1,4 +1,3 @@
-
 on:
   push:
     branches: [ "main" ]
@@ -7,27 +6,45 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      
+
       - name: Install Flutter
         uses: subosito/flutter-action@v2
         with:
           channel: stable
-          
+
       - name: Install dependencies
         run: flutter pub get
-        
-#      - name: Analyze
-#        run: flutter analyze
-        
-#      - name: Run tests
-#        run: flutter test
-        
+
+      #      - name: Analyze
+      #        run: flutter analyze
+
+      #      - name: Run tests
+      #        run: flutter test
+
+      - name: Commit and Push Changes
+        run: |
+          # Set user name and email for Git commit
+          git config --global user.name "GitHub Actions"
+          git config --global user.email "actions@github.com"
+          
+          # Add all files to staging area
+          git add .
+          
+          # Commit with a message
+          git commit -m "Status updates"
+          
+          # Push the changes back to GitHub (replace 'main' with your branch if different)
+          git push origin main
+        env:
+          # Ensure the token is available for pushing (use a personal access token)
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
       - name: Format code
         run: dart format --fix .
-        
+
       - name: Check Publish Warnings
         run: dart pub publish --dry-run
-        
+
       - name: Publish
         uses: k-paxian/dart-package-publisher@v1.5.1
         with:
