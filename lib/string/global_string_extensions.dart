@@ -1,6 +1,10 @@
 part of '../flutter_extend.dart';
 
 extension GlobalStringExtensions on String {
+  /// Last N Characters
+  String xGetLastNCharacters(int n) =>
+      length >= n ? substring(length - n) : this;
+
   /// Truncate Name
   String xTruncateName() {
     final wordArray = split(' ');
