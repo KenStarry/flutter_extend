@@ -9,4 +9,10 @@ extension DateTimeExtensions on DateTime {
     final now = DateTime.now();
     return year == now.year && month == now.month && day == now.day;
   }
+
+  /// Checks if given DateTime is in the past from current DateTime
+  bool get isPast => isBefore(DateTime.now());
+
+  /// Checks if given DateTime is in the future from current DateTime
+  bool get isFuture => isAfter(DateTime.now());
 }
