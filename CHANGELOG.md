@@ -1,3 +1,7 @@
+## 0.0.3
+* Added DateTime Extensions
+* Updated Package README
+
 ## 0.0.2
 
 * Added Context Extensions for BuildContext
