@@ -18,9 +18,10 @@ part 'string/auth_string_extensions.dart';
 part 'colors/global_color_extensions.dart';
 
 /// Widget Extensions
+part 'widgets/widget_extensions.dart';
 part 'widgets/scaffold_extensions.dart';
 
 part 'widgets/text_extensions.dart';
 
 /// Context Extensions
-part 'widgets/context_extensions.dart';
+part 'context/context_extensions.dart';

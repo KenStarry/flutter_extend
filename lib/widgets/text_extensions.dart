@@ -2,7 +2,7 @@ part of '../flutter_extend.dart';
 
 extension TextExtensions on Text {
   /// Add Hyperlinks to text
-  Text xAddHyperLinks(
+  Text addHyperLinks(
       {required List<String> hyperLinkTexts,
       bool showUnderline = true,
       bool makeBold = false,

@@ -1,3 +1,7 @@
+## 0.0.4
+* Added Widget Extensions
+* Updated Package README
+
 ## 0.0.3
 * Added DateTime Extensions
 * Updated Package README

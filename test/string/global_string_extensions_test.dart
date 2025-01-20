@@ -10,7 +10,7 @@ void main() {
       final text = 'Hello';
 
       /// Act
-      final last10Characters = text.xGetLastNCharacters(10);
+      final last10Characters = text.getLastNCharacters(10);
 
       /// Assert
       expect(last10Characters, 'Hello');
