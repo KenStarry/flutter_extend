@@ -2,7 +2,7 @@ part of '../flutter_extend.dart';
 
 extension GlobalColorExtensions on Color {
   /// Color to Int
-  int get xColorToInt {
+  int get colorToInt {
     final alpha = (a * 255).toInt();
     final red = (r * 255).toInt();
     final green = (g * 255).toInt();
@@ -12,42 +12,42 @@ extension GlobalColorExtensions on Color {
   }
 
   /// Generate Material color
-  MaterialColor xGenerateMaterialColors(Color color) =>
-      MaterialColor(color.xColorToInt, {
-        50: xTintColor(color, 0.9),
-        100: xTintColor(color, 0.8),
-        200: xTintColor(color, 0.6),
-        300: xTintColor(color, 0.4),
-        400: xTintColor(color, 0.2),
+  MaterialColor generateMaterialColors(Color color) =>
+      MaterialColor(color.colorToInt, {
+        50: tintColor(color, 0.9),
+        100: tintColor(color, 0.8),
+        200: tintColor(color, 0.6),
+        300: tintColor(color, 0.4),
+        400: tintColor(color, 0.2),
         500: color,
-        600: xShadeColor(color, 0.1),
-        700: xShadeColor(color, 0.2),
-        800: xShadeColor(color, 0.3),
-        900: xShadeColor(color, 0.4)
+        600: shadeColor(color, 0.1),
+        700: shadeColor(color, 0.2),
+        800: shadeColor(color, 0.3),
+        900: shadeColor(color, 0.4)
       });
 
   /// Tint Generator
-  int xTintValue(int value, double factor) =>
+  int tintValue(int value, double factor) =>
       max(0, min((value + ((255 - value) * factor)).round(), 255));
 
-  Color xTintColor(Color color, double factor) => Color.fromRGBO(
-      xTintValue(r.toInt(), factor),
-      xTintValue(g.toInt(), factor),
-      xTintValue(b.toInt(), factor),
+  Color tintColor(Color color, double factor) => Color.fromRGBO(
+      tintValue(r.toInt(), factor),
+      tintValue(g.toInt(), factor),
+      tintValue(b.toInt(), factor),
       1);
 
   /// Shade Generator
-  int xShadeValue(int value, double factor) =>
+  int shadeValue(int value, double factor) =>
       max(0, min(value - (value * factor).round(), 255));
 
-  Color xShadeColor(Color color, double factor) => Color.fromRGBO(
-      xShadeValue(r.toInt(), factor),
-      xShadeValue(g.toInt(), factor),
-      xShadeValue(b.toInt(), factor),
+  Color shadeColor(Color color, double factor) => Color.fromRGBO(
+      shadeValue(r.toInt(), factor),
+      shadeValue(g.toInt(), factor),
+      shadeValue(b.toInt(), factor),
       1);
 
   /// Generate Random color
-  Color get xGenerateRandomColor {
+  Color get generateRandomColor {
     final rand = Random();
 
     Color randomColor = Color.fromRGBO(
@@ -57,7 +57,7 @@ extension GlobalColorExtensions on Color {
   }
 
   /// Darken color by percent (100 -> black)
-  Color xDarkenColor([int percent = 10]) {
+  Color darkenColor([int percent = 10]) {
     assert(1 <= percent && percent <= 100);
 
     var f = 1 - percent / 100;
@@ -66,7 +66,7 @@ extension GlobalColorExtensions on Color {
   }
 
   /// Lighten Color by percent (100 -> white)
-  Color xLightenColor([int percent = 10]) {
+  Color lightenColor([int percent = 10]) {
     assert(1 <= percent && percent <= 100);
 
     var p = percent / 100;
@@ -79,5 +79,5 @@ extension GlobalColorExtensions on Color {
   }
 
   /// Color to Hex
-  String get xColorToHex => '#${xColorToInt.toRadixString(16)}';
+  String get colorToHex => '#${colorToInt.toRadixString(16)}';
 }

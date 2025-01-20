@@ -2,7 +2,7 @@ part of '../flutter_extend.dart';
 
 extension ScaffoldExtensions on Scaffold {
   /// Add Annotated region for the status bar
-  Widget xAddAnnotatedRegion(
+  Widget addAnnotatedRegion(
       {Color? statusBarColor,
       Brightness? statusBarBrightness,
       Color? navigationBarColor,

@@ -24,13 +24,6 @@ jobs:
       - name: Format code
         run: dart format --fix .
 
-      - name: Commit Changes (if any)
-        run: |
-          # Check if there are any changes to commit
-          git diff --exit-code || git commit -am "Update package for publishing"
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
       - name: Check Publish Warnings
         run: dart pub publish --dry-run
 

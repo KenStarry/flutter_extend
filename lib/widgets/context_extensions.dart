@@ -2,14 +2,17 @@ part of '../flutter_extend.dart';
 
 extension ContextExtensions on BuildContext {
   /// Get Screen Width
-  double get xGetScreenWidth => MediaQuery.sizeOf(this).width;
+  double get screenWidth => MediaQuery.sizeOf(this).width;
 
   /// Get Screen Height
-  double get xGetScreenHeight => MediaQuery.sizeOf(this).height;
+  double get screenHeight => MediaQuery.sizeOf(this).height;
 
   /// Get Theme Data
-  ThemeData get xTheme => Theme.of(this);
+  ThemeData get theme => Theme.of(this);
 
   /// Get Color Scheme
-  ColorScheme get xColorScheme => Theme.of(this).colorScheme;
+  ColorScheme get colorScheme => Theme.of(this).colorScheme;
+
+  /// Check Dark Mode
+  bool get isDarkMode => MediaQuery.of(this).platformBrightness == Brightness.dark;
 }

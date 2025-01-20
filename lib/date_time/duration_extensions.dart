@@ -2,20 +2,20 @@ part of '../flutter_extend.dart';
 
 extension DurationExtensions on int {
   /// Days
-  Duration get xDays => Duration(days: this);
+  Duration get days => Duration(days: this);
 
   /// Hours
-  Duration get xHours => Duration(hours: this);
+  Duration get hours => Duration(hours: this);
 
   /// Minutes
-  Duration get xMins => Duration(minutes: this);
+  Duration get mins => Duration(minutes: this);
 
   /// Seconds
-  Duration get xSecs => Duration(seconds: this);
+  Duration get secs => Duration(seconds: this);
 
   /// Milliseconds
-  Duration get xMilliSecs => Duration(milliseconds: this);
+  Duration get milliSecs => Duration(milliseconds: this);
 
   /// Microseconds
-  Duration get xMicroSecs => Duration(microseconds: this);
+  Duration get microSecs => Duration(microseconds: this);
 }
