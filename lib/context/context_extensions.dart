@@ -14,5 +14,6 @@ extension ContextExtensions on BuildContext {
   ColorScheme get colorScheme => Theme.of(this).colorScheme;
 
   /// Check Dark Mode
-  bool get isDarkMode => MediaQuery.of(this).platformBrightness == Brightness.dark;
+  bool get isDarkMode =>
+      MediaQuery.of(this).platformBrightness == Brightness.dark;
 }
