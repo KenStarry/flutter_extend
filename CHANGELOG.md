@@ -1,3 +1,9 @@
+## 0.0.5
+* Added Generator Extensions
+* Added Future Extensions
+* Added List Extensions
+* Added more String Extensions
+
 ## 0.0.4
 * Added Widget Extensions
 * Updated Package README
