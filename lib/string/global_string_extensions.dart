@@ -6,7 +6,7 @@ extension GlobalStringExtensions on String {
       length >= n ? substring(length - n) : this;
 
   /// Truncate Name
-  String truncateName() {
+  String get truncateName {
     final wordArray = split(' ');
 
     return wordArray.length > 1
@@ -14,5 +14,6 @@ extension GlobalStringExtensions on String {
         : wordArray[0];
   }
 
-  /// Capitalize any letter
+  /// Remove all White Spaces
+  String get removeAllWhiteSpaces => replaceAll(RegExp(r'\s+'), '');
 }
