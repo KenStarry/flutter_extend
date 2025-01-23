@@ -13,4 +13,8 @@ extension FutureExtensions<T> on Future<T> {
     }
     throw Exception('Failed after $retries retries');
   }
+
+  /// Future Timeout
+  Future<T> timeoutWithFallback(Duration timeout, T fallbackValue) =>
+      this.timeout(timeout, onTimeout: () => fallbackValue);
 }
