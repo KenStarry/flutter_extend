@@ -12,6 +12,10 @@ part 'date_time/date_time_extensions.dart';
 /// Image Extensions
 // part 'images/image_extensions.dart';
 
+/// Future Extensions
+part 'futures/string_future_extensions.dart';
+part 'futures/future_extensions.dart';
+
 /// Generator Extensions
 part 'generators/string_generator_extensions.dart';
 part 'generators/widget_generator_extensions.dart';

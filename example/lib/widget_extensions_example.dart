@@ -15,10 +15,10 @@ class WidgetExtensionsExample extends StatelessWidget {
               padding: EdgeInsets.symmetric(horizontal: 32)),
           
           /// Generate Lorem Ipsum
-          Text(''.loremIpsum(wordCount: 30)),
+          Text(''.generateLoremIpsum(wordCount: 30)),
 
           /// Generate Random UUID
-          Text(''),
+          Text(''.generateUUID()),
         ],
       ),
     );

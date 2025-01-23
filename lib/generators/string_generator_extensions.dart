@@ -2,7 +2,7 @@ part of '../flutter_extend.dart';
 
 extension StringGeneratorExtensions on String {
   /// Lorem Generator - Generate Lorem Ipsum Text
-  String loremIpsum({int wordCount = 30}) {
+  String generateLoremIpsum({int wordCount = 30}) {
     const loremWords = [
       'Lorem',
       'ipsum',
@@ -90,5 +90,11 @@ extension StringGeneratorExtensions on String {
     }).join();
 
     return uuid;
+  }
+
+  /// Read From Clipboard - Read Contents from Clipboard
+  Future<String?> generateClipboardContents({String? textIfNull}) async {
+    final data = await Clipboard.getData('text/plain');
+    return data?.text ?? textIfNull;
   }
 }
