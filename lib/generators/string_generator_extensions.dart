@@ -1,7 +1,7 @@
 part of '../flutter_extend.dart';
 
 extension StringGeneratorExtensions on String {
-  /// Generate Lorem Ipsum Text
+  /// Lorem Generator - Generate Lorem Ipsum Text
   String loremIpsum({int wordCount = 30}) {
     const loremWords = [
       'Lorem',
@@ -77,5 +77,18 @@ extension StringGeneratorExtensions on String {
 
     return List.generate(
         wordCount, (index) => loremWords[index % loremWords.length]).join(' ');
+  }
+
+  /// UUID Generator - Generates a random UUID (Universally Unique Identifier)
+  String generateUUID({int length = 32}) {
+    final random = Random();
+
+    final uuid = List.generate(length, (index) {
+      final char = random.nextInt(16).toRadixString(16);
+
+      return [8, 12, 16, 20].contains(index) ? '-$char' : char;
+    }).join();
+
+    return uuid;
   }
 }
