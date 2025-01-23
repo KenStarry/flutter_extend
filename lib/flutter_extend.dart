@@ -1,3 +1,4 @@
+import 'dart:async';
 import 'dart:math';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
@@ -15,6 +16,7 @@ part 'date_time/date_time_extensions.dart';
 /// Future Extensions
 part 'futures/string_future_extensions.dart';
 part 'futures/future_extensions.dart';
+part 'futures/future_iterable_extensions.dart';
 
 /// Generator Extensions
 part 'generators/string_generator_extensions.dart';
