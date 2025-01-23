@@ -13,6 +13,9 @@ part 'date_time/date_time_extensions.dart';
 /// Image Extensions
 // part 'images/image_extensions.dart';
 
+/// List Extensions
+part 'lists/list_extensions.dart';
+
 /// Future Extensions
 part 'futures/string_future_extensions.dart';
 part 'futures/future_extensions.dart';

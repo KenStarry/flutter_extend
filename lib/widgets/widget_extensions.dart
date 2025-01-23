@@ -1,6 +1,13 @@
 part of '../flutter_extend.dart';
 
 extension WidgetExtensions on Widget {
+  /// Add Expanded
+  Widget expanded({int flex = 1}) => Expanded(flex: flex, child: this);
+
+  /// Add Flexible
+  Widget flexibe({int flex = 1, FlexFit fit = FlexFit.loose}) =>
+      Flexible(flex: flex, fit: fit, child: this);
+
   /// Add Padding to Widget
   Widget padding({EdgeInsetsGeometry padding = const EdgeInsets.all(8)}) =>
       Padding(padding: padding, child: this);
