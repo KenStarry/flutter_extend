@@ -5,7 +5,7 @@ extension ListExtensions<T> on List<T> {
   void sortBy(Comparable Function(T) selector, {bool ascending = true}) {
     sort((a, b) {
       final keyA = selector(a);
-      final keyB = selector(a);
+      final keyB = selector(b);
 
       final comparison = keyA.compareTo(keyB);
       return ascending ? comparison : -comparison;
@@ -19,7 +19,7 @@ extension ListExtensions<T> on List<T> {
 
     sortedList.sort((a, b) {
       final keyA = selector(a);
-      final keyB = selector(a);
+      final keyB = selector(b);
 
       final comparison = keyA.compareTo(keyB);
       return ascending ? comparison : -comparison;

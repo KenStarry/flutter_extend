@@ -2,7 +2,7 @@ part of '../flutter_extend.dart';
 
 extension FutureExtensions<T> on Future<T> {
   /// Wrap a Future in a Completer
-  Completer<T> get wrapInCompleter {
+  Completer<T> wrapInCompleter() {
     final completer = Completer<T>();
 
     then(completer.complete).catchError(completer.completeError);
@@ -10,7 +10,7 @@ extension FutureExtensions<T> on Future<T> {
   }
 
   /// Check if Future is Complete
-  bool get isComplete => wrapInCompleter.isCompleted;
+  bool isComplete() => wrapInCompleter().isCompleted;
 
   /// Retry a Future - Retry Futures such as network calls etc.
   Future<T> retry(int retries, {Duration delay = Duration.zero}) async {

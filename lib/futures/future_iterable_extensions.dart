@@ -9,7 +9,7 @@ extension FutureIterableExtensions<T> on Iterable<Future<T>> {
     for (var future in this) {
       if (pool.length >= limit) {
         results.add(await Future.any(pool));
-        pool.removeWhere((f) => f.isComplete);
+        pool.removeWhere((f) => f.isComplete());
       }
 
       pool.add(future);
@@ -34,7 +34,7 @@ extension FutureIterableExtensions<T> on Iterable<Future<T>> {
 
       if (active.length >= limit) {
         await Future.any(active);
-        active.removeWhere((f) => f.isComplete);
+        active.removeWhere((f) => f.isComplete());
       }
     }
 

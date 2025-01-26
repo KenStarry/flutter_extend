@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_extend/flutter_extend.dart';
+import 'package:flutter_extend/string/regex_string_extensions.dart';
 
 class WidgetExtensionsExample extends StatelessWidget {
   const WidgetExtensionsExample({super.key});
@@ -11,7 +12,7 @@ class WidgetExtensionsExample extends StatelessWidget {
         children: [
 
           /// Add Padding to text
-          Text("Hello there my friend".removeAllWhiteSpaces).padding(
+          Text("Hello there my friend".removeAllWhiteSpaces()).padding(
               padding: EdgeInsets.symmetric(horizontal: 32)),
           
           /// Generate Lorem Ipsum
