@@ -1,19 +1,8 @@
-<!--
-This README describes the package. If you publish this package to pub.dev,
-this README's contents appear on the landing page for your package.
-
-For information about how to write a good package README, see the guide for
-[writing package pages](https://dart.dev/guides/libraries/writing-package-pages).
-
-For general information about developing packages, see the Dart guide for
-[creating packages](https://dart.dev/guides/libraries/create-library-packages)
-and the Flutter guide for
-[developing packages and plugins](https://flutter.dev/developing-packages).
--->
+# Flutter Extend
 
 ![FLUTTER EXTEND](https://github.com/user-attachments/assets/b3a4d7ae-e1b6-4f3d-b485-857567a2cc2b)
 
-Effortless Flutter Development with Prebuilt Extension Methods
+A Flutter package designed to provide developers with a collection of useful extensions for Flutter and Dart. These extensions aim to simplify and speed up development by adding frequently used functionalities that are not available out-of-the-box.
 
 ## Features
 
@@ -25,7 +14,7 @@ Effortless Flutter Development with Prebuilt Extension Methods
 
 ## Getting started
 
-1. Add this package to your pubspec.yaml file:
+1. Add this package to your `pubspec.yaml` file:
 ```yaml
 dependencies:
   flutter_extend: ^0.0.1
@@ -41,38 +30,54 @@ import 'package:flutter_extend/flutter_extend.dart';
 ```
 
 ## Usage
+## Context Extensions
+#### Screen Width
+Get the screen width using the `screenWidth` extension.
 
-Below you'll find some useful tips and tricks for working with `flutter_extend`.
-
-You need to call the extension methods starting with the `x` prefix as outlined below.
-
-### Context Extensions
-#### 1. Get ThemeData
-Use the extension method `xTheme` to capitalize words in a String.
-
-```
-context.xTheme // Output: Theme.of(context)
+```dart
+/// Get Current Screen Width
+Text("SCREEN WIDTH : ${context.screenWidth}")
 ```
 
-#### 2. Get ColorScheme
-Use the extension method `xColorScheme` to capitalize words in a String.
+#### Screen Height
+Get the screen height using the `screenHeight` extension.
 
+```dart
+/// Get Current Screen Width
+Text("SCREEN HEIGHT : ${context.screenHeight}")
 ```
-context.xColorScheme // Output: Theme.of(context).colorScheme
+
+#### Check Dark Mode
+Check if the system is in Dark Mode or not using the `isDarkMode` extension.
+```dart
+/// Change color if is Dark Mode
+Container(
+width: 100,
+height: 100,
+color: context.isDarkMode ? Colors.grey : Colors.red,
+),
 ```
 
-[//]: # (### String Extensions)
+Other handy **Context** Extension methods include: 
+> `context.theme`, `context.colorScheme`
 
-[//]: # (#### 1. Capitalize)
+## String Extensions
+```dart
+import 'package:flutter_extend/flutter_extend.dart';
 
-[//]: # (Use the extension method `szCapitalize` to capitalize words in a String.)
+void main() {
+  String text = "hello world";
+  print(text.capitalize()); // Output: Hello world
+}
+```
 
-[//]: # ()
-[//]: # (```)
+### DateTime Extensions
+```dart
+import 'package:flutter_extend/flutter_extend.dart';
 
-[//]: # (String text = "hello world";)
-
-[//]: # (print&#40;text.xCapitalize&#40;&#41;&#41;; // Output: Hello World)
-
-[//]: # (```)
+void main() {
+  DateTime now = DateTime.now();
+  print(now.isToday()); // Output: true if today, false otherwise
+}
+```
 
