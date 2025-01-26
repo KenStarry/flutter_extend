@@ -6,14 +6,11 @@ extension GlobalStringExtensions on String {
       length >= n ? substring(length - n) : this;
 
   /// Truncate Name
-  String get truncateName {
+  String truncateName() {
     final wordArray = split(' ');
 
     return wordArray.length > 1
         ? '${wordArray[0]} ${wordArray[1][0]}.'
         : wordArray[0];
   }
-
-  /// Remove all White Spaces
-  String get removeAllWhiteSpaces => replaceAll(RegExp(r'\s+'), '');
 }

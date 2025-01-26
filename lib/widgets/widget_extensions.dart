@@ -1,6 +1,31 @@
 part of '../flutter_extend.dart';
 
 extension WidgetExtensions on Widget {
+  /// Adds a click event to a Widget that, if on the web, will show a mouse pointer
+  Widget clickableMouse(
+          {VoidCallback? onTap,
+          Function(PointerHoverEvent)? onHover,
+          Function(PointerEnterEvent)? onEnter,
+          Function(PointerExitEvent)? onExit}) =>
+      onTap == null
+          ? MouseRegion(
+              cursor: SystemMouseCursors.click,
+              onHover: onHover,
+              onEnter: onEnter,
+              onExit: onExit,
+              child: this,
+            )
+          : MouseRegion(
+              cursor: SystemMouseCursors.click,
+              onHover: onHover,
+              onEnter: onEnter,
+              onExit: onExit,
+              child: GestureDetector(
+                onTap: onTap,
+                child: this,
+              ),
+            );
+
   /// Add Expanded
   Widget expanded({int flex = 1}) => Expanded(flex: flex, child: this);
 
@@ -23,16 +48,26 @@ extension WidgetExtensions on Widget {
         child: this,
       );
 
+  /// Remove Scrollbar from Scrollable widgets
+  Widget removeScrollbar(BuildContext context) => ScrollConfiguration(
+      behavior: ScrollConfiguration.of(context).copyWith(scrollbars: false),
+      child: this);
+
+  /// Add Scrollbar to Scrollable widgets
+  Widget addScrollbar(BuildContext context) => ScrollConfiguration(
+      behavior: ScrollConfiguration.of(context).copyWith(scrollbars: true),
+      child: this);
+
   /// Visibility
   Widget visibility({bool visible = true}) =>
       Visibility(visible: visible, child: this);
 
   /// Invinsible
-  Widget get invinsible => Visibility(visible: false, child: this);
+  Widget invinsible() => Visibility(visible: false, child: this);
 
   /// Visible
-  Widget get visible => Visibility(visible: true, child: this);
+  Widget visible() => Visibility(visible: true, child: this);
 
   /// Center a widget
-  Widget get center => Center(child: this);
+  Widget center() => Center(child: this);
 }

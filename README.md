@@ -1,78 +1,119 @@
-<!--
-This README describes the package. If you publish this package to pub.dev,
-this README's contents appear on the landing page for your package.
-
-For information about how to write a good package README, see the guide for
-[writing package pages](https://dart.dev/guides/libraries/writing-package-pages).
-
-For general information about developing packages, see the Dart guide for
-[creating packages](https://dart.dev/guides/libraries/create-library-packages)
-and the Flutter guide for
-[developing packages and plugins](https://flutter.dev/developing-packages).
--->
-
+#  Flutter Extend
 ![FLUTTER EXTEND](https://github.com/user-attachments/assets/b3a4d7ae-e1b6-4f3d-b485-857567a2cc2b)
 
-Effortless Flutter Development with Prebuilt Extension Methods
+A Flutter package designed to provide developers with a collection of useful extensions for Flutter and Dart. These
+extensions aim to simplify and speed up development by adding frequently used functionalities that are not available
+out-of-the-box.
 
 ## Features
 
-* 🚀 Prebuilt Extension Methods: Simplify common Flutter development tasks with prebuilt extensions for widgets, colors, strings, and more.
+* 🚀 Prebuilt Extension Methods: Simplify common Flutter development tasks with prebuilt extensions for widgets, colors,
+  strings, and more.
 * 🎨 Custom MaterialColor Generator: Easily create dynamic MaterialColor palettes from any Color.
 * 🛠 Convenient String Manipulations: Transform and format strings effortlessly.
 * 📏 Widget Utilities: Add padding, margins, and styling directly to widgets.
 
-
 ## Getting started
 
-1. Add this package to your pubspec.yaml file:
+1. Add this package to your `pubspec.yaml` file:
+
 ```yaml
 dependencies:
-  flutter_extend: ^0.0.1
+  flutter_extend: ^0.0.6
 ```
+
 2. Run the following command to get the package:
+
 ```bash
   flutter pub get
 ```
 
 3. Import the package in your Dart file:
+
 ```dart
 import 'package:flutter_extend/flutter_extend.dart';
 ```
 
 ## Usage
 
-Below you'll find some useful tips and tricks for working with `flutter_extend`.
+## Context Extensions
 
-You need to call the extension methods starting with the `x` prefix as outlined below.
+#### Screen Width - `context.screenWidth`
 
-### Context Extensions
-#### 1. Get ThemeData
-Use the extension method `xTheme` to capitalize words in a String.
-
-```
-context.xTheme // Output: Theme.of(context)
+```dart
+/// Get Current Screen Width
+Text("SCREEN WIDTH : ${context.screenWidth}")
 ```
 
-#### 2. Get ColorScheme
-Use the extension method `xColorScheme` to capitalize words in a String.
+#### Check Dark Mode - `context.isDarkMode`
 
+```dart
+/// Change color if is Dark Mode
+Container(
+width: 100,
+height: 100,
+color: context.isDarkMode ? Colors.grey : Colors.red,
+),
 ```
-context.xColorScheme // Output: Theme.of(context).colorScheme
+
+Other handy **Context** Extension methods include:
+> `context.screenWidth`, `context.screenHeight`, `context.isDarkMode`, `context.theme`, `context.colorScheme`
+
+Visit
+the [context_extensions.dart example](https://github.com/KenStarry/flutter_extend/blob/main/example/lib/context_extensions_example.dart)
+for the full API Reference.
+
+## String Extensions
+
+```dart
+import 'package:flutter_extend/flutter_extend.dart';
+
+void main() {
+  String text = "hello world";
+  print(text.capitalize()); // Output: Hello world
+}
 ```
 
-[//]: # (### String Extensions)
+### DateTime Extensions
 
-[//]: # (#### 1. Capitalize)
+```dart
+import 'package:flutter_extend/flutter_extend.dart';
 
-[//]: # (Use the extension method `szCapitalize` to capitalize words in a String.)
+void main() {
+  DateTime now = DateTime.now();
+  print(now.isToday()); // Output: true if today, false otherwise
+}
+```
 
-[//]: # ()
-[//]: # (```)
+## Examples
+Check out the [examples directory](https://github.com/KenStarry/flutter_extend/tree/main/example/lib) for complete
+examples demonstrating the use of this package:
 
-[//]: # (String text = "hello world";)
+```bash
+git clone https://github.com/KenStarry/flutter_extend.git
+cd flutter_extend/examples
+flutter run
+```
 
-[//]: # (print&#40;text.xCapitalize&#40;&#41;&#41;; // Output: Hello World)
+## Contributing
 
-[//]: # (```)
+We welcome contributions! If you have ideas or improvements, feel free to:
 
+* Fork the repository.
+* Create a new branch for your feature/bug fix.
+* Submit a pull request.
+
+Read the Contributing Guidelines for more details.
+
+## Useful Links
+
+* [Package on pub.dev](https://pub.dev/packages/flutter_extend)
+* [Flutter Documentation](https://docs.flutter.dev)
+* [Dart Documentation](https://dart.dev/docs)
+
+## License
+
+This package is distributed under the MIT License. See the [LICENSE](https://github.com/KenStarry/flutter_extend/blob/main/LICENSE) file for more details.
+
+See yah!
+![FLUTTER EXTEND](https://github.com/user-attachments/assets/f2fd6081-1634-4002-864f-ef0015adbf02)

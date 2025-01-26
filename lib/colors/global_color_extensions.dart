@@ -2,7 +2,7 @@ part of '../flutter_extend.dart';
 
 extension GlobalColorExtensions on Color {
   /// Color to Int
-  int get colorToInt {
+  int colorToInt() {
     final alpha = (a * 255).toInt();
     final red = (r * 255).toInt();
     final green = (g * 255).toInt();
@@ -13,7 +13,7 @@ extension GlobalColorExtensions on Color {
 
   /// Generate Material color
   MaterialColor generateMaterialColors(Color color) =>
-      MaterialColor(color.colorToInt, {
+      MaterialColor(color.colorToInt(), {
         50: tintColor(color, 0.9),
         100: tintColor(color, 0.8),
         200: tintColor(color, 0.6),
@@ -47,7 +47,7 @@ extension GlobalColorExtensions on Color {
       1);
 
   /// Generate Random color
-  Color get generateRandomColor {
+  Color generateRandomColor() {
     final rand = Random();
 
     Color randomColor = Color.fromRGBO(
@@ -79,5 +79,5 @@ extension GlobalColorExtensions on Color {
   }
 
   /// Color to Hex
-  String get colorToHex => '#${colorToInt.toRadixString(16)}';
+  String colorToHex() => '#${colorToInt().toRadixString(16)}';
 }
