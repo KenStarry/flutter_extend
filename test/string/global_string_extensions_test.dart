@@ -1,4 +1,5 @@
 import 'package:flutter_extend/flutter_extend.dart';
+import 'package:flutter_extend/string/regex_string_extensions.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 void main() {
@@ -20,39 +21,37 @@ void main() {
   group('Remove All Whitespaces', () {
     test('String with spaces in the middle should be removed', () {
       final text = 'This is a text with spaces';
-      final newText = text.removeAllWhiteSpaces;
+      final newText = text.removeAllWhiteSpaces();
 
       expect(newText, 'Thisisatextwithspaces');
     });
 
     test('String with spaces in the start should be removed', () {
       final text = ' Thisisatextwithspaces';
-      final newText = text.removeAllWhiteSpaces;
+      final newText = text.removeAllWhiteSpaces();
 
       expect(newText, 'Thisisatextwithspaces');
     });
 
     test('String with spaces in the end should be removed', () {
       final text = 'Thisisatextwithspaces ';
-      final newText = text.removeAllWhiteSpaces;
+      final newText = text.removeAllWhiteSpaces();
 
       expect(newText, 'Thisisatextwithspaces');
     });
 
-    test('String with spaces in the start and end only should be removed',
-        () {
-          final text = ' Thisisatextwithspaces ';
-          final newText = text.removeAllWhiteSpaces;
+    test('String with spaces in the start and end only should be removed', () {
+      final text = ' Thisisatextwithspaces ';
+      final newText = text.removeAllWhiteSpaces();
 
-          expect(newText, 'Thisisatextwithspaces');
-        });
+      expect(newText, 'Thisisatextwithspaces');
+    });
 
-    test('String with no spaces should return the same string',
-            () {
-              final text = 'Thisisatextwithnospaces';
-              final newText = text.removeAllWhiteSpaces;
+    test('String with no spaces should return the same string', () {
+      final text = 'Thisisatextwithnospaces';
+      final newText = text.removeAllWhiteSpaces();
 
-              expect(newText, 'Thisisatextwithnospaces');
-            });
+      expect(newText, 'Thisisatextwithnospaces');
+    });
   });
 }

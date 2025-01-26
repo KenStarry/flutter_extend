@@ -5,16 +5,16 @@ extension DateTimeExtensions on DateTime {
   /// ```dart
   ///   print("Is Today? ${DateTime(2024, 1, 1).isToday}"); // false
   /// ```
-  bool get isToday {
+  bool isToday() {
     final now = DateTime.now();
     return year == now.year && month == now.month && day == now.day;
   }
 
   /// Checks if given DateTime is in the past from current DateTime
-  bool get isPast => isBefore(DateTime.now());
+  bool isPast() => isBefore(DateTime.now());
 
   /// Checks if given DateTime is in the future from current DateTime
-  bool get isFuture => isAfter(DateTime.now());
+  bool isFuture() => isAfter(DateTime.now());
 
   /// Adds Business Days to the current DateTime Object
   DateTime addBusinessDays(int days) {
@@ -32,8 +32,8 @@ extension DateTimeExtensions on DateTime {
   }
 
   /// Gets the given DateTime's Month Name eg. January, February, March etc...
-  String get monthName => DateFormat.MMMM().format(this);
+  String monthName() => DateFormat.MMMM().format(this);
 
   /// Gets the shortened of the given DateTime's Month Name eg. Jan, feb, Mar, etc...
-  String get monthNameShort => DateFormat.MMM().format(this);
+  String monthNameShort() => DateFormat.MMM().format(this);
 }
