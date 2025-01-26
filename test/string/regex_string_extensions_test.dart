@@ -8,11 +8,9 @@ void main() {
         () {
       final text = 'Sheilla123';
       final text2 = '123Sheilla123 Ken24';
-      final text3 = '123Sheilla 12Pookie1 Ken24';
-      final text4 = '123Sheilla 123Sheilla-= 12Pookie1 7Ken24 BooBoo';
-      final newText = text4.removeAllWordsStartingWithButNotContainingNumbers();
+      final newText = text2.removeAllWordsStartingWithNumber();
 
-      expect(newText, "12Pookie1 7Ken24 BooBoo");
+      expect(newText, "Ken24");
     });
   });
 }

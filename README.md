@@ -1,5 +1,4 @@
-# Flutter Extend
-
+#  Flutter Extend
 ![FLUTTER EXTEND](https://github.com/user-attachments/assets/b3a4d7ae-e1b6-4f3d-b485-857567a2cc2b)
 
 A Flutter package designed to provide developers with a collection of useful extensions for Flutter and Dart. These
@@ -20,7 +19,7 @@ out-of-the-box.
 
 ```yaml
 dependencies:
-  flutter_extend: ^0.0.1
+  flutter_extend: ^0.0.6
 ```
 
 2. Run the following command to get the package:
@@ -115,3 +114,6 @@ Read the Contributing Guidelines for more details.
 ## License
 
 This package is distributed under the MIT License. See the [LICENSE](https://github.com/KenStarry/flutter_extend/blob/main/LICENSE) file for more details.
+
+See yah!
+![FLUTTER EXTEND](https://github.com/user-attachments/assets/f2fd6081-1634-4002-864f-ef0015adbf02)

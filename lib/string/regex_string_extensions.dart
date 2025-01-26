@@ -11,12 +11,6 @@ extension RegexStringExtensions on String {
           .replaceAll(RegExp(r'\s{2,}'), ' ')
           .trim();
 
-  /// Remove All Digits From Text
-  String removeAllWordsStartingWithButNotContainingNumbers() =>
-      replaceAll(RegExp(r'\b\d+[a-zA-Z]+\W+\b'), '')
-          .replaceAll(RegExp(r'\s{2,}'), ' ')
-          .trim();
-
   /// Check if String contains only Digits
   bool isDigitsOnly() => RegExp(r'^\d+$').hasMatch(this);
 
