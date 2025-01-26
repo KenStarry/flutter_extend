@@ -40,20 +40,18 @@ void main() {
       expect(newText, 'Thisisatextwithspaces');
     });
 
-    test('String with spaces in the start and end only should be removed',
-        () {
-          final text = ' Thisisatextwithspaces ';
-          final newText = text.removeAllWhiteSpaces();
+    test('String with spaces in the start and end only should be removed', () {
+      final text = ' Thisisatextwithspaces ';
+      final newText = text.removeAllWhiteSpaces();
 
-          expect(newText, 'Thisisatextwithspaces');
-        });
+      expect(newText, 'Thisisatextwithspaces');
+    });
 
-    test('String with no spaces should return the same string',
-            () {
-              final text = 'Thisisatextwithnospaces';
-              final newText = text.removeAllWhiteSpaces();
+    test('String with no spaces should return the same string', () {
+      final text = 'Thisisatextwithnospaces';
+      final newText = text.removeAllWhiteSpaces();
 
-              expect(newText, 'Thisisatextwithnospaces');
-            });
+      expect(newText, 'Thisisatextwithnospaces');
+    });
   });
 }

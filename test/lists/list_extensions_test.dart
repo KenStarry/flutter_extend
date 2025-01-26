@@ -13,7 +13,8 @@ void main() {
 
   group('Sort By (Returns the list)', () {
     test('Return sorted list after invoking the sortBy method', () {
-      final cars = ["Urus", "BMW", "Anodite", "Ferari", "Lambo"].sortByAndReturnSorted(((car) => car));
+      final cars = ["Urus", "BMW", "Anodite", "Ferari", "Lambo"]
+          .sortByAndReturnSorted(((car) => car));
 
       expect(cars, ["Anodite", "BMW", "Ferari", "Lambo", "Urus"]);
     });

@@ -10,11 +10,10 @@ class WidgetExtensionsExample extends StatelessWidget {
     return Scaffold(
       body: Column(
         children: [
-
           /// Add Padding to text
-          Text("Hello there my friend".removeAllWhiteSpaces()).padding(
-              padding: EdgeInsets.symmetric(horizontal: 32)),
-          
+          Text("Hello there my friend".removeAllWhiteSpaces())
+              .padding(padding: EdgeInsets.symmetric(horizontal: 32)),
+
           /// Generate Lorem Ipsum
           Text(''.generateLoremIpsum(wordCount: 30)),
 
