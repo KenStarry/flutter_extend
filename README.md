@@ -59,7 +59,9 @@ color: context.isDarkMode ? Colors.grey : Colors.red,
 ```
 
 Other handy **Context** Extension methods include: 
-> `context.theme`, `context.colorScheme`
+> `context.screenWidth`, `context.screenHeight`, `context.isDarkMode`, `context.theme`, `context.colorScheme`
+
+Visit the [context_extensions.dart example](https://github.com/KenStarry/flutter_extend/blob/main/example/lib/context_extensions_example.dart) for the full API Reference.
 
 ## String Extensions
 ```dart
