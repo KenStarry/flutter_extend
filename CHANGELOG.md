@@ -1,3 +1,8 @@
+## 0.0.6
+* Added New List Extensions
+* Added New String, Regx Extensions
+* Updated README
+
 ## 0.0.5
 * Added Generator Extensions
 * Added Future Extensions
