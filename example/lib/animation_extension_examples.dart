@@ -39,7 +39,17 @@ class _AnimationExtensionExamplesState extends State<AnimationExtensionExamples>
                   color: Colors.blue,
                   shape: BoxShape.circle
                 ),
-              ).fadeIn(duration: 1000),
+              ).fadeIn(duration: 1000, repeat: true, reverse: true),
+
+              /// Fade Out Animation
+              Container(
+                width: 100,
+                height: 100,
+                decoration: BoxDecoration(
+                  color: Colors.green,
+                  shape: BoxShape.circle
+                ),
+              ).fadeOut(duration: 1000, repeat: true, reverse: true),
             ],
           ),
         ),
