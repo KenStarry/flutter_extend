@@ -4,11 +4,16 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:intl/intl.dart';
+import 'package:flutter_animate/flutter_animate.dart';
+
+/// Animation Extensions
+part 'animations/animation_extensions.dart';
+part 'animations/fade_animation_extensions.dart';
+part 'animations/list_animation_extensions.dart';
 
 /// DateTime Extensions
 part 'date_time/duration_extensions.dart';
 
-part 'date_time/date_time_extensions.dart';
 part 'date_time/date_time_manipulation_extensions.dart';
 part 'date_time/date_time_formatting_extensions.dart';
 part 'date_time/date_time_comparison_extensions.dart';

@@ -105,6 +105,40 @@ We welcome contributions! If you have ideas or improvements, feel free to:
 
 Read the Contributing Guidelines for more details.
 
+## Refrences
+
+<!--
+CONTEXT EXTENSIONS
+-->
+<details open>
+
+<summary>Context Extensions (Click to open)</summary>
+
+| Extension              | Description                               |
+|:-----------------------|:------------------------------------------|
+| `context.screenWidth`  | Get the current screen width.             |
+| `context.screenHeight` | Get the current screen height.            |
+| `context.isDarkMode`   | Check if the current theme is dark mode.  |
+| `context.theme`        | Get the current theme.                    |
+| `context.colorScheme`  | Get the current color scheme.             |
+
+</details>
+
+<!--
+DATE TIME EXTENSIONS
+-->
+<details open>
+
+<summary>DateTime Extensions (Click to open)</summary>
+
+| Extension | Description |
+|:----------|:------------|
+| `isToday`  | Checks if the current DateTime provided is Today      |
+| `isPast`   | Checks if the current DateTime provided is in the Past |
+| `isFuture` | Checks if the current DateTime provided is in the Future |
+
+</details>
+
 ## Useful Links
 
 * [Package on pub.dev](https://pub.dev/packages/flutter_extend)
