@@ -55,5 +55,14 @@ extension DateTimeFormattingExtensions on DateTime {
   /// Gets the shortened of the given DateTime's Day Name eg. Mon, Tue, Wed etc...
   String dayNameShort() => DateFormat.E().format(this);
 
+  /// Gets the Slashed Date Format of the given DateTime eg. 31/12/2025
+  String slashedDate() => DateFormat('dd/MM/yyyy').format(this);
 
+  /// Get Week Number of the Given Date
+  int weekNumber() {
+    final firstDayOfYear = DateTime(year, 1, 1);
+    final daysSinceFirstDay = difference(firstDayOfYear).inDays;
+
+    return ((daysSinceFirstDay + firstDayOfYear.weekday - 1) / 7).ceil();
+  }
 }
