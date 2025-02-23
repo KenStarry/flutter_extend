@@ -33,6 +33,18 @@ class _AnimationExtensionExamplesState extends State<AnimationExtensionExamples>
 
               /// Fade In Top Sticky Bouncy Animation
               Ball(color: Colors.cyan).fadeInMoveInTopStickyBouncy(duration: 1000, repeat: true),
+
+              /// Fade In Left Bouncy Animation
+              Ball(color: Colors.deepOrange).fadeInMoveInLeftBouncy(duration: 500, repeat: true),
+
+              /// Fade In Left Sticky Bouncy Animation
+              Ball(color: Colors.deepPurple).fadeInMoveInLeftStickyBouncy(duration: 1000, repeat: true),
+
+              /// Fade In Right Bouncy Animation
+              Ball(color: Colors.indigo).fadeInMoveInRightBouncy(duration: 500, repeat: true),
+
+              /// Fade In Right Sticky Bouncy Animation
+              Ball(color: Colors.lime).fadeInMoveInRightStickyBouncy(duration: 1000, repeat: true),
             ] : [
               /// Bounce Animation
               Ball(color: Colors.red).pulseSimple(duration: 1000),

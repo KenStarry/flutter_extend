@@ -8,7 +8,7 @@ import 'package:flutter_animate/flutter_animate.dart';
 
 /// Animation Extensions
 part 'animations/animation_extensions.dart';
-part 'animations/fade_animation_extensions.dart';
+part 'animations/fade_in_animation_extensions.dart';
 part 'animations/list_animation_extensions.dart';
 
 /// DateTime Extensions

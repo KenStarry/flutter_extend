@@ -1,6 +1,6 @@
 part of '../flutter_extend.dart';
 
-extension FadeAnimationExtensions on Widget {
+extension FadeInAnimationExtensions on Widget {
   /// Fade In Animation
   Widget fadeIn(
           {int delay = 0,
@@ -252,6 +252,64 @@ extension FadeAnimationExtensions on Widget {
               end: 0,
               curve: curve ?? Curves.ease);
 
+  /// Fade In Move In Left Bouncy Animation
+  Widget fadeInMoveInLeftBouncy(
+          {int delay = 0,
+          double horizontalOffset = 50,
+          int duration = 500,
+          bool repeat = false,
+          bool reverse = false,
+          bool autoPlay = true,
+          void Function(AnimationController)? onInit}) =>
+      animate(
+              delay: delay.milliSecs,
+              autoPlay: autoPlay,
+              onInit: onInit,
+              onPlay: (controller) {
+                if (repeat) {
+                  controller.repeat(reverse: reverse);
+                }
+              })
+          .fadeIn(duration: duration.milliSecs, begin: 0, curve: Curves.ease)
+          .moveX(
+              duration: duration.milliSecs,
+              begin: -horizontalOffset,
+              end: 0,
+              curve: Curves.ease)
+          .then()
+          .moveX(duration: duration.milliSecs, begin: 30, curve: Curves.ease);
+
+  /// Fade In Move In Left Bouncy Animation
+  Widget fadeInMoveInLeftStickyBouncy(
+          {int delay = 0,
+          double horizontalOffset = 50,
+          int duration = 500,
+          bool repeat = false,
+          bool reverse = false,
+          bool autoPlay = true,
+          void Function(AnimationController)? onInit}) =>
+      animate(
+              delay: delay.milliSecs,
+              autoPlay: autoPlay,
+              onInit: onInit,
+              onPlay: (controller) {
+                if (repeat) {
+                  controller.repeat(reverse: reverse);
+                }
+              })
+          .fadeIn(duration: duration.milliSecs, begin: 0, curve: Curves.ease)
+          .moveX(
+              duration: duration.milliSecs,
+              begin: -horizontalOffset,
+              end: 0,
+              curve: Curves.ease)
+          .then()
+          .moveX(
+              duration: duration.milliSecs,
+              begin: -horizontalOffset,
+              end: 0,
+              curve: Curves.elasticOut);
+
   /// Fade In Move In Right Animation
   Widget fadeInMoveInRight(
           {int delay = 0,
@@ -280,4 +338,70 @@ extension FadeAnimationExtensions on Widget {
               begin: horizontalOffset,
               end: 0,
               curve: curve ?? Curves.ease);
+
+  /// Fade In Move In Right Bouncy Animation
+  Widget fadeInMoveInRightBouncy(
+          {int delay = 0,
+          double horizontalOffset = 50,
+          int duration = 500,
+          bool repeat = false,
+          bool reverse = false,
+          bool autoPlay = true,
+          Curve? curve,
+          void Function(AnimationController)? onInit}) =>
+      animate(
+              delay: delay.milliSecs,
+              autoPlay: autoPlay,
+              onInit: onInit,
+              onPlay: (controller) {
+                if (repeat) {
+                  controller.repeat(reverse: reverse);
+                }
+              })
+          .fadeIn(
+              duration: duration.milliSecs,
+              begin: 0,
+              curve: curve ?? Curves.ease)
+          .moveX(
+              duration: duration.milliSecs,
+              begin: horizontalOffset,
+              end: 0,
+              curve: curve ?? Curves.ease)
+          .then()
+          .moveX(duration: duration.milliSecs, begin: -30, curve: Curves.ease);
+
+  /// Fade In Move In Right Sticky Bouncy Animation
+  Widget fadeInMoveInRightStickyBouncy(
+          {int delay = 0,
+          double horizontalOffset = 50,
+          int duration = 500,
+          bool repeat = false,
+          bool reverse = false,
+          bool autoPlay = true,
+          Curve? curve,
+          void Function(AnimationController)? onInit}) =>
+      animate(
+              delay: delay.milliSecs,
+              autoPlay: autoPlay,
+              onInit: onInit,
+              onPlay: (controller) {
+                if (repeat) {
+                  controller.repeat(reverse: reverse);
+                }
+              })
+          .fadeIn(
+              duration: duration.milliSecs,
+              begin: 0,
+              curve: curve ?? Curves.ease)
+          .moveX(
+              duration: duration.milliSecs,
+              begin: horizontalOffset,
+              end: 0,
+              curve: curve ?? Curves.ease)
+          .then()
+          .moveX(
+              duration: duration.milliSecs,
+              begin: horizontalOffset,
+              end: 0,
+              curve: Curves.elasticOut);
 }
