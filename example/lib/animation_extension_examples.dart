@@ -21,7 +21,19 @@ class _AnimationExtensionExamplesState extends State<AnimationExtensionExamples>
         child: SingleChildScrollView(
           child: Column(
             spacing: 32,
-            children: [
+            children: true ? [
+              /// Fade In Bottom Sticky Bouncy Animation
+              Ball(color: Colors.teal).fadeInMoveInBottomStickyBouncy(duration: 1000, repeat: true),
+
+              /// Fade In Bottom Bouncy Animation
+              Ball(color: Colors.blueGrey).fadeInMoveInBottomBouncy(duration: 500, repeat: true),
+
+              /// Fade In Top Bouncy Animation
+              Ball(color: Colors.brown).fadeInMoveInTopBouncy(duration: 500, repeat: true),
+
+              /// Fade In Top Sticky Bouncy Animation
+              Ball(color: Colors.cyan).fadeInMoveInTopStickyBouncy(duration: 1000, repeat: true),
+            ] : [
               /// Bounce Animation
               Ball(color: Colors.red).pulseSimple(duration: 1000),
           

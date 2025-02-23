@@ -49,10 +49,10 @@ extension FadeAnimationExtensions on Widget {
               begin: begin,
               curve: curve ?? Curves.easeIn);
 
-  /// Fade In Move In Vertical Animation
+  /// Fade In Move In Bottom Animation
   Widget fadeInMoveInBottom(
           {int delay = 0,
-          double verticalBegin = 50,
+          double verticalOffset = 50,
           int duration = 500,
           bool repeat = false,
           bool reverse = false,
@@ -74,9 +74,67 @@ extension FadeAnimationExtensions on Widget {
               curve: curve ?? Curves.ease)
           .moveY(
               duration: duration.milliSecs,
-              begin: verticalBegin,
+              begin: verticalOffset,
               end: 0,
               curve: curve ?? Curves.ease);
+
+  /// Fade In Move In Bottom Sticky Bouncy Animation
+  Widget fadeInMoveInBottomBouncy(
+          {int delay = 0,
+          double verticalOffset = 50,
+          int duration = 500,
+          bool repeat = false,
+          bool reverse = false,
+          bool autoPlay = true,
+          void Function(AnimationController)? onInit}) =>
+      animate(
+              delay: delay.milliSecs,
+              autoPlay: autoPlay,
+              onInit: onInit,
+              onPlay: (controller) {
+                if (repeat) {
+                  controller.repeat(reverse: reverse);
+                }
+              })
+          .fadeIn(duration: duration.milliSecs, begin: 0, curve: Curves.ease)
+          .moveY(
+              duration: duration.milliSecs,
+              begin: verticalOffset,
+              end: 0,
+              curve: Curves.ease)
+          .then()
+          .moveY(duration: duration.milliSecs, begin: -30, curve: Curves.ease);
+
+  /// Fade In Move In Bottom Sticky Bouncy Animation
+  Widget fadeInMoveInBottomStickyBouncy(
+          {int delay = 0,
+          double verticalOffset = 50,
+          int duration = 500,
+          bool repeat = false,
+          bool reverse = false,
+          bool autoPlay = true,
+          void Function(AnimationController)? onInit}) =>
+      animate(
+              delay: delay.milliSecs,
+              autoPlay: autoPlay,
+              onInit: onInit,
+              onPlay: (controller) {
+                if (repeat) {
+                  controller.repeat(reverse: reverse);
+                }
+              })
+          .fadeIn(duration: duration.milliSecs, begin: 0, curve: Curves.ease)
+          .moveY(
+              duration: duration.milliSecs,
+              begin: verticalOffset,
+              end: 0,
+              curve: Curves.ease)
+          .then()
+          .moveY(
+              duration: duration.milliSecs,
+              begin: verticalOffset,
+              end: 0,
+              curve: Curves.elasticOut);
 
   /// Fade In Move In Vertical Animation
   Widget fadeInMoveInTop(
@@ -106,6 +164,64 @@ extension FadeAnimationExtensions on Widget {
               begin: -verticalOffset,
               end: 0,
               curve: curve ?? Curves.ease);
+
+  /// Fade In Move In Bottom Sticky Bouncy Animation
+  Widget fadeInMoveInTopBouncy(
+          {int delay = 0,
+          double verticalOffset = 50,
+          int duration = 500,
+          bool repeat = false,
+          bool reverse = false,
+          bool autoPlay = true,
+          void Function(AnimationController)? onInit}) =>
+      animate(
+              delay: delay.milliSecs,
+              autoPlay: autoPlay,
+              onInit: onInit,
+              onPlay: (controller) {
+                if (repeat) {
+                  controller.repeat(reverse: reverse);
+                }
+              })
+          .fadeIn(duration: duration.milliSecs, begin: 0, curve: Curves.ease)
+          .moveY(
+              duration: duration.milliSecs,
+              begin: -verticalOffset,
+              end: 0,
+              curve: Curves.ease)
+          .then()
+          .moveY(duration: duration.milliSecs, begin: 30, curve: Curves.ease);
+
+  /// Fade In Move In Bottom Sticky Bouncy Animation
+  Widget fadeInMoveInTopStickyBouncy(
+          {int delay = 0,
+          double verticalOffset = 50,
+          int duration = 500,
+          bool repeat = false,
+          bool reverse = false,
+          bool autoPlay = true,
+          void Function(AnimationController)? onInit}) =>
+      animate(
+              delay: delay.milliSecs,
+              autoPlay: autoPlay,
+              onInit: onInit,
+              onPlay: (controller) {
+                if (repeat) {
+                  controller.repeat(reverse: reverse);
+                }
+              })
+          .fadeIn(duration: duration.milliSecs, begin: 0, curve: Curves.ease)
+          .moveY(
+              duration: duration.milliSecs,
+              begin: -verticalOffset,
+              end: 0,
+              curve: Curves.ease)
+          .then()
+          .moveY(
+              duration: duration.milliSecs,
+              begin: -verticalOffset,
+              end: 0,
+              curve: Curves.elasticOut);
 
   /// Fade In Move In Left Animation
   Widget fadeInMoveInLeft(
