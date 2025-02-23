@@ -11,6 +11,7 @@ part 'date_time/duration_extensions.dart';
 part 'date_time/date_time_extensions.dart';
 part 'date_time/date_time_manipulation_extensions.dart';
 part 'date_time/date_time_formatting_extensions.dart';
+part 'date_time/date_time_comparison_extensions.dart';
 
 /// Image Extensions
 // part 'images/image_extensions.dart';

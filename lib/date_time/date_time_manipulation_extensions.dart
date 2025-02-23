@@ -1,46 +1,41 @@
 part of '../flutter_extend.dart';
 
 extension DateTimeManipulationExtensions on DateTime {
+  /// Add Number of Days to the DateTime
+  DateTime addDays(int days) => add(Duration(days: days));
 
-  /// Get Time Ago
-  String timeAgo() {
-    final Duration diff = DateTime.now().difference(this);
+  /// Subtract Number of Days from the DateTime
+  DateTime subtractDays(int days) => subtract(Duration(days: days));
 
-    if (diff.inDays > 365) {
-      return '${(diff.inDays / 365).floor()} years ago';
-    } else if (diff.inDays > 30) {
-      return '${(diff.inDays / 30).floor()} months ago';
-    } else if (diff.inDays > 7) {
-      return '${(diff.inDays / 7).floor()} weeks ago';
-    } else if (diff.inDays > 0) {
-      return '${diff.inDays} days ago';
-    } else if (diff.inHours > 0) {
-      return '${diff.inHours} hours ago';
-    } else if (diff.inMinutes > 0) {
-      return '${diff.inMinutes} minutes ago';
-    } else {
-      return 'Just now';
+  /// Add Number of Months to the DateTime
+  DateTime addMonths(int months) => DateTime(year, month + months, day, hour,
+      minute, second, millisecond, microsecond);
+
+  /// Subtract Number of Months from the DateTime
+  DateTime subtractMonths(int months) => DateTime(year, month - months, day, hour,
+      minute, second, millisecond, microsecond);
+
+  /// Add Number of Years to the DateTime
+  DateTime addYears(int years) => DateTime(year + years, month, day, hour,
+      minute, second, millisecond, microsecond);
+
+  /// Subtract Number of Years from the DateTime
+  DateTime subtractYears(int years) => DateTime(year - years, month, day, hour,
+      minute, second, millisecond, microsecond);
+
+  /// Adds Business Days to the current DateTime Object
+  DateTime addBusinessDays(int days) {
+    var result = this;
+
+    while (days > 0) {
+      result = result.add(Duration(days: 1));
+      if (result.weekday != DateTime.saturday &&
+          result.weekday != DateTime.sunday) {
+        days--;
+      }
     }
+
+    return result;
   }
 
-  /// Get Time Until
-  String timeUntil() {
-    final Duration diff = difference(DateTime.now());
-
-    if (diff.inDays > 365) {
-      return 'in ${(diff.inDays / 365).floor()} years';
-    } else if (diff.inDays > 30) {
-      return 'in ${(diff.inDays / 30).floor()} months';
-    } else if (diff.inDays > 7) {
-      return 'in ${(diff.inDays / 7).floor()} weeks';
-    } else if (diff.inDays > 0) {
-      return 'in ${diff.inDays} days';
-    } else if (diff.inHours > 0) {
-      return 'in ${diff.inHours} hours';
-    } else if (diff.inMinutes > 0) {
-      return 'in ${diff.inMinutes} minutes';
-    } else {
-      return 'Just now';
-    }
-  }
 }
