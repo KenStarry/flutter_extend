@@ -131,11 +131,55 @@ DATE TIME EXTENSIONS
 
 <summary>DateTime Extensions (Click to open)</summary>
 
-| Extension | Description |
-|:----------|:------------|
-| `isToday`  | Checks if the current DateTime provided is Today      |
-| `isPast`   | Checks if the current DateTime provided is in the Past |
-| `isFuture` | Checks if the current DateTime provided is in the Future |
+<!--COMPARISON EXTENSIONS-->
+<details open>
+
+<summary>DateTime Comparison Extensions</summary>
+
+| Extension     | Description                                              |
+|:--------------|:---------------------------------------------------------|
+| `isToday`     | Checks if the current DateTime provided is Today         |
+| `isPast`      | Checks if the current DateTime provided is in the Past   |
+| `isFuture`    | Checks if the current DateTime provided is in the Future |
+| `isYesterday` | Check if Date is Yesterday                               |
+| `isTomorrow`  | Check if Date is Tomorrow                                |
+
+</details>
+
+<!--FORMATTING EXTENSIONS-->
+<details open>
+
+<summary>DateTime Formatting Extensions</summary>
+
+| Extension        | Description                                                                                  |
+|:-----------------|:---------------------------------------------------------------------------------------------|
+| `timeAgo`        | Converts the current DateTime into a human readable format eg 2 years ago, 5 hours ago etc.  |
+| `timeUntil`      | Gets the amount of time remaining until this DateTime is reached eg in 2 years, in 3 minutes |
+| `monthName`      | Gets the given DateTime's Month Name eg. January, February, March etc...                     |
+| `monthNameShort` | Gets the shortened of the given DateTime's Month Name eg. Jan, feb, Mar, etc...              |
+| `dayName`        | Gets the given DateTime's Day Name eg. Monday, Tuesday, Wednesday etc...                     |
+| `dayNameShort`   | Gets the shortened of the given DateTime's Day Name eg. Mon, Tue, Wed etc...                 |
+| `slashedDate`    | Gets the Slashed Date Format of the given DateTime eg. 31/12/2025                            |
+| `weekNumber`     | Get Week Number of the Given Date                                                            |
+
+</details>
+
+<!--MANIPULATION EXTENSIONS-->
+<details open>
+
+<summary>DateTime Manipulation Extensions</summary>
+
+| Extension         | Description                                       |
+|:------------------|:--------------------------------------------------|
+| `addDays`         | Add Number of Days to the DateTime                |
+| `subtractDays`    | Subtract Number of Days from the DateTime         |
+| `addMonths`       | Add Number of Months to the DateTime              |
+| `subtractMonths`  | Subtract Number of Months from the DateTime       |
+| `addYears`        | Add Number of Years to the DateTime               |
+| `subtractYears`   | Subtract Number of Years from the DateTime        |
+| `addBusinessDays` | Adds Business Days to the current DateTime Object |
+
+</details>
 
 </details>
 

@@ -1,4 +1,6 @@
 import 'dart:async';
+import 'dart:convert';
+import 'dart:io';
 import 'dart:math';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
@@ -11,6 +13,9 @@ part 'animations/animation_extensions.dart';
 part 'animations/fade_in_animation_extensions.dart';
 part 'animations/shake_animation_extensions.dart';
 part 'animations/list_animation_extensions.dart';
+
+/// File Extensions
+part 'files/file_extensions.dart';
 
 /// DateTime Extensions
 part 'date_time/duration_extensions.dart';
