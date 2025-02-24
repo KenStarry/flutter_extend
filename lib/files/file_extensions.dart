@@ -29,4 +29,11 @@ extension FileExtensions on File {
 
   /// Convert to Base64 String
   String fileToBase64String() => base64Encode(readAsBytesSync());
+
+  /// Check if file is an image
+  bool isImage() {
+    final ext = path.split('.').last.toLowerCase();
+
+    return ['jpg', 'jpeg', 'png', 'gif', 'bmp', 'webp'].contains(ext);
+  }
 }
