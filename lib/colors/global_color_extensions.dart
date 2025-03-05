@@ -1,83 +1,49 @@
 part of '../flutter_extend.dart';
 
 extension GlobalColorExtensions on Color {
-  /// Color to Int
-  int colorToInt() {
-    final alpha = (a * 255).toInt();
-    final red = (r * 255).toInt();
-    final green = (g * 255).toInt();
-    final blue = (b * 255).toInt();
-
-    return (alpha << 24) | (red << 16) | (green << 8) | blue;
-  }
-
-  /// Generate Material color
-  MaterialColor generateMaterialColors(Color color) =>
-      MaterialColor(color.colorToInt(), {
-        50: tintColor(color, 0.9),
-        100: tintColor(color, 0.8),
-        200: tintColor(color, 0.6),
-        300: tintColor(color, 0.4),
-        400: tintColor(color, 0.2),
-        500: color,
-        600: shadeColor(color, 0.1),
-        700: shadeColor(color, 0.2),
-        800: shadeColor(color, 0.3),
-        900: shadeColor(color, 0.4)
-      });
-
-  /// Tint Generator
-  int tintValue(int value, double factor) =>
-      max(0, min((value + ((255 - value) * factor)).round(), 255));
-
-  Color tintColor(Color color, double factor) => Color.fromRGBO(
-      tintValue(r.toInt(), factor),
-      tintValue(g.toInt(), factor),
-      tintValue(b.toInt(), factor),
-      1);
-
-  /// Shade Generator
-  int shadeValue(int value, double factor) =>
-      max(0, min(value - (value * factor).round(), 255));
-
-  Color shadeColor(Color color, double factor) => Color.fromRGBO(
-      shadeValue(r.toInt(), factor),
-      shadeValue(g.toInt(), factor),
-      shadeValue(b.toInt(), factor),
-      1);
-
   /// Generate Random color
-  Color generateRandomColor() {
-    final rand = Random();
-
-    Color randomColor = Color.fromRGBO(
-        rand.nextInt(255), rand.nextInt(255), rand.nextInt(255), 1);
-
-    return randomColor;
-  }
-
-  /// Darken color by percent (100 -> black)
-  Color darkenColor([int percent = 10]) {
-    assert(1 <= percent && percent <= 100);
-
-    var f = 1 - percent / 100;
-    return Color.fromARGB(
-        a.toInt(), (r * f).round(), (g * f).round(), (b * f).round());
-  }
+  // Color generateRandomColor() {
+  //   final rand = Random();
+  //
+  //   Color randomColor = Color.fromRGBO(
+  //       rand.nextInt(255), rand.nextInt(255), rand.nextInt(255), 1);
+  //
+  //   return randomColor;
+  // }
 
   /// Lighten Color by percent (100 -> white)
-  Color lightenColor([int percent = 10]) {
-    assert(1 <= percent && percent <= 100);
+  Color getLighterShade(double factor) {
+    assert(factor >= 0 && factor <= 1, 'Factor must be between 0 and 1');
 
-    var p = percent / 100;
+    // Extract the red, green, and blue components of the color
+    int red = (r * 255).toInt();
+    int green = (g * 255).toInt();
+    int blue = (b * 255).toInt();
 
-    return Color.fromARGB(
-        a.toInt(),
-        r.toInt() + ((255 - r.toInt()) * p).round(),
-        g.toInt() + ((255 - g.toInt()) * p).round(),
-        b.toInt() + ((255 - b.toInt()) * p).round());
+    // Calculate the new lighter color components
+    int newRed = red + ((255 - red) * factor).round();
+    int newGreen = green + ((255 - green) * factor).round();
+    int newBlue = blue + ((255 - blue) * factor).round();
+
+    // Ensure the values are within the valid range (0-255)
+    newRed = newRed.clamp(0, 255);
+    newGreen = newGreen.clamp(0, 255);
+    newBlue = newBlue.clamp(0, 255);
+
+    // Return the new lighter color
+    return Color.fromARGB((a * 255).toInt(), newRed, newGreen, newBlue);
   }
 
   /// Color to Hex
-  String colorToHex() => '#${colorToInt().toRadixString(16)}';
+  String toHex({bool hashSign = true, bool withAlpha = false}) {
+    final alpha = (a * 255).toInt().toRadixString(16).padLeft(2, '0');
+    final red = (r * 255).toInt().toRadixString(16).padLeft(2, '0');
+    final green = (g * 255).toInt().toRadixString(16).padLeft(2, '0');
+    final blue = (b * 255).toInt().toRadixString(16).padLeft(2, '0');
+
+    return '${hashSign ? '#' : ''}'
+        '${withAlpha ? alpha : ''}'
+        '$red$green$blue'
+        .toUpperCase();
+  }
 }

@@ -11,21 +11,30 @@ extension AuthStringExtensions on String {
   }
 
   /// Check if password is valid
-  bool isPasswordValid(
-      String password, {
-        int minLength = 8,
-        int minUppercase = 1,
-        int minNumbers = 1,
-        int minSpecialChars = 1,
-      }) {
-    if (password.length < minLength) return false;
+  bool isPasswordValid({
+    int minLength = 8,
+    int minUppercase = 1,
+    int minNumbers = 1,
+    int minSpecialChars = 1,
+  }) {
+    if (length < minLength) return false;
 
-    int uppercaseCount = RegExp(r'[A-Z]').allMatches(password).length;
-    int numberCount = RegExp(r'\d').allMatches(password).length;
-    int specialCharCount = RegExp(r'[!@#\$%^&*(),.?":{}|<>]').allMatches(password).length;
+    int uppercaseCount = RegExp(r'[A-Z]').allMatches(this).length;
+    int numberCount = RegExp(r'\d').allMatches(this).length;
+    int specialCharCount =
+        RegExp(r'[!@#\$%^&*(),.?":{}|<>]').allMatches(this).length;
 
     return uppercaseCount >= minUppercase &&
         numberCount >= minNumbers &&
         specialCharCount >= minSpecialChars;
+  }
+
+  /// Check if String is a valid URL
+  bool isValidURL() {
+    final bool isValidURL = RegExp(
+            r'^(http:\/\/www\.|https:\/\/www\.|http:\/\/|https:\/\/)?[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(:[0-9]{1,5})?(\/.*)?$')
+        .hasMatch(this);
+
+    return isValidURL;
   }
 }

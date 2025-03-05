@@ -111,4 +111,15 @@ void main() {
       expect(name, 'Mar');
     });
   });
+  
+  //  Add Days
+  group('Add Days', () {
+    test("Adding 5 days outputs 5 days after the current date", (){
+      final dateTime = DateTime(2025, 1, 1);
+
+      final currentDate = dateTime.addDays(5);
+
+      expect(currentDate, DateTime(2025, 1, 6));
+    });
+  });
 }

@@ -18,7 +18,7 @@ part 'animations/list_animation_extensions.dart';
 part 'files/file_extensions.dart';
 
 /// DateTime Extensions
-part 'date_time/duration_extensions.dart';
+part 'number/number_duration_extensions.dart';
 
 part 'date_time/date_time_manipulation_extensions.dart';
 part 'date_time/date_time_formatting_extensions.dart';

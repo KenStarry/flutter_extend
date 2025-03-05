@@ -70,4 +70,7 @@ extension WidgetExtensions on Widget {
 
   /// Center a widget
   Widget center() => Center(child: this);
+
+  /// Makes the widget selectable
+  Widget addSelectionArea() => SelectionArea(child: this);
 }

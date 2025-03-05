@@ -1,6 +1,6 @@
 part of '../flutter_extend.dart';
 
-extension DurationExtensions on int {
+extension NumberDurationExtensions on int {
   /// Days
   Duration get days => Duration(days: this);
 

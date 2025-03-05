@@ -17,9 +17,6 @@ extension RegexStringExtensions on String {
   /// Check if String contains only text
   bool isTextOnly() => RegExp(r'^[a-zA-Z]+$').hasMatch(this);
 
-  /// Check if String is a valid URL
-  // bool isValidURL() => RegExp(r'')
-
   /// Remove all White Spaces
   String removeAllWhiteSpaces() => replaceAll(RegExp(r'\s+'), '');
 
