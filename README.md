@@ -2,8 +2,8 @@
 
 ![FLUTTER EXTEND](https://github.com/user-attachments/assets/b3a4d7ae-e1b6-4f3d-b485-857567a2cc2b)
 
-![Pub Version](https://img.shields.io/pub/v/flutter_extend) 
-![License](https://img.shields.io/github/license/KenStarry/flutter_extend) 
+![Pub Version](https://img.shields.io/pub/v/flutter_extend)
+![License](https://img.shields.io/github/license/KenStarry/flutter_extend)
 ![Stars](https://img.shields.io/github/stars/KenStarry/flutter_extend?style=social)
 
 🚀 Welcome to the ultimate Flutter cheat code! This package brings you a collection of mind-blowing extensions that'll
@@ -334,10 +334,14 @@ A huge shoutout to the amazing people who have contributed to making **Flutter E
 
 <div>
 
-<table>
-  <tr>
-    <a href="https://github.com/KenStarry" target="_blank"><td style="text-align: center; vertical-align: middle;"><img src="https://github.com/KenStarry.png?s=80&v=4" width="80" style="border-radius: 50%;"  alt="KenStarry"/><br /><sub><b>KenStarry(Owner)</b></sub></td></a>
-    <a href="https://github.com/okelloEnos" target="_blank"><td style="text-align: center; vertical-align: middle;"><img src="https://github.com/okelloEnos.png?s=80&v=4" width="80" style="border-radius: 50%;"  alt="Enos Okello"/><br /><sub><b>Enos Okello</b></sub></td></a>
+<table style="border: none;">
+  <tr style="border: none;">
+    <a href="https://github.com/KenStarry" target="_blank"><td style="border: none; text-align: center; vertical-align: middle;">
+        <img src="https://github.com/KenStarry.png?s=80&v=4" width="80" style="border-radius: 50%;"  alt="KenStarry"/><br /><sub><b>KenStarry(Owner)</b></sub></td>
+</a>
+    <a href="https://github.com/okelloEnos" target="_blank"><td style="border: none; text-align: center; vertical-align: middle;">
+        <img src="https://github.com/okelloEnos.png?s=80&v=4" width="80" style="border-radius: 50%;"  alt="Enos Okello"/><br /><sub><b>Enos Okello</b></sub></td>
+</a>
   </tr>
 </table>
 
