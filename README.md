@@ -1,172 +1,120 @@
-# Flutter Extend
+# 🎩 Flutter Extend – The Magical Extensions Toolbox!
 
 ![FLUTTER EXTEND](https://github.com/user-attachments/assets/b3a4d7ae-e1b6-4f3d-b485-857567a2cc2b)
 
-A Flutter package designed to provide developers with a collection of useful extensions for Flutter and Dart. These
-extensions aim to simplify and speed up development by adding frequently used functionalities that are not available
-out-of-the-box.
+![Pub Version](https://img.shields.io/pub/v/flutter_extend) 
+![License](https://img.shields.io/github/license/KenStarry/flutter_extend) 
+![Stars](https://img.shields.io/github/stars/KenStarry/flutter_extend?style=social)
 
-## Features
+🚀 Welcome to the ultimate Flutter cheat code! This package brings you a collection of mind-blowing extensions that'll
+make your development experience smoother than a buttered-up otter sliding down a rainbow. 🌈✨
 
-* 🚀 Prebuilt Extension Methods: Simplify common Flutter development tasks with prebuilt extensions for widgets, colors,
-  strings, and more.
-* 🎨 Custom MaterialColor Generator: Easily create dynamic MaterialColor palettes from any Color.
-* 🛠 Convenient String Manipulations: Transform and format strings effortlessly.
-* 📏 Widget Utilities: Add padding, margins, and styling directly to widgets.
+## 🍕 Why Should You Care?
 
-## Getting started
+Because **Flutter Extend** makes your life easier, that's why! Instead of writing **boring repetitive code**, let these
+extensions do the heavy lifting while you sip on your coffee ☕ (or energy drink, we don’t judge).
 
-1. Add this package to your `pubspec.yaml` file:
+👌 **Save time** – Fewer lines of code, more time for memes.  
+🔄 **Write cleaner code** – Your future self will thank you.  
+🧙 **Look like a coding wizard** – Impress your teammates.
+
+---
+
+## ⚒️ Installation – Get Started Faster than a Cheetah on Roller Skates
+
+1. **Summon Flutter Extend into your project** by adding this to your `pubspec.yaml`:
 
 ```yaml
 dependencies:
   flutter_extend: ^0.0.6
-```
+```  
 
-2. Run the following command to get the package:
-
-```bash
-  flutter pub get
-```
-
-3. Import the package in your Dart file:
-
-```dart
-import 'package:flutter_extend/flutter_extend.dart';
-```
-
-## Usage
-
-## Context Extensions
-
-#### Screen Width - `context.screenWidth`
-
-```dart
-/// Get Current Screen Width
-Text
-("SCREEN WIDTH : 
-${context.
-screenWidth
-}
-"
-)
-```
-
-#### Check Dark Mode - `context.isDarkMode`
-
-```dart
-/// Change color if is Dark Mode
-Container
-(
-width: 100,
-height: 100,
-color: context.isDarkMode ? Colors.grey : Colors.red,
-)
-,
-```
-
-Other handy **Context** Extension methods include:
-> `context.screenWidth`, `context.screenHeight`, `context.isDarkMode`, `context.theme`, `context.colorScheme`
-
-Visit
-the [context_extensions.dart example](https://github.com/KenStarry/flutter_extend/blob/main/example/lib/context_extensions_example.dart)
-for the full API Reference.
-
-## String Extensions
-
-```dart
-import 'package:flutter_extend/flutter_extend.dart';
-
-void main() {
-  String text = "hello world";
-  print(text.capitalize()); // Output: Hello world
-}
-```
-
-### DateTime Extensions
-
-```dart
-import 'package:flutter_extend/flutter_extend.dart';
-
-void main() {
-  DateTime now = DateTime.now();
-  print(now.isToday()); // Output: true if today, false otherwise
-}
-```
-
-## Examples
-
-Check out the [examples directory](https://github.com/KenStarry/flutter_extend/tree/main/example/lib) for complete
-examples demonstrating the use of this package:
+2. **Run this spell** in your terminal:
 
 ```bash
-git clone https://github.com/KenStarry/flutter_extend.git
-cd flutter_extend/examples
-flutter run
-```
+flutter pub get
+```  
 
-## Contributing
+3. **Import the package** and start your journey to developer enlightenment:
 
-We welcome contributions! If you have ideas or improvements, feel free to:
+```dart
+import 'package:flutter_extend/flutter_extend.dart';
+```  
 
-* Fork the repository.
-* Create a new branch for your feature/bug fix.
-* Submit a pull request.
+BOOM. 💥 You’re now **10x more powerful** (results may vary).
 
-Read the Contributing Guidelines for more details.
+---
 
-## Cheat Sheets
+## 🤯 **Behold, The Extensions That Will Blow Your Mind!**
 
-### 📦 Animation Extensions
+### 📦 **Animation Extensions – Because Motion is Magic!**
 
-### 🎨 Color Extensions
+_(Coming soon… if I ever stop procrastinating.)_
+
+---
+
+### 🔖 **Future Extensions – Async Like a Boss!**
+
+_(Coming soon… after I finish scrolling through cat videos.)_
+
+---
+
+### 🎨 **Color Extensions – For When You Need to Make Things Pretty**
 
 <details>
 
 <summary>Global Color Extensions (Click to open)</summary>
 
-| Extension                        | Description                             | 
-|:---------------------------------|:----------------------------------------|
-| `Colors.red.getLighterShade(10)` | Lighten Color by percent (100 -> white) |
-| `Colors.red.toHex()`             | Convert Color to Hexadecimal String     |
+| Extension                        | Description                                  | 
+|:---------------------------------|:---------------------------------------------|
+| `Colors.red.getLighterShade(10)` | Turns red into diet red (10% lighter)!       |
+| `Colors.red.toHex()`             | Converts red into that fancy #FF0000 format. |
 
-</details>
+</details> 
 
-### 💎 Context Extensions
+🔥 No more googling **“Flutter color to hex”** like a caveman.
 
-<details>
+---
 
-<summary>Context Extensions (Click to open)</summary>
-
-| Extension              | Description                              |
-|:-----------------------|:-----------------------------------------|
-| `context.colorScheme`  | Get the current color scheme.            |
-| `context.isDarkMode`   | Check if the current theme is dark mode. |
-| `context.screenHeight` | Get the current screen height.           |
-| `context.screenWidth`  | Get the current screen width.            |
-| `context.theme`        | Get the current theme.                   |
-
-</details>
-
-### 📅 DateTime Extensions
+### 📏 **Context Extensions – Your App’s Sixth Sense**
 
 <details>
 
-<summary>DateTime Comparison Extensions (Click to open)</summary>
+<summary>🧠 Context Extensions (Click to reveal the magic!)</summary>
 
-| Extension        | Description                                              |
-|:-----------------|:---------------------------------------------------------|
-| `.isToday()`     | Checks if the current DateTime provided is Today         |
-| `.isPast()`      | Checks if the current DateTime provided is in the Past   |
-| `.isFuture()`    | Checks if the current DateTime provided is in the Future |
-| `.isYesterday()` | Check if Date is Yesterday                               |
-| `.isTomorrow()`  | Check if Date is Tomorrow                                |
+| Extension              | Description                                     |
+|:-----------------------|:------------------------------------------------|
+| `context.colorScheme`  | Knows what colors your app is vibing with. 🎨   |
+| `context.isDarkMode`   | Detects if your app has gone full Sith mode. 🌑 |
+| `context.screenHeight` | Measures how tall your app stands. 📏           |
+| `context.screenWidth`  | Measures the width, because size matters. 📐    |
+| `context.theme`        | Retrieves the whole theme like a style guru. 👔 |
+
+</details> 
+
+💡 These context extensions **always know what’s up** (literally).
+
+---
+
+### 📆 **DateTime Extensions – Manipulate Time Like Doctor Strange**
+
+<details>
+
+<summary>⏳ DateTime Comparison Extensions (Click to open)</summary>
+
+| Extension        | What It Does                         |  
+|------------------|--------------------------------------|  
+| `.isToday()`     | Is today… today? 🤔                  |  
+| `.isPast()`      | Confirms if your date is ancient. 📜 |  
+| `.isFuture()`    | Predicts the future… kinda. 🔮       |  
+| `.isYesterday()` | Checks if it was **Laundry Day**.    |  
+| `.isTomorrow()`  | Future You says hello. 👋            |  
 
 </details>
 
 <details>
 
-<summary>DateTime Formatting Extensions (Click to open)</summary>
+<summary>🗓️ DateTime Formatting Extensions (Click to open)</summary>
 
 | Extension           | Example                               | Output       |
 |:--------------------|:--------------------------------------|--------------|
@@ -183,7 +131,7 @@ Read the Contributing Guidelines for more details.
 
 <details>
 
-<summary>DateTime Manipulation Extensions (Click to open)</summary>
+<summary>🛠️ DateTime Manipulation Extensions (Click to open)</summary>
 
 | Extension                 | Example                                 | Output                 |
 |:--------------------------|:----------------------------------------|------------------------|
@@ -197,61 +145,55 @@ Read the Contributing Guidelines for more details.
 
 </details>
 
-### 🕑 Number Extensions
+
+🔄 **Master time manipulation and become the Flutter Time Lord!**
+
+---
+
+### 📂 **File Extensions – Handle Files Like a Pro!**
 
 <details>
 
-<summary>Number Duration Extensions (Click to open)</summary>
+<summary>📁 File Extensions (Click to open)</summary>
 
-| Extension    | Example     | Output                    |
-|:-------------|:------------|---------------------------|
-| `.days`      | 5.days      | Duration(days: 5)         |
-| `.hours`     | 5.hours     | Duration(hours: 5)        |
-| `.mins`      | 5.mins      | Duration(minutes: 5)      |
-| `.secs`      | 5.secs      | Duration(seconds: 5)      |
-| `.milliSecs` | 5.milliSecs | Duration(milliSeconds: 5) |
-| `.microSecs` | 5.microSecs | Duration(microSeconds: 5) |
+| Extension                     | Example                                   | Output                 |
+|:------------------------------|:------------------------------------------|------------------------|
+| `.fileFormattedSize()`        | `File('path').fileFormattedSize()`        | 500 MB                 |
+| `.filePath()`                 | `File('path').filePath()`                 | /emulated/0/storage... |
+| `.fileExtension()`            | `File('path').fileExtension()`            | pdf, jpg, etc.         |
+| `.fileNameWithoutExtension()` | `File('path').fileNameWithoutExtension()` | myAwesomeFile          |
 
 </details>
 
-### 📂 File Extensions
+🗂️ **Stop wrestling with file paths like it’s 1999!**
+
+---
+
+### 📦 **Generator Extensions – Auto-Magic String Generation!**
+
+_NB: String generator methods should be used on Empty Strings for the best results._
 
 <details>
 
-<summary>File Extensions (Click to open)</summary>
+<summary>🔠 String Generator Extensions (Click to open)</summary>
 
-| Extension                     | Example                                 | Output                 |
-|:------------------------------|:----------------------------------------|------------------------|
-| `.fileFormattedSize()`        | File('path').fileFormattedSize()        | 500 MB                 |
-| `.filePath()`                 | File('path').filePath()                 | /emulated/0/storage... |
-| `.fileExtension()`            | File('path').fileExtension()            | pdf, jpg etc...        |
-| `.fileNameWithoutExtension()` | File('path').fileNameWithoutExtension() | myAwesomeFile          |
+| Extension                                | Example                               | Output                                |
+|:-----------------------------------------|:--------------------------------------|---------------------------------------|
+| `.generateLoremIpsum(wordCount)`         | `"".generateLoremIpsum(wordCount: 5)` | `Lorem ipsum dolor sit amet`          |
+| `.generateUUID(length)`                  | `"".generateUUID(length: 10)`         | `Random UUID`                         |
+| `.generateClipboardContents(textIfNull)` | `"".generateClipboardContents()`      | `Returns a String clipboard contents` |
 
 </details>
 
-### 📦 Future Extensions
+📝 **Because manually typing random text is so last year!**
 
-### 📦 Generator Extensions
+---
 
-NB: String generator methods should be used on Empty Strings for the best results.
-
-<details>
-
-<summary>String Generator Extensions (Click to open)</summary>
-
-| Extension                                | Example                             | Output                              |
-|:-----------------------------------------|:------------------------------------|-------------------------------------|
-| `.generateLoremIpsum(wordCount)`         | "".generateLoremIpsum(wordCount: 5) | Lorem ipsum dolor sit amet          |
-| `.generateUUID(length)`                  | "".generateUUID(length: 10)         | Random UUID                         |
-| `.generateClipboardContents(textIfNull)` | "".generateClipboardContents()      | Returns a String clipboard contents |
-
-</details>
-
-### 📋 List Extensions
+### 📋 **List Extensions – Sorting, Chunking, and More!**
 
 <details>
 
-<summary>List Extensions (Click to open)</summary>
+<summary>📜 List Extensions (Click to open)</summary>
 
 | Extension                  | Example                                                                                | Output                                                   |
 |:---------------------------|:---------------------------------------------------------------------------------------|----------------------------------------------------------|
@@ -264,56 +206,85 @@ NB: String generator methods should be used on Empty Strings for the best result
 
 </details>
 
-### 🔤 String Transformations
+📌 **Because sorting lists manually is for mere mortals!**
+
+---
+
+### 🔢 **Number Extensions – Math is Hard, Let’s Make It Easy**
 
 <details>
 
-<summary>Auth String Extensions (Click to open)</summary>
+<summary>Number Duration Extensions (Click to open)</summary>
 
-| Extension            | Example                       | Output |
-|:---------------------|:------------------------------|--------|
-| `.isEmailValid()`    | "badEmail.com".isEmailValid() | false  |
-| `.isPasswordValid()` | "weak12".isPasswordValid()    | false  |
-| `.isValidURL()`      | "weirdurl//".isValidURL()     | false  |
+| Extension    | Example       | Output                    |
+|:-------------|:--------------|---------------------------|
+| `.days`      | `5.days`      | Duration(days: 5)         |
+| `.hours`     | `5.hours`     | Duration(hours: 5)        |
+| `.mins`      | `5.mins`      | Duration(minutes: 5)      |
+| `.secs`      | `5.secs`      | Duration(seconds: 5)      |
+| `.milliSecs` | `5.milliSecs` | Duration(milliSeconds: 5) |
+| `.microSecs` | `5.microSecs` | Duration(microSeconds: 5) |
+
+</details> 
+
+🧠 **Because numbers should work for you, not the other way around.**
+
+---
+
+### 🔤 **String Extensions – Tame Your Text Like a Pro!**
+
+<details>
+
+<summary>🔑 Auth String Extensions (Click to open)</summary>
+
+| Extension            | Example                         | Output  |
+|:---------------------|:--------------------------------|---------|
+| `.isEmailValid()`    | `"badEmail.com".isEmailValid()` | `false` |
+| `.isPasswordValid()` | `"weak12".isPasswordValid()`    | `false` |
+| `.isValidURL()`      | `"weirdurl//".isValidURL()`     | `false` |
 
 </details>
 
 <details>
 
-<summary>Global String Extensions (Click to open)</summary>
+<summary>🌍 Global String Extensions (Click to open)</summary>
 
-| Extension                            | Example                                         | Output      |
-|:-------------------------------------|:------------------------------------------------|-------------|
-| `.capitalizeFirstLetter()`           | "hello".capitalizeFirstLetter()                 | Hello       |
-| `.capitalizeFirstLetterOfEachWord()` | "hello world".capitalizeFirstLetterOfEachWord() | Hello World |
-| `.getLastNCharacters(n)`             | "hello".getLastNCharacters(2)                   | lo          |
-| `.mask(visibleCount)`                | "helloworld".mask()                             | he******ld  |
-| `.reverse()`                         | "hello".reverse()                               | olleh       |
-| `.truncateName()`                    | "Ken Starry".truncateName()                     | Ken S.      |
+| Extension                            | Example                                           | Output        |
+|:-------------------------------------|:--------------------------------------------------|---------------|
+| `.capitalizeFirstLetter()`           | `"hello".capitalizeFirstLetter()`                 | `Hello`       |
+| `.capitalizeFirstLetterOfEachWord()` | `"hello world".capitalizeFirstLetterOfEachWord()` | `Hello World` |
+| `.getLastNCharacters(n)`             | `"hello".getLastNCharacters(2)`                   | `lo`          |
+| `.mask(visibleCount)`                | `"helloworld".mask()`                             | `he******ld`  |
+| `.reverse()`                         | `"hello".reverse()`                               | `olleh`       |
+| `.truncateName()`                    | `"Ken Starry".truncateName()`                     | `Ken S.`      |
 
 </details>
 
 <details>
 
-<summary>Regex String Extensions (Click to open)</summary>
+<summary>🕵️ Regex String Extensions (Click to open)</summary>
 
-| Extension                             | Example                                            | Output             |
-|:--------------------------------------|:---------------------------------------------------|--------------------|
-| `.extractDigits()`                    | "abc123".extractDigits()                           | "123"              |
-| `.removeAllDigits()`                  | "abc123".removeAllDigits()                         | "abc"              |
-| `.removeAllWordsStartingWithNumber()` | "1abc 2def ghi".removeAllWordsStartingWithNumber() | "ghi"              |
-| `.isDigitsOnly()`                     | "12345".isDigitsOnly()                             | true               |
-| `.isTextOnly()`                       | "abc".isTextOnly()                                 | true               |
-| `.removeAllWhiteSpaces()`             | "a b c".removeAllWhiteSpaces()                     | "abc"              |
-| `.getWords()`                         | "Hello world!".getWords()                          | ["Hello", "world"] |
+| Extension                             | Example                                              | Output               |
+|:--------------------------------------|:-----------------------------------------------------|----------------------|
+| `.extractDigits()`                    | `"abc123".extractDigits()`                           | `"123"`              |
+| `.removeAllDigits()`                  | `"abc123".removeAllDigits()`                         | `"abc"`              |
+| `.removeAllWordsStartingWithNumber()` | `"1abc 2def ghi".removeAllWordsStartingWithNumber()` | `"ghi"`              |
+| `.isDigitsOnly()`                     | `"12345".isDigitsOnly()`                             | `true`               |
+| `.isTextOnly()`                       | `"abc".isTextOnly()`                                 | `true`               |
+| `.removeAllWhiteSpaces()`             | `"a b c".removeAllWhiteSpaces()`                     | `"abc"`              |
+| `.getWords()`                         | `"Hello world!".getWords()`                          | `["Hello", "world"]` |
 
 </details>
 
-### 📏 Widget Extensions
+🔠 **Say goodbye to messy text handling forever!**
+
+---
+
+### 🖼️ **Widget Extensions – Supercharge Your Widgets!**
 
 <details>
 
-<summary>Widget Extensions (Click to open)</summary>
+<summary>🧩 Widget Extensions (Click to open)</summary>
 
 | Extension          | Example                                                             | Output                                                                         |
 |--------------------|---------------------------------------------------------------------|--------------------------------------------------------------------------------|
@@ -335,7 +306,7 @@ NB: String generator methods should be used on Empty Strings for the best result
 
 <details>
 
-<summary>Scaffold Extensions (Click to open)</summary>
+<summary>🛠️ Scaffold Extensions (Click to open)</summary>
 
 | Extension               | Example                                                                                                                                                                       | Output                                                                                   |
 |:------------------------|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------|
@@ -345,7 +316,7 @@ NB: String generator methods should be used on Empty Strings for the best result
 
 <details>
 
-<summary>Text Extensions (Click to open)</summary>
+<summary>🔗 Text Extensions (Click to open)</summary>
 
 | Extension        | Example                                                                                                      | Output                                                                                               |
 |:-----------------|:-------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------|
@@ -353,16 +324,54 @@ NB: String generator methods should be used on Empty Strings for the best result
 
 </details>
 
-## Useful Links
+🖍️ **Make your widgets do more with less code!**
 
-* [Package on pub.dev](https://pub.dev/packages/flutter_extend)
-* [Flutter Documentation](https://docs.flutter.dev)
-* [Dart Documentation](https://dart.dev/docs)
+---
 
-## License
+## 🤝 **Contributors**
 
-This package is distributed under the MIT License. See
-the [LICENSE](https://github.com/KenStarry/flutter_extend/blob/main/LICENSE) file for more details.
+A huge shoutout to the amazing people who have contributed to making **Flutter Extend** even more awesome! 🎉
 
-See yah!
-![FLUTTER EXTEND](https://github.com/user-attachments/assets/f2fd6081-1634-4002-864f-ef0015adbf02)
+<div>
+
+<table>
+  <tr>
+    <a href="https://github.com/KenStarry" target="_blank"><td style="text-align: center; vertical-align: middle;"><img src="https://github.com/KenStarry.png" width="80" style="border-radius: 50%;"  alt="KenStarry"/><br /><sub><b>KenStarry(Owner)</b></sub></td></a>
+    <a href="https://github.com/okelloEnos" target="_blank"><td style="text-align: center; vertical-align: middle;"><img src="https://github.com/okelloEnos.png" width="80" style="border-radius: 50%;"  alt="Enos Okello"/><br /><sub><b>Enos Okello</b></sub></td></a>
+  </tr>
+</table>
+
+</div>
+
+---
+
+## 👥 **Want to Contribute?**
+
+🛠 Found something cool to add? **Fork this repo, create a new branch, and submit a pull request!**
+
+👾 **Join the Fun!** We love developers who break things (and then fix them).
+
+---
+
+## 📘 **Useful Links – Because You’ll Need ‘Em**
+
+🔗 **[Package on pub.dev](https://pub.dev/packages/flutter_extend)**  
+🔗 **[GitHub Repo](https://github.com/KenStarry/flutter_extend/tree/main/example/lib)**  
+📖 **[Flutter Documentation](https://docs.flutter.dev)**  
+📒 **[Dart Documentation](https://dart.dev/docs)**
+
+---
+
+## 🐝 **License – Go Wild!**
+
+This package is [**licensed under MIT**](https://github.com/KenStarry/flutter_extend/blob/main/LICENSE), meaning you can
+use it, modify it, and show it off to your friends. 🎉
+
+---
+
+🎉 **That’s it, folks!** Now go forth and write Flutter code like an absolute **legend**. 🚀💙
+
+## Examples
+
+Check out the [examples directory](https://github.com/KenStarry/flutter_extend/tree/main/example/lib) for complete
+examples demonstrating the use of this package:
