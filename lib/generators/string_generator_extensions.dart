@@ -79,6 +79,23 @@ extension StringGeneratorExtensions on String {
         wordCount, (index) => loremWords[index % loremWords.length]).join(' ');
   }
 
+  /// Random String generator
+  String generateRandomString(int length,
+      {bool includeNumbers = false, bool includeSpecial = false}) {
+    const letters = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    const numbers = '0123456789';
+    const special = '!@#\$%^&*()_+-=[]{}|;:\'",.<>?/`~';
+
+    String chars = letters;
+
+    if (includeNumbers) chars += numbers;
+    if (includeSpecial) chars += special;
+
+    final rand = Random();
+    return List.generate(length, (index) => chars[rand.nextInt(chars.length)])
+        .join('');
+  }
+
   /// UUID Generator - Generates a random UUID (Universally Unique Identifier)
   String generateUUID({int length = 32}) {
     final random = Random();

@@ -5,6 +5,7 @@ import 'dart:math';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_extend/string/regex_string_extensions.dart';
 import 'package:intl/intl.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 
@@ -41,7 +42,7 @@ part 'generators/widget_generator_extensions.dart';
 
 /// String Extensions
 part 'string/global_string_extensions.dart';
-
+part 'string/string_formatter_extensions.dart';
 part 'string/validation_string_extensions.dart';
 
 /// Color Extensions

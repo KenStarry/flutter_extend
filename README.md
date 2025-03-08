@@ -47,18 +47,6 @@ BOOM. 💥 You’re now **10x more powerful** (results may vary).
 
 ## 🤯 **Behold, The Extensions That Will Blow Your Mind!**
 
-### 📦 **Animation Extensions – Because Motion is Magic!**
-
-_(Coming soon… if I ever stop procrastinating.)_
-
----
-
-### 🔖 **Future Extensions – Async Like a Boss!**
-
-_(Coming soon… after I finish scrolling through cat videos.)_
-
----
-
 ### 🎨 **Color Extensions – For When You Need to Make Things Pretty**
 
 <details>
@@ -182,6 +170,7 @@ _NB: String generator methods should be used on Empty Strings for the best resul
 | `.generateLoremIpsum(wordCount)`         | `"".generateLoremIpsum(wordCount: 5)` | `Lorem ipsum dolor sit amet`          |
 | `.generateUUID(length)`                  | `"".generateUUID(length: 10)`         | `Random UUID`                         |
 | `.generateClipboardContents(textIfNull)` | `"".generateClipboardContents()`      | `Returns a String clipboard contents` |
+| `.generateRandomString(length)`          | `"".generateRandomString(10)`         | `Random 10-character string`          |
 
 </details>
 
@@ -235,7 +224,7 @@ _NB: String generator methods should be used on Empty Strings for the best resul
 
 <details>
 
-<summary>🔑 Auth String Extensions (Click to open)</summary>
+<summary>🔑 Validation String Extensions (Click to open)</summary>
 
 | Extension            | Example                         | Output  |
 |:---------------------|:--------------------------------|---------|
@@ -273,6 +262,22 @@ _NB: String generator methods should be used on Empty Strings for the best resul
 | `.isTextOnly()`                       | `"abc".isTextOnly()`                                 | `true`               |
 | `.removeAllWhiteSpaces()`             | `"a b c".removeAllWhiteSpaces()`                     | `"abc"`              |
 | `.getWords()`                         | `"Hello world!".getWords()`                          | `["Hello", "world"]` |
+
+</details>
+
+<details>
+
+<summary>🔢 String Formatter Extensions (Click to open)</summary>
+
+| Extension                  | Example                           | Output          |
+|:---------------------------|:----------------------------------|-----------------|
+| `.capitalizeFirstLetter()` | `'hello'.capitalizeFirstLetter()` | `'Hello'`       |
+| `.toTitleCase()`           | `'hello world'.toTitleCase()`     | `'Hello World'` |
+| `.toCamelCase()`           | `'hello_world'.toCamelCase()`     | `'helloWorld'`  |
+| `.toSlug()`                | `'Hello World!'.toSlug()`         | `'hello-world'` |
+| `.toOrdinal()`             | `'23'.toOrdinal()`                | `'23rd'`        |
+| `.toBase64()`              | `'Hello'.toBase64()`              | `'SGVsbG8='`    |
+| `.fromBase64()`            | `'SGVsbG8='.fromBase64()`         | `'Hello'`       |
 
 </details>
 
@@ -325,6 +330,26 @@ _NB: String generator methods should be used on Empty Strings for the best resul
 </details>
 
 🖍️ **Make your widgets do more with less code!**
+
+---
+
+## ⏳ **Coming Soon – The Future is Bright!**
+
+### 📦 **Animation Extensions – Because Motion is Magic!**
+
+_(Coming soon… if I ever stop procrastinating.)_
+
+---
+
+### 🔖 **Future Extensions – Async Like a Boss!**
+
+_(Coming soon… after I finish scrolling through cat videos.)_
+
+---
+
+### 🎭 **Widget Generators – The Magic is Brewing! ☕🔮**
+
+_(Coming soon... currently summoning the code wizards for this one. 🧙‍♂️✨)_
 
 ---
 
