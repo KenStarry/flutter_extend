@@ -1,0 +1,41 @@
+name: Secure PR Checks
+
+on:
+  pull_request:
+    branches:
+      - main
+
+permissions:
+  contents: read
+  pull-requests: write
+
+jobs:
+  test:
+    name: Validate Code & Run Tests
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Clone repository
+        uses: actions/checkout@v4
+      - name: Set up Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          flutter-version: 3.27.1
+
+      - name: Flutter Version
+        run: flutter --version
+
+      - name: Install Dependencies
+        run: flutter pub get
+
+      - name: Check Formatting
+        run: dart format --set-exit-if-changed .
+
+      #      - name: Run Linter
+      #        run: flutter analyze
+
+      #      - name: Check for Outdated Dependencies
+      #        run: dart pub outdated --no-dev
+
+      - name: Run Tests
+        run: flutter test

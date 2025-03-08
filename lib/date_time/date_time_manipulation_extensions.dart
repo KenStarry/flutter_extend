@@ -12,16 +12,16 @@ extension DateTimeManipulationExtensions on DateTime {
       minute, second, millisecond, microsecond);
 
   /// Subtract Number of Months from the DateTime
-  DateTime subtractMonths(int months) => DateTime(year, month - months, day, hour,
-      minute, second, millisecond, microsecond);
+  DateTime subtractMonths(int months) => DateTime(year, month - months, day,
+      hour, minute, second, millisecond, microsecond);
 
   /// Add Number of Years to the DateTime
-  DateTime addYears(int years) => DateTime(year + years, month, day, hour,
-      minute, second, millisecond, microsecond);
+  DateTime addYears(int years) => DateTime(
+      year + years, month, day, hour, minute, second, millisecond, microsecond);
 
   /// Subtract Number of Years from the DateTime
-  DateTime subtractYears(int years) => DateTime(year - years, month, day, hour,
-      minute, second, millisecond, microsecond);
+  DateTime subtractYears(int years) => DateTime(
+      year - years, month, day, hour, minute, second, millisecond, microsecond);
 
   /// Adds Business Days to the current DateTime Object
   DateTime addBusinessDays(int days) {
@@ -37,5 +37,4 @@ extension DateTimeManipulationExtensions on DateTime {
 
     return result;
   }
-
 }

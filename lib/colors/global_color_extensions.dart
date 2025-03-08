@@ -42,8 +42,8 @@ extension GlobalColorExtensions on Color {
     final blue = (b * 255).toInt().toRadixString(16).padLeft(2, '0');
 
     return '${hashSign ? '#' : ''}'
-        '${withAlpha ? alpha : ''}'
-        '$red$green$blue'
+            '${withAlpha ? alpha : ''}'
+            '$red$green$blue'
         .toUpperCase();
   }
 }

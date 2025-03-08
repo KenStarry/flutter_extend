@@ -5,7 +5,8 @@ void main() {
   group("String", () {
     test("Generate Lorem String", () {
       final randomString = "".generateLoremIpsum(wordCount: 10);
-      expect(randomString, "Lorem ipsum dolor sit amet consectetur adipiscing elit sed do");
+      expect(randomString,
+          "Lorem ipsum dolor sit amet consectetur adipiscing elit sed do");
     });
   });
 }

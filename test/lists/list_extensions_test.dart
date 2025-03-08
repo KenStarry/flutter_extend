@@ -22,10 +22,14 @@ void main() {
 
   group('Chunked Lists', () {
     test('Return chunked list after invoking the sortBy method', () {
-      final cars = ["Urus", "BMW", "Aston Martin", "Ferari", "Lambo"]
-          .chunked(2);
+      final cars =
+          ["Urus", "BMW", "Aston Martin", "Ferari", "Lambo"].chunked(2);
 
-      expect(cars, [['Urus', 'BMW'], ['Aston Martin', 'Ferari'], ['Lambo']]);
+      expect(cars, [
+        ['Urus', 'BMW'],
+        ['Aston Martin', 'Ferari'],
+        ['Lambo']
+      ]);
     });
   });
 }
