@@ -1,3 +1,9 @@
+## 0.0.7
+* Added New Animation Extensions
+* Added New String, Regx Extensions
+* Updated README
+* Downgraded intl version to 0.19.0
+
 ## 0.0.6
 * Added New List Extensions
 * Added New String, Regx Extensions
