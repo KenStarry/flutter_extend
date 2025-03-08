@@ -391,6 +391,16 @@ A huge shoutout to the amazing people who have contributed to making **Flutter E
 
 ---
 
+## Examples
+
+📚 Enough talk, time for action! Want to see these extensions in action? Head over to our [**examples directory
+**](https://github.com/KenStarry/flutter_extend/tree/main/example/lib) directory and witness the magic firsthand! ✨
+🔍 **See. Try. Enjoy. Repeat.**
+
+_(Warning: May cause extreme excitement and spontaneous coding sprees.) 😆_
+
+---
+
 ## 🐝 **License – Go Wild!**
 
 This package is [**licensed under MIT**](https://github.com/KenStarry/flutter_extend/blob/main/LICENSE), meaning you can
@@ -399,8 +409,3 @@ use it, modify it, and show it off to your friends. 🎉
 ---
 
 🎉 **That’s it, folks!** Now go forth and write Flutter code like an absolute **legend**. 🚀💙
-
-## Examples
-
-Check out the [examples directory](https://github.com/KenStarry/flutter_extend/tree/main/example/lib) for complete
-examples demonstrating the use of this package:
