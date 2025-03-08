@@ -10,10 +10,7 @@ class Ball extends StatelessWidget {
     return Container(
       width: 100,
       height: 100,
-      decoration: BoxDecoration(
-          color: color,
-          shape: BoxShape.circle
-      ),
+      decoration: BoxDecoration(color: color, shape: BoxShape.circle),
     );
   }
 }
@@ -31,8 +28,7 @@ class Squicle extends StatelessWidget {
       decoration: BoxDecoration(
           color: color,
           shape: BoxShape.rectangle,
-        borderRadius: BorderRadius.circular(24)
-      ),
+          borderRadius: BorderRadius.circular(24)),
     );
   }
 }

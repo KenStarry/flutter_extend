@@ -6,21 +6,21 @@ void main() {
   group('DateTime is Today', () {
     test('Give a previous date should return false', () {
       final previousDate = DateTime(2023, 1, 1);
-      final isToday = previousDate.isToday;
+      final isToday = previousDate.isToday();
 
       expect(isToday, false);
     });
 
     test('Give current date should return true', () {
       final currentDate = DateTime.now();
-      final isToday = currentDate.isToday;
+      final isToday = currentDate.isToday();
 
       expect(isToday, true);
     });
 
     test('Give a future date should return false', () {
       final futureDate = DateTime(2050, 1, 1);
-      final isToday = futureDate.isToday;
+      final isToday = futureDate.isToday();
 
       expect(isToday, false);
     });
@@ -30,21 +30,21 @@ void main() {
   group('DateTime is Past', () {
     test('Give a previous date should return true', () {
       final previousDate = DateTime(2023, 1, 1);
-      final isToday = previousDate.isPast;
+      final isToday = previousDate.isPast();
 
       expect(isToday, true);
     });
 
     test('Give current date should return false', () {
       final currentDate = DateTime.now();
-      final isToday = currentDate.isPast;
+      final isToday = currentDate.isPast();
 
       expect(isToday, false);
     });
 
     test('Give a future date should return false', () {
       final futureDate = DateTime(2050, 1, 1);
-      final isToday = futureDate.isPast;
+      final isToday = futureDate.isPast();
 
       expect(isToday, false);
     });
@@ -54,21 +54,21 @@ void main() {
   group('DateTime is Future', () {
     test('Give a previous date should return false', () {
       final previousDate = DateTime(2023, 1, 1);
-      final isToday = previousDate.isFuture;
+      final isToday = previousDate.isFuture();
 
       expect(isToday, false);
     });
 
     test('Give current date should return false', () {
       final currentDate = DateTime.now();
-      final isToday = currentDate.isFuture;
+      final isToday = currentDate.isFuture();
 
       expect(isToday, false);
     });
 
     test('Give a future date should return true', () {
       final futureDate = DateTime(2050, 1, 1);
-      final isToday = futureDate.isFuture;
+      final isToday = futureDate.isFuture();
 
       expect(isToday, true);
     });
@@ -79,7 +79,7 @@ void main() {
     test("Should Return January as the month name", () {
       final dateTime = DateTime(2025, 1);
 
-      final name = dateTime.monthName;
+      final name = dateTime.monthName();
 
       expect(name, 'January');
     });
@@ -87,7 +87,7 @@ void main() {
     test("Should Return March as the month name", () {
       final dateTime = DateTime(2025, 3);
 
-      final name = dateTime.monthName;
+      final name = dateTime.monthName();
 
       expect(name, 'March');
     });
@@ -98,7 +98,7 @@ void main() {
     test("Should Return Jan as the month name", () {
       final dateTime = DateTime(2025, 1);
 
-      final name = dateTime.monthNameShort;
+      final name = dateTime.monthNameShort();
 
       expect(name, 'Jan');
     });
@@ -106,15 +106,15 @@ void main() {
     test("Should Return Mar as the month name", () {
       final dateTime = DateTime(2025, 3);
 
-      final name = dateTime.monthNameShort;
+      final name = dateTime.monthNameShort();
 
       expect(name, 'Mar');
     });
   });
-  
+
   //  Add Days
   group('Add Days', () {
-    test("Adding 5 days outputs 5 days after the current date", (){
+    test("Adding 5 days outputs 5 days after the current date", () {
       final dateTime = DateTime(2025, 1, 1);
 
       final currentDate = dateTime.addDays(5);

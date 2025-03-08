@@ -29,8 +29,7 @@ void main() {
   });
 
   group("Is Password Valid", () {
-
-    group("Minimum Length", (){
+    group("Minimum Length", () {
       test("Password with less than 8 characters should be invalid", () {
         final password = "Test1";
         final isValid = password.isPasswordValid(minLength: 8);
@@ -50,7 +49,7 @@ void main() {
       });
     });
 
-    group("Minimum Uppercase", (){
+    group("Minimum Uppercase", () {
       test("Password with less than 1 uppercase should be invalid", () {
         final password = "test1@";
         final isValid = password.isPasswordValid(minLength: 4, minUppercase: 1);
@@ -76,7 +75,7 @@ void main() {
       });
     });
 
-    group("Minimum Number", (){
+    group("Minimum Number", () {
       test("Password with no number should be invalid", () {
         final password = "Test@";
         final isValid = password.isPasswordValid(minLength: 4, minUppercase: 1);
@@ -85,27 +84,31 @@ void main() {
 
       test("Password with expected minimum numbers should be valid", () {
         final password = "Test@12345";
-        final isValid = password.isPasswordValid(minLength: 4, minNumbers: 5, minUppercase: 1);
+        final isValid = password.isPasswordValid(
+            minLength: 4, minNumbers: 5, minUppercase: 1);
         expect(isValid, true);
       });
     });
 
-    group("Special Characters", (){
+    group("Special Characters", () {
       test("Password with no special character should be invalid", () {
         final password = "Test123";
-        final isValid = password.isPasswordValid(minLength: 4, minUppercase: 1, minSpecialChars: 2);
+        final isValid = password.isPasswordValid(
+            minLength: 4, minUppercase: 1, minSpecialChars: 2);
         expect(isValid, false);
       });
       test("Password with less special characters should be invalid", () {
         final password = "Test123#";
-        final isValid = password.isPasswordValid(minLength: 4, minUppercase: 1, minSpecialChars: 2);
+        final isValid = password.isPasswordValid(
+            minLength: 4, minUppercase: 1, minSpecialChars: 2);
         expect(isValid, false);
       });
     });
 
     test("Password with all requirements should be valid", () {
       final password = "TeFDGGSEdfdst1234@%";
-      final isValid = password.isPasswordValid(minLength: 6, minNumbers: 3, minSpecialChars: 2, minUppercase: 4);
+      final isValid = password.isPasswordValid(
+          minLength: 6, minNumbers: 3, minSpecialChars: 2, minUppercase: 4);
       expect(isValid, true);
     });
   });
