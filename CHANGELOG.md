@@ -1,4 +1,4 @@
-## 0.0.7
+## 0.1.0
 * Added New Animation Extensions
 * Added New String, Regx Extensions
 * Updated README
