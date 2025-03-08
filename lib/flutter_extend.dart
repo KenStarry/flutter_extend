@@ -42,7 +42,7 @@ part 'generators/widget_generator_extensions.dart';
 /// String Extensions
 part 'string/global_string_extensions.dart';
 
-part 'string/auth_string_extensions.dart';
+part 'string/validation_string_extensions.dart';
 
 /// Color Extensions
 part 'colors/global_color_extensions.dart';

@@ -1,17 +1,6 @@
 part of '../flutter_extend.dart';
 
 extension GlobalStringExtensions on String {
-  /// Capitalize First Letter
-  String capitalizeFirstLetter() =>
-      isNotEmpty ? '${this[0].toUpperCase()}${substring(1)}' : this;
-
-  /// Capitalize First Letter of Each Word
-  String capitalizeFirstLetterOfEachWord() {
-    final wordArray = split(' ');
-
-    return wordArray.map((word) => word.capitalizeFirstLetter()).join(' ');
-  }
-
   /// Mask part of the String with character while keeping the first and last visible Count characters
   String mask({int visibleCount = 2, String maskCharacter = '*'}) {
     if (length <= visibleCount * 2) return this;

@@ -1,6 +1,6 @@
 part of '../flutter_extend.dart';
 
-extension AuthStringExtensions on String {
+extension ValidationStringExtensions on String {
   /// Check if Email is Valid
   bool isEmailValid() {
     final bool isEmailValid = RegExp(
