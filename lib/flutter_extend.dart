@@ -9,6 +9,10 @@ import 'package:flutter_extend/string/regex_string_extensions.dart';
 import 'package:intl/intl.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 
+/// Enums
+part 'enum/emoji.dart';
+part 'enum/emoji_category.dart';
+
 /// Animation Extensions
 part 'animations/animation_extensions.dart';
 part 'animations/fade_in_animation_extensions.dart';
@@ -43,6 +47,7 @@ part 'generators/widget_generator_extensions.dart';
 /// String Extensions
 part 'string/global_string_extensions.dart';
 part 'string/string_formatter_extensions.dart';
+part 'string/string_transformer_extensions.dart';
 part 'string/validation_string_extensions.dart';
 
 /// Color Extensions
