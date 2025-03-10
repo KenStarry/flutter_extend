@@ -6,8 +6,7 @@ void main() {
     test(
         "A string containing numbers should be removed to remain with the string",
         () {
-      final text = 'Sheilla123';
-      final text2 = '123Sheilla123 Ken24';
+      final text2 = '123Hello123 Ken24';
       final newText = text2.removeAllWordsStartingWithNumber();
 
       expect(newText, "Ken24");
