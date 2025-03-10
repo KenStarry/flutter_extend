@@ -376,11 +376,9 @@ A huge shoutout to the amazing people who have contributed to making **Flutter E
 
 ## 👥 **Want to Contribute?**
 
-🛠 Found something cool to add? **Fork this repo, create a new branch, and submit a pull request!**
+🛠 Found something cool to add? **Please read our [**Contribution Guidelines**](CONTRIBUTING.md) before making a pull request.**
 
 👾 **Join the Fun!** We love developers who break things (and then fix them).
-
-Please read our [**Contribution Guidelines**](CONTRIBUTING.md) before making a pull request. 
 
 ---
 
