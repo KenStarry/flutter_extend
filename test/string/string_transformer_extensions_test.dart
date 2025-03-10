@@ -25,7 +25,7 @@ void main() {
     });
   });
 
-  group('Ordinals', (){
+  group('Ordinals', () {
     test("String with Ordinals eg. 1st, 2nd etc", () {
       String text = '23';
 
