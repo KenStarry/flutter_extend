@@ -380,6 +380,8 @@ A huge shoutout to the amazing people who have contributed to making **Flutter E
 
 👾 **Join the Fun!** We love developers who break things (and then fix them).
 
+Please read our [**Contribution Guidelines**](CONTRIBUTING.md) before making a pull request. 
+
 ---
 
 ## 📘 **Useful Links – Because You’ll Need ‘Em**
