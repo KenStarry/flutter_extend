@@ -62,3 +62,6 @@ part 'widgets/text_extensions.dart';
 
 /// Context Extensions
 part 'context/context_extensions.dart';
+
+/// currency Extensions
+part 'string/currency_extensions.dart';
