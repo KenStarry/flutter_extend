@@ -43,6 +43,7 @@ Before you unleash your inner Flutter wizard, let’s lay down some ground rules
 
 7. **Commit like a poet** - Describe your masterpiece
    ```bash
+   dart format .
    git add .
    git commit -m "feat: Added a mind-blowing new String extension"
    ```
