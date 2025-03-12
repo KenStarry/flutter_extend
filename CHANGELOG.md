@@ -1,3 +1,7 @@
+## 0.1.1
+* Added New Number Currency Extensions
+* Updated README
+
 ## 0.1.0
 * Added New Animation Extensions
 * Added New String, Regx Extensions
