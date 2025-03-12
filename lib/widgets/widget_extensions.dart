@@ -62,8 +62,8 @@ extension WidgetExtensions on Widget {
   Widget visibility({bool visible = true}) =>
       Visibility(visible: visible, child: this);
 
-  /// Invinsible
-  Widget invinsible() => Visibility(visible: false, child: this);
+  /// Invisible
+  Widget invisible() => Visibility(visible: false, child: this);
 
   /// Visible
   Widget visible() => Visibility(visible: true, child: this);
