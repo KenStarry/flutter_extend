@@ -1,4 +1,3 @@
 part of '../flutter_extend.dart';
 
-enum CurrencyDirection {left, right}
-
+enum CurrencyDirection { left, right }
