@@ -51,7 +51,9 @@ BOOM. 💥 You’re now **10x more powerful** (results may vary).
 
 <details>
 
-<summary>Global Color Extensions (Click to open)</summary>
+<summary style="padding: 8px 8px 8px 8px;backgroundColor: #eeeeee;cursor: pointer">
+<p style="font-size:14px; display:inline">Global Color Extensions (Click to open)</p>
+</summary>
 
 | Extension                        | Description                                  | 
 |:---------------------------------|:---------------------------------------------|
@@ -68,7 +70,9 @@ BOOM. 💥 You’re now **10x more powerful** (results may vary).
 
 <details>
 
-<summary>🧠 Context Extensions (Click to reveal the magic!)</summary>
+<summary style="padding: 8px 8px 8px 8px;backgroundColor: #eeeeee;cursor: pointer">
+<p style="font-size:14px; display:inline">🧠 Context Extensions (Click to reveal the magic!)</p>
+</summary>
 
 | Extension              | Description                                     |
 |:-----------------------|:------------------------------------------------|
@@ -88,7 +92,9 @@ BOOM. 💥 You’re now **10x more powerful** (results may vary).
 
 <details>
 
-<summary>⏳ DateTime Comparison Extensions (Click to open)</summary>
+<summary style="padding: 8px 8px 8px 8px;backgroundColor: #eeeeee;cursor: pointer">
+<p style="font-size:14px; display:inline">⏳ DateTime Comparison Extensions (Click to open)</p>
+</summary>
 
 | Extension        | What It Does                         |  
 |------------------|--------------------------------------|  
@@ -102,7 +108,9 @@ BOOM. 💥 You’re now **10x more powerful** (results may vary).
 
 <details>
 
-<summary>🗓️ DateTime Formatting Extensions (Click to open)</summary>
+<summary style="padding: 8px 8px 8px 8px;backgroundColor: #eeeeee;cursor: pointer">
+<p style="font-size:14px; display:inline">🗓️ DateTime Formatting Extensions (Click to open)</p>
+</summary>
 
 | Extension           | Example                               | Output       |
 |:--------------------|:--------------------------------------|--------------|
@@ -119,7 +127,9 @@ BOOM. 💥 You’re now **10x more powerful** (results may vary).
 
 <details>
 
-<summary>🛠️ DateTime Manipulation Extensions (Click to open)</summary>
+<summary style="padding: 8px 8px 8px 8px;backgroundColor: #eeeeee;cursor: pointer">
+<p style="font-size:14px; display:inline">🛠️ DateTime Manipulation Extensions (Click to open)</p>
+</summary>
 
 | Extension                 | Example                                 | Output                 |
 |:--------------------------|:----------------------------------------|------------------------|
@@ -142,7 +152,9 @@ BOOM. 💥 You’re now **10x more powerful** (results may vary).
 
 <details>
 
-<summary>📁 File Extensions (Click to open)</summary>
+<summary style="padding: 8px 8px 8px 8px;backgroundColor: #eeeeee;cursor: pointer">
+<p style="font-size:14px; display:inline">📁 File Extensions (Click to open)</p>
+</summary>
 
 | Extension                     | Example                                   | Output                 |
 |:------------------------------|:------------------------------------------|------------------------|
@@ -163,7 +175,9 @@ _NB: String generator methods should be used on Empty Strings for the best resul
 
 <details>
 
-<summary>🔠 String Generator Extensions (Click to open)</summary>
+<summary style="padding: 8px 8px 8px 8px;backgroundColor: #eeeeee;cursor: pointer">
+<p style="font-size:14px; display:inline">🔠 String Generator Extensions (Click to open)</p>
+</summary>
 
 | Extension                                | Example                               | Output                                |
 |:-----------------------------------------|:--------------------------------------|---------------------------------------|
@@ -182,7 +196,9 @@ _NB: String generator methods should be used on Empty Strings for the best resul
 
 <details>
 
-<summary>📜 List Extensions (Click to open)</summary>
+<summary style="padding: 8px 8px 8px 8px;backgroundColor: #eeeeee;cursor: pointer">
+<p style="font-size:14px; display:inline">📜 List Extensions (Click to open)</p>
+</summary>
 
 | Extension                  | Example                                                                                | Output                                                   |
 |:---------------------------|:---------------------------------------------------------------------------------------|----------------------------------------------------------|
@@ -203,7 +219,9 @@ _NB: String generator methods should be used on Empty Strings for the best resul
 
 <details>
 
-<summary>Number Duration Extensions (Click to open)</summary>
+<summary style="padding: 8px 8px 8px 8px;backgroundColor: #eeeeee;cursor: pointer">
+<p style="font-size:14px; display:inline">🕦 Number Duration Extensions</p>
+</summary>
 
 | Extension    | Example       | Output                    |
 |:-------------|:--------------|---------------------------|
@@ -216,6 +234,19 @@ _NB: String generator methods should be used on Empty Strings for the best resul
 
 </details> 
 
+<details>
+
+<summary style="padding: 8px 8px 8px 8px;backgroundColor: #eeeeee;cursor: pointer">
+<p style="font-size:14px; display:inline">💰 Number Currency Extensions</p>
+</summary>
+
+| Extension          | Example  | Output      |
+|:-------------------|:---------|-------------|
+| `.toCurrency()`    | `100000` | KES 100,000 |
+| `.toAbbreviated()` | `100000` | 100K        |
+
+</details> 
+
 🧠 **Because numbers should work for you, not the other way around.**
 
 ---
@@ -224,7 +255,9 @@ _NB: String generator methods should be used on Empty Strings for the best resul
 
 <details>
 
-<summary>🔑 Validation String Extensions (Click to open)</summary>
+<summary style="padding: 8px 8px 8px 8px;backgroundColor: #eeeeee;cursor: pointer">
+<p style="font-size:14px; display:inline">🔑 Validation String Extensions (Click to open)</p>
+</summary>
 
 | Extension            | Example                         | Output  |
 |:---------------------|:--------------------------------|---------|
@@ -236,7 +269,9 @@ _NB: String generator methods should be used on Empty Strings for the best resul
 
 <details>
 
-<summary>🌍 Global String Extensions (Click to open)</summary>
+<summary style="padding: 8px 8px 8px 8px;backgroundColor: #eeeeee;cursor: pointer">
+<p style="font-size:14px; display:inline">🌍 Global String Extensions (Click to open)</p>
+</summary>
 
 | Extension                            | Example                                           | Output        |
 |:-------------------------------------|:--------------------------------------------------|---------------|
@@ -251,7 +286,9 @@ _NB: String generator methods should be used on Empty Strings for the best resul
 
 <details>
 
-<summary>🕵️ Regex String Extensions (Click to open)</summary>
+<summary style="padding: 8px 8px 8px 8px;backgroundColor: #eeeeee;cursor: pointer">
+<p style="font-size:14px; display:inline">🕵️ Regex String Extensions (Click to open)</p>
+</summary>
 
 | Extension                             | Example                                              | Output               |
 |:--------------------------------------|:-----------------------------------------------------|----------------------|
@@ -267,7 +304,9 @@ _NB: String generator methods should be used on Empty Strings for the best resul
 
 <details>
 
-<summary>🔢 String Formatter Extensions (Click to open)</summary>
+<summary style="padding: 8px 8px 8px 8px;backgroundColor: #eeeeee;cursor: pointer">
+<p style="font-size:14px; display:inline">🔢 String Formatter Extensions (Click to open)</p>
+</summary>
 
 | Extension                  | Example                           | Output          |
 |:---------------------------|:----------------------------------|-----------------|
@@ -289,7 +328,9 @@ _NB: String generator methods should be used on Empty Strings for the best resul
 
 <details>
 
-<summary>🧩 Widget Extensions (Click to open)</summary>
+<summary style="padding: 8px 8px 8px 8px;backgroundColor: #eeeeee;cursor: pointer">
+<p style="font-size:14px; display:inline">🧩 Widget Extensions (Click to open)</p>
+</summary>
 
 | Extension          | Example                                                             | Output                                                                         |
 |--------------------|---------------------------------------------------------------------|--------------------------------------------------------------------------------|
@@ -311,7 +352,9 @@ _NB: String generator methods should be used on Empty Strings for the best resul
 
 <details>
 
-<summary>🛠️ Scaffold Extensions (Click to open)</summary>
+<summary style="padding: 8px 8px 8px 8px;backgroundColor: #eeeeee;cursor: pointer">
+<p style="font-size:14px; display:inline">🛠️ Scaffold Extensions (Click to open)</p>
+</summary>
 
 | Extension               | Example                                                                                                                                                                       | Output                                                                                   |
 |:------------------------|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------|
@@ -321,7 +364,9 @@ _NB: String generator methods should be used on Empty Strings for the best resul
 
 <details>
 
-<summary>🔗 Text Extensions (Click to open)</summary>
+<summary style="padding: 8px 8px 8px 8px;backgroundColor: #eeeeee;cursor: pointer">
+<p style="font-size:14px; display:inline">🔗 Text Extensions (Click to open)</p>
+</summary>
 
 | Extension        | Example                                                                                                      | Output                                                                                               |
 |:-----------------|:-------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------|
@@ -357,18 +402,38 @@ _(Coming soon... currently summoning the code wizards for this one. 🧙‍♂�
 
 A huge shoutout to the amazing people who have contributed to making **Flutter Extend** even more awesome! 🎉
 
+<div style="display: flex; flex-wrap: wrap; flex-direction: row;">
+    <div style="margin: 4px 20px 0px 0px; flex-direction: column; align-items: center;justify-content: center;height: 100%; text-align: center;">
+        <img src="https://github.com/KenStarry.png" width="80" height="80" style="border-radius: 50%;object-fit: cover;"  alt="KenStarry"/>
+        <p style="text-align: center;font-size: 12px"><b>KenStarry (Owner)</b></p>
+    </div>
+    <div style="margin: 4px 20px 0px 0px; flex-direction: column; align-items: center;justify-content: center;height: 100%; text-align: center;">
+        <img src="https://github.com/okelloEnos.png" width="80" height="80" style="border-radius: 50%;object-fit: cover;"  alt="Enos Okello"/>
+        <p style="text-align: center;font-size: 12px">Enos Okello</p>
+    </div>
+</div>
+
 <div>
 
-<table style="border: none;">
-  <tr style="border: none;">
-    <a href="https://github.com/KenStarry" target="_blank"><td style="border: none; text-align: center; vertical-align: middle;">
-        <img src="https://github.com/KenStarry.png?s=80&v=4" width="80" style="border-radius: 50%;"  alt="KenStarry"/><br /><sub><b>KenStarry(Owner)</b></sub></td>
-</a>
-    <a href="https://github.com/okelloEnos" target="_blank"><td style="border: none; text-align: center; vertical-align: middle;">
-        <img src="https://github.com/okelloEnos.png?s=80&v=4" width="80" style="border-radius: 50%;"  alt="Enos Okello"/><br /><sub><b>Enos Okello</b></sub></td>
-</a>
-  </tr>
-</table>
+[//]: # (<table style="border: none;">)
+
+[//]: # (  <tr style="border: none;">)
+
+[//]: # (    <a href="https://github.com/KenStarry" target="_blank"><td style="border: none; text-align: center; vertical-align: middle;">)
+
+[//]: # (        <img src="https://github.com/KenStarry.png?s=80&v=4" width="80" style="border-radius: 50%;"  alt="KenStarry"/><br /><sub><b>KenStarry&#40;Owner&#41;</b></sub></td>)
+
+[//]: # (</a>)
+
+[//]: # (    <a href="https://github.com/okelloEnos" target="_blank"><td style="border: none; text-align: center; vertical-align: middle;">)
+
+[//]: # (        <img src="https://github.com/okelloEnos.png?s=80&v=4" width="80" style="border-radius: 50%;"  alt="Enos Okello"/><br /><sub><b>Enos Okello</b></sub></td>)
+
+[//]: # (</a>)
+
+[//]: # (  </tr>)
+
+[//]: # (</table>)
 
 </div>
 
@@ -376,7 +441,8 @@ A huge shoutout to the amazing people who have contributed to making **Flutter E
 
 ## 👥 **Want to Contribute?**
 
-🛠 Found something cool to add? **Please read our [**Contribution Guidelines**](CONTRIBUTING.md) before making a pull request.**
+🛠 Found something cool to add? **Please read our [**Contribution Guidelines**](CONTRIBUTING.md) before making a pull
+request.**
 
 👾 **Join the Fun!** We love developers who break things (and then fix them).
 
