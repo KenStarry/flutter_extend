@@ -402,7 +402,7 @@ _(Coming soon... currently summoning the code wizards for this one. 🧙‍♂�
 
 A huge shoutout to the amazing people who have contributed to making **Flutter Extend** even more awesome! 🎉
 
-<div style="display: flex; flex-wrap: wrap; flex-direction: row;">
+<div style="display: flex; flex-wrap: wrap; flex-direction: row;align-items: center;justify-content: left;">
     <div style="margin: 4px 20px 0px 0px; flex-direction: column; align-items: center;justify-content: center;height: 100%; text-align: center;">
         <img src="https://github.com/KenStarry.png" width="80" height="80" style="border-radius: 50%;object-fit: cover;"  alt="KenStarry"/>
         <p style="text-align: center;font-size: 12px"><b>KenStarry (Owner)</b></p>
