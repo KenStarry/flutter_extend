@@ -203,7 +203,7 @@ _NB: String generator methods should be used on Empty Strings for the best resul
 
 <details>
 
-<summary>Number Duration Extensions (Click to open)</summary>
+<summary>🕞 Number Duration Extensions</summary>
 
 | Extension    | Example       | Output                    |
 |:-------------|:--------------|---------------------------|
@@ -213,6 +213,17 @@ _NB: String generator methods should be used on Empty Strings for the best resul
 | `.secs`      | `5.secs`      | Duration(seconds: 5)      |
 | `.milliSecs` | `5.milliSecs` | Duration(milliSeconds: 5) |
 | `.microSecs` | `5.microSecs` | Duration(microSeconds: 5) |
+
+</details> 
+
+<details>
+
+<summary>💰 Number Currency Extensions</summary>
+
+| Extension          | Example                  | Output      |
+|:-------------------|:-------------------------|-------------|
+| `.toCurrency()`    | `100000.toCurrency()`    | KES 100,000 |
+| `.toAbbreviated()` | `100000.toAbbreviated()` | 100K        |
 
 </details> 
 
@@ -280,6 +291,17 @@ _NB: String generator methods should be used on Empty Strings for the best resul
 | `.fromBase64()`            | `'SGVsbG8='.fromBase64()`         | `'Hello'`       |
 
 </details>
+
+<details>
+
+<summary>💰 String Currency Extensions</summary>
+
+| Extension               | Example                         | Output    |
+|:------------------------|:--------------------------------|-----------|
+| `.thousandNumberFormat` | `'100000'.thousandNumberFormat` | '100,000' |
+| `.cleanNumbers`         | `'100,000'.cleanNumbers`        | '100000'  |
+
+</details> 
 
 🔠 **Say goodbye to messy text handling forever!**
 
@@ -376,7 +398,8 @@ A huge shoutout to the amazing people who have contributed to making **Flutter E
 
 ## 👥 **Want to Contribute?**
 
-🛠 Found something cool to add? **Please read our [**Contribution Guidelines**](CONTRIBUTING.md) before making a pull request.**
+🛠 Found something cool to add? **Please read our [**Contribution Guidelines**](CONTRIBUTING.md) before making a pull
+request.**
 
 👾 **Join the Fun!** We love developers who break things (and then fix them).
 
