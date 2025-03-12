@@ -12,6 +12,7 @@ import 'package:flutter_animate/flutter_animate.dart';
 /// Enums
 part 'enum/emoji.dart';
 part 'enum/emoji_category.dart';
+part 'enum/currency_direction.dart';
 
 /// Animation Extensions
 part 'animations/animation_extensions.dart';
@@ -22,9 +23,11 @@ part 'animations/list_animation_extensions.dart';
 /// File Extensions
 part 'files/file_extensions.dart';
 
-/// DateTime Extensions
+/// Number Extensions
 part 'number/number_duration_extensions.dart';
+part 'number/number_currency_extensions.dart';
 
+/// DateTime Extensions
 part 'date_time/date_time_manipulation_extensions.dart';
 part 'date_time/date_time_formatting_extensions.dart';
 part 'date_time/date_time_comparison_extensions.dart';
