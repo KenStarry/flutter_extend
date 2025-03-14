@@ -30,7 +30,7 @@ extension WidgetExtensions on Widget {
   Widget expanded({int flex = 1}) => Expanded(flex: flex, child: this);
 
   /// Add Flexible
-  Widget flexibe({int flex = 1, FlexFit fit = FlexFit.loose}) =>
+  Widget flexible({int flex = 1, FlexFit fit = FlexFit.loose}) =>
       Flexible(flex: flex, fit: fit, child: this);
 
   /// Add Padding to Widget
