@@ -67,6 +67,7 @@ part 'widgets/text_extensions.dart';
 part 'context/context_extensions.dart';
 part 'context/theme_context_extensions.dart';
 part 'context/media_query_context_extensions.dart';
+part 'context/navigator_context_extensions.dart';
 
 /// currency Extensions
 part 'string/currency_extensions.dart';
