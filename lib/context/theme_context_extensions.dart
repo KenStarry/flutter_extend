@@ -9,4 +9,7 @@ extension ThemeContextExtensions on BuildContext {
 
   /// Get Color Scheme
   ColorScheme get colorScheme => Theme.of(this).colorScheme;
+
+  /// Get Icon Theme Data
+  IconThemeData get iconTheme => Theme.of(this).iconTheme;
 }
