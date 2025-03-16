@@ -51,12 +51,15 @@ BOOM. 💥 You’re now **10x more powerful** (results may vary).
 
 <details>
 
-<summary>Global Color Extensions (Click to open)</summary>
+<summary>🖍️ Global Color Extensions (Click to open)</summary>
 
-| Extension                        | Description                                  | 
-|:---------------------------------|:---------------------------------------------|
-| `Colors.red.getLighterShade(10)` | Turns red into diet red (10% lighter)!       |
-| `Colors.red.toHex()`             | Converts red into that fancy #FF0000 format. |
+| Extension                   | Description                                        | Example                          |
+|:----------------------------|:---------------------------------------------------|----------------------------------|
+| `.getLighterShade(percent)` | Turns red into diet red (10\% lighter)\!           | `Colors.red.getLighterShade(10)` |
+| `.isDark`                   | Checks if the color is dark. 🌑                    | `Colors.red.isDark`              |
+| `.isLight`                  | Checks if the color is light. 🌞                   | `Colors.red.isLight`             |
+| `.luminance`                | Computes the luminance to determine brightness. 🌟 | `Colors.red.luminance`           |
+| `.toHex()`                  | Converts red into that fancy \#FF0000 format.      | `Colors.red.toHex()`             |
 
 </details> 
 
@@ -68,15 +71,71 @@ BOOM. 💥 You’re now **10x more powerful** (results may vary).
 
 <details>
 
-<summary>🧠 Context Extensions (Click to reveal the magic!)</summary>
+<summary>🧠 Global Context Extensions</summary>
 
-| Extension              | Description                                     |
-|:-----------------------|:------------------------------------------------|
-| `context.colorScheme`  | Knows what colors your app is vibing with. 🎨   |
-| `context.isDarkMode`   | Detects if your app has gone full Sith mode. 🌑 |
-| `context.screenHeight` | Measures how tall your app stands. 📏           |
-| `context.screenWidth`  | Measures the width, because size matters. 📐    |
-| `context.theme`        | Retrieves the whole theme like a style guru. 👔 |
+| Extension                        | Description                            |
+|:---------------------------------|:---------------------------------------|
+| `context.hideKeyboard()`         | Hides the keyboard when needed. ⌨️     |
+| `context.safeSetState(callback)` | Performs safe setState operations. 🏷️ |
+
+</details> 
+
+<details>
+
+<summary>📱 MediaQuery Context Extensions</summary>
+
+| Extension                   | Description                                     |
+|:----------------------------|:------------------------------------------------|
+| `context.isDarkMode`        | Detects if your app has gone full Sith mode. 🌑 |
+| `context.screenSize`        | Retrieves the full screen size. 📏              |
+| `context.screenHeight`      | Measures how tall your app stands. 📏           |
+| `context.screenWidth`       | Measures the width, because size matters. 📐    |
+| `context.theme`             | Retrieves the whole theme like a style guru. 👔 |
+| `context.safePadding`       | Retrieves the safe padding from MediaQuery. 🛏️ |
+| `context.orientation`       | Gets the screen orientation. 🔄                 |
+| `context.brightness`        | Checks platform brightness. 🌌                  |
+| `context.isKeyboardVisible` | Detects if the keyboard is on screen. ⌨️        |
+| `context.isLandscape`       | Detects if the device is in landscape mode. 🎢  |
+| `context.isPortrait`        | Detects if the device is in portrait mode. 🌆   |
+
+</details> 
+
+<details>
+
+<summary>↗️ Navigator Context Extensions</summary>
+
+| Extension                  | Description                                |
+|:---------------------------|:-------------------------------------------|
+| `context.navigateTo(page)` | Simplifies navigation to a new screen. 🚀  |
+| `context.popScreen()`      | Pops the current screen from the stack. ⏏️ |
+
+</details> 
+
+<details>
+
+<summary>💻 Platform Context Extensions</summary>
+
+| Extension           | Description                            |
+|:--------------------|:---------------------------------------|
+| `context.isIOS`     | Checks if the platform is iOS. 🌐      |
+| `context.isAndroid` | Checks if the platform is Android. 📱  |
+| `context.isWindows` | Checks if the platform is Windows. 🖥️ |
+| `context.isMacOS`   | Checks if the platform is macOS. 💻    |
+| `context.isLinux`   | Checks if the platform is Linux. 🐟    |
+| `context.isFuchsia` | Checks if the platform is Fuchsia. 🛶  |
+
+</details> 
+
+<details>
+
+<summary>🖍️ Theme Context Extensions</summary>
+
+| Extension             | Description                                     |
+|:----------------------|:------------------------------------------------|
+| `context.theme`       | Retrieves the whole theme like a style guru. 👔 |
+| `context.textTheme`   | Retrieves the text theme of the app. 🖊️        |
+| `context.colorScheme` | Retrieves the color scheme of the app. 🌐       |
+| `context.iconTheme`   | Retrieves the icon theme data. 💎               |
 
 </details> 
 

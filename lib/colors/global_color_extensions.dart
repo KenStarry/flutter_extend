@@ -1,15 +1,15 @@
 part of '../flutter_extend.dart';
 
 extension GlobalColorExtensions on Color {
-  /// Generate Random color
-  // Color generateRandomColor() {
-  //   final rand = Random();
-  //
-  //   Color randomColor = Color.fromRGBO(
-  //       rand.nextInt(255), rand.nextInt(255), rand.nextInt(255), 1);
-  //
-  //   return randomColor;
-  // }
+  /// Compute the Luminance of a Color to determine if it's dark or light
+  /// ** This is computationally expensive to calculate **.
+  double get luminance => computeLuminance();
+
+  /// Check if the Color is a Dark Color
+  bool get isDark => luminance < 0.5;
+
+  /// Check if the Color is a Light Color
+  bool get isLight => luminance >= 0.5;
 
   /// Lighten Color by percent (100 -> white)
   Color getLighterShade(double factor) {
