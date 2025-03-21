@@ -216,6 +216,52 @@ BOOM. 💥 You’re now **10x more powerful** (results may vary).
 
 ---
 
+### 🔖 **Future Extensions – Async Like a Boss!**
+
+💡 Tired of waiting for your Futures like they're stuck in dial-up internet? Say hello to **instant gratification**!
+These extensions turn async from a patience test into a **speedrun to success**—no more unnecessary delays, retries, or
+timeout meltdowns!
+
+<details>
+
+<summary>🕰️ Future Extensions (Click to reveal the magic)</summary>
+
+| Extension                                      | What It Does (In Normal-Person Terms)                          | Example                                                            |
+|------------------------------------------------|----------------------------------------------------------------|--------------------------------------------------------------------|
+| `.wrapInCompleter()`                           | Turns your Future into a **Completer** like a pro.             | `myFuture.wrapInCompleter()`                                       |
+| `.isComplete()`                                | Checks if a Future is **donezo** or still playing hard to get. | `myFuture.isComplete()`                                            |
+| `.retry(retries, delay)`                       | Gives your Future **extra lives** (great for network calls).   | `myFuture.retry(3, delay: Duration(seconds: 2))`                   |
+| `.timeoutWithFallback(timeout, fallbackValue)` | **Stops waiting** after a timeout and gives a backup plan.     | `myFuture.timeoutWithFallback(Duration(seconds: 5), fallbackData)` |
+| `.runAfterDelay(delay)`                        | **Hits snooze** before running the Future.                     | `myFuture.runAfterDelay(Duration(seconds: 2))`                     |
+
+</details>
+
+<details>
+
+<summary>🌀 Future Iterable Extensions (Click to reveal the magic)</summary>
+
+| Extension                     | What It Does (In Normal-Person Terms)                                      | Example                            |
+|-------------------------------|----------------------------------------------------------------------------|------------------------------------|
+| `.runWithLimit(limit)`        | Runs multiple Futures **at once**, but limits how many run simultaneously. | `myFutures.runWithLimit(3)`        |
+| `.runWithLimitOrdered(limit)` | Runs multiple Futures **in order**, with limited concurrent executions.    | `myFutures.runWithLimitOrdered(2)` |
+
+</details>
+
+<details>
+
+<summary>📋 String Future Extensions (Click to reveal the magic)</summary>
+
+| Extension            | What It Does (In Normal-Person Terms)                     | Example                                   |
+|----------------------|-----------------------------------------------------------|-------------------------------------------|
+| `.copyToClipboard()` | Copies a string to the clipboard **like a sneaky ninja**. | `await 'Hello, world!'.copyToClipboard()` |
+
+</details>
+
+💥 Wave goodbye to async chaos and say hello to Future-powered hyperspeed! No more waiting in the async DMV line—your
+code is now on rollerblades. 🛼⚡
+
+---
+
 ### 📦 **Generator Extensions – Auto-Magic String Generation!**
 
 _NB: String generator methods should be used on Empty Strings for the best results._
@@ -264,14 +310,14 @@ _NB: String generator methods should be used on Empty Strings for the best resul
 
 <summary>🕞 Number Duration Extensions</summary>
 
-| Extension    | Example       | Output                    |
-|:-------------|:--------------|---------------------------|
-| `.days`      | `5.days`      | Duration(days: 5)         |
-| `.hours`     | `5.hours`     | Duration(hours: 5)        |
-| `.mins`      | `5.mins`      | Duration(minutes: 5)      |
-| `.secs`      | `5.secs`      | Duration(seconds: 5)      |
-| `.milliSecs` | `5.milliSecs` | Duration(milliSeconds: 5) |
-| `.microSecs` | `5.microSecs` | Duration(microSeconds: 5) |
+| Extension       | Example          | Output                    |
+|:----------------|:-----------------|---------------------------|
+| `.days`         | `5.days`         | Duration(days: 5)         |
+| `.hours`        | `5.hours`        | Duration(hours: 5)        |
+| `.minutes`      | `5.minutes`      | Duration(minutes: 5)      |
+| `.seconds`      | `5.seconds`      | Duration(seconds: 5)      |
+| `.milliSeconds` | `5.milliSeconds` | Duration(milliSeconds: 5) |
+| `.microSeconds` | `5.microSeconds` | Duration(microSeconds: 5) |
 
 </details> 
 
@@ -419,12 +465,6 @@ _NB: String generator methods should be used on Empty Strings for the best resul
 ### 📦 **Animation Extensions – Because Motion is Magic!**
 
 _(Coming soon… if I ever stop procrastinating.)_
-
----
-
-### 🔖 **Future Extensions – Async Like a Boss!**
-
-_(Coming soon… after I finish scrolling through cat videos.)_
 
 ---
 

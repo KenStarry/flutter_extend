@@ -11,7 +11,7 @@ extension AnimationExtensions on Widget {
           bool autoPlay = true,
           void Function(AnimationController)? onInit}) =>
       animate(
-              delay: delay.milliSecs,
+              delay: delay.milliSeconds,
               autoPlay: autoPlay,
               onInit: onInit,
               onPlay: (controller) {
@@ -22,7 +22,7 @@ extension AnimationExtensions on Widget {
           .scaleXY(
               begin: 1.0,
               end: scaleFactor,
-              duration: duration.milliSecs,
+              duration: duration.milliSeconds,
               curve: Curves.easeInOut);
 
   /// Bounce Effect Animation
@@ -32,7 +32,7 @@ extension AnimationExtensions on Widget {
           bool repeat = true,
           void Function(AnimationController)? onInit}) =>
       animate(
-              delay: delay.milliSecs,
+              delay: delay.milliSeconds,
               autoPlay: true,
               onInit: onInit,
               onPlay: (controller) {
@@ -40,7 +40,7 @@ extension AnimationExtensions on Widget {
                   controller.repeat(reverse: true);
                 }
               })
-          .scaleXY(begin: 0.8, end: 1.1, duration: duration.milliSecs)
+          .scaleXY(begin: 0.8, end: 1.1, duration: duration.milliSeconds)
           .then()
-          .scaleXY(begin: 1.1, end: 1.0, duration: (duration ~/ 2).milliSecs);
+          .scaleXY(begin: 1.1, end: 1.0, duration: (duration ~/ 2).milliSeconds);
 }

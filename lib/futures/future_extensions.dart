@@ -25,7 +25,7 @@ extension FutureExtensions<T> on Future<T> {
     throw Exception('Failed after $retries retries');
   }
 
-  /// Future Timeout
+  /// Future Timeout - Stop waiting for this future after a timeout is complete
   Future<T> timeoutWithFallback(Duration timeout, T fallbackValue) =>
       this.timeout(timeout, onTimeout: () => fallbackValue);
 

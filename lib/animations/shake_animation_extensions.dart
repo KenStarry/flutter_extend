@@ -12,12 +12,12 @@ extension ShakeAnimationExtensions on Widget {
           Curve? curve,
           void Function(AnimationController)? onInit}) =>
       animate(
-          delay: delay.milliSecs,
+          delay: delay.milliSeconds,
           autoPlay: autoPlay,
           onInit: onInit,
           onPlay: (controller) {
             if (repeat) {
               controller.repeat(reverse: reverse);
             }
-          }).shake(duration: duration.milliSecs, hz: 5);
+          }).shake(duration: duration.milliSeconds, hz: 5);
 }

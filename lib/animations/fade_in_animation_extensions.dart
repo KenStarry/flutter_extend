@@ -12,7 +12,7 @@ extension FadeInAnimationExtensions on Widget {
           Curve? curve,
           void Function(AnimationController)? onInit}) =>
       animate(
-              delay: delay.milliSecs,
+              delay: delay.milliSeconds,
               autoPlay: autoPlay,
               onInit: onInit,
               onPlay: (controller) {
@@ -21,7 +21,7 @@ extension FadeInAnimationExtensions on Widget {
                 }
               })
           .fadeIn(
-              duration: duration.milliSecs,
+              duration: duration.milliSeconds,
               begin: begin,
               curve: curve ?? Curves.easeIn);
 
@@ -36,7 +36,7 @@ extension FadeInAnimationExtensions on Widget {
           Curve? curve,
           void Function(AnimationController)? onInit}) =>
       animate(
-              delay: delay.milliSecs,
+              delay: delay.milliSeconds,
               autoPlay: autoPlay,
               onInit: onInit,
               onPlay: (controller) {
@@ -45,7 +45,7 @@ extension FadeInAnimationExtensions on Widget {
                 }
               })
           .fadeOut(
-              duration: duration.milliSecs,
+              duration: duration.milliSeconds,
               begin: begin,
               curve: curve ?? Curves.easeIn);
 
@@ -60,7 +60,7 @@ extension FadeInAnimationExtensions on Widget {
           Curve? curve,
           void Function(AnimationController)? onInit}) =>
       animate(
-              delay: delay.milliSecs,
+              delay: delay.milliSeconds,
               autoPlay: autoPlay,
               onInit: onInit,
               onPlay: (controller) {
@@ -69,11 +69,11 @@ extension FadeInAnimationExtensions on Widget {
                 }
               })
           .fadeIn(
-              duration: duration.milliSecs,
+              duration: duration.milliSeconds,
               begin: 0,
               curve: curve ?? Curves.ease)
           .moveY(
-              duration: duration.milliSecs,
+              duration: duration.milliSeconds,
               begin: verticalOffset,
               end: 0,
               curve: curve ?? Curves.ease);
@@ -88,7 +88,7 @@ extension FadeInAnimationExtensions on Widget {
           bool autoPlay = true,
           void Function(AnimationController)? onInit}) =>
       animate(
-              delay: delay.milliSecs,
+              delay: delay.milliSeconds,
               autoPlay: autoPlay,
               onInit: onInit,
               onPlay: (controller) {
@@ -96,14 +96,14 @@ extension FadeInAnimationExtensions on Widget {
                   controller.repeat(reverse: reverse);
                 }
               })
-          .fadeIn(duration: duration.milliSecs, begin: 0, curve: Curves.ease)
+          .fadeIn(duration: duration.milliSeconds, begin: 0, curve: Curves.ease)
           .moveY(
-              duration: duration.milliSecs,
+              duration: duration.milliSeconds,
               begin: verticalOffset,
               end: 0,
               curve: Curves.ease)
           .then()
-          .moveY(duration: duration.milliSecs, begin: -30, curve: Curves.ease);
+          .moveY(duration: duration.milliSeconds, begin: -30, curve: Curves.ease);
 
   /// Fade In Move In Bottom Sticky Bouncy Animation
   Widget fadeInMoveInBottomStickyBouncy(
@@ -115,7 +115,7 @@ extension FadeInAnimationExtensions on Widget {
           bool autoPlay = true,
           void Function(AnimationController)? onInit}) =>
       animate(
-              delay: delay.milliSecs,
+              delay: delay.milliSeconds,
               autoPlay: autoPlay,
               onInit: onInit,
               onPlay: (controller) {
@@ -123,15 +123,15 @@ extension FadeInAnimationExtensions on Widget {
                   controller.repeat(reverse: reverse);
                 }
               })
-          .fadeIn(duration: duration.milliSecs, begin: 0, curve: Curves.ease)
+          .fadeIn(duration: duration.milliSeconds, begin: 0, curve: Curves.ease)
           .moveY(
-              duration: duration.milliSecs,
+              duration: duration.milliSeconds,
               begin: verticalOffset,
               end: 0,
               curve: Curves.ease)
           .then()
           .moveY(
-              duration: duration.milliSecs,
+              duration: duration.milliSeconds,
               begin: verticalOffset,
               end: 0,
               curve: Curves.elasticOut);
@@ -147,7 +147,7 @@ extension FadeInAnimationExtensions on Widget {
           Curve? curve,
           void Function(AnimationController)? onInit}) =>
       animate(
-              delay: delay.milliSecs,
+              delay: delay.milliSeconds,
               autoPlay: autoPlay,
               onInit: onInit,
               onPlay: (controller) {
@@ -156,11 +156,11 @@ extension FadeInAnimationExtensions on Widget {
                 }
               })
           .fadeIn(
-              duration: duration.milliSecs,
+              duration: duration.milliSeconds,
               begin: 0,
               curve: curve ?? Curves.ease)
           .moveY(
-              duration: duration.milliSecs,
+              duration: duration.milliSeconds,
               begin: -verticalOffset,
               end: 0,
               curve: curve ?? Curves.ease);
@@ -175,7 +175,7 @@ extension FadeInAnimationExtensions on Widget {
           bool autoPlay = true,
           void Function(AnimationController)? onInit}) =>
       animate(
-              delay: delay.milliSecs,
+              delay: delay.milliSeconds,
               autoPlay: autoPlay,
               onInit: onInit,
               onPlay: (controller) {
@@ -183,14 +183,14 @@ extension FadeInAnimationExtensions on Widget {
                   controller.repeat(reverse: reverse);
                 }
               })
-          .fadeIn(duration: duration.milliSecs, begin: 0, curve: Curves.ease)
+          .fadeIn(duration: duration.milliSeconds, begin: 0, curve: Curves.ease)
           .moveY(
-              duration: duration.milliSecs,
+              duration: duration.milliSeconds,
               begin: -verticalOffset,
               end: 0,
               curve: Curves.ease)
           .then()
-          .moveY(duration: duration.milliSecs, begin: 30, curve: Curves.ease);
+          .moveY(duration: duration.milliSeconds, begin: 30, curve: Curves.ease);
 
   /// Fade In Move In Bottom Sticky Bouncy Animation
   Widget fadeInMoveInTopStickyBouncy(
@@ -202,7 +202,7 @@ extension FadeInAnimationExtensions on Widget {
           bool autoPlay = true,
           void Function(AnimationController)? onInit}) =>
       animate(
-              delay: delay.milliSecs,
+              delay: delay.milliSeconds,
               autoPlay: autoPlay,
               onInit: onInit,
               onPlay: (controller) {
@@ -210,15 +210,15 @@ extension FadeInAnimationExtensions on Widget {
                   controller.repeat(reverse: reverse);
                 }
               })
-          .fadeIn(duration: duration.milliSecs, begin: 0, curve: Curves.ease)
+          .fadeIn(duration: duration.milliSeconds, begin: 0, curve: Curves.ease)
           .moveY(
-              duration: duration.milliSecs,
+              duration: duration.milliSeconds,
               begin: -verticalOffset,
               end: 0,
               curve: Curves.ease)
           .then()
           .moveY(
-              duration: duration.milliSecs,
+              duration: duration.milliSeconds,
               begin: -verticalOffset,
               end: 0,
               curve: Curves.elasticOut);
@@ -234,7 +234,7 @@ extension FadeInAnimationExtensions on Widget {
           Curve? curve,
           void Function(AnimationController)? onInit}) =>
       animate(
-              delay: delay.milliSecs,
+              delay: delay.milliSeconds,
               autoPlay: autoPlay,
               onInit: onInit,
               onPlay: (controller) {
@@ -243,11 +243,11 @@ extension FadeInAnimationExtensions on Widget {
                 }
               })
           .fadeIn(
-              duration: duration.milliSecs,
+              duration: duration.milliSeconds,
               begin: 0,
               curve: curve ?? Curves.ease)
           .moveX(
-              duration: duration.milliSecs,
+              duration: duration.milliSeconds,
               begin: -horizontalOffset,
               end: 0,
               curve: curve ?? Curves.ease);
@@ -262,7 +262,7 @@ extension FadeInAnimationExtensions on Widget {
           bool autoPlay = true,
           void Function(AnimationController)? onInit}) =>
       animate(
-              delay: delay.milliSecs,
+              delay: delay.milliSeconds,
               autoPlay: autoPlay,
               onInit: onInit,
               onPlay: (controller) {
@@ -270,14 +270,14 @@ extension FadeInAnimationExtensions on Widget {
                   controller.repeat(reverse: reverse);
                 }
               })
-          .fadeIn(duration: duration.milliSecs, begin: 0, curve: Curves.ease)
+          .fadeIn(duration: duration.milliSeconds, begin: 0, curve: Curves.ease)
           .moveX(
-              duration: duration.milliSecs,
+              duration: duration.milliSeconds,
               begin: -horizontalOffset,
               end: 0,
               curve: Curves.ease)
           .then()
-          .moveX(duration: duration.milliSecs, begin: 30, curve: Curves.ease);
+          .moveX(duration: duration.milliSeconds, begin: 30, curve: Curves.ease);
 
   /// Fade In Move In Left Bouncy Animation
   Widget fadeInMoveInLeftStickyBouncy(
@@ -289,7 +289,7 @@ extension FadeInAnimationExtensions on Widget {
           bool autoPlay = true,
           void Function(AnimationController)? onInit}) =>
       animate(
-              delay: delay.milliSecs,
+              delay: delay.milliSeconds,
               autoPlay: autoPlay,
               onInit: onInit,
               onPlay: (controller) {
@@ -297,15 +297,15 @@ extension FadeInAnimationExtensions on Widget {
                   controller.repeat(reverse: reverse);
                 }
               })
-          .fadeIn(duration: duration.milliSecs, begin: 0, curve: Curves.ease)
+          .fadeIn(duration: duration.milliSeconds, begin: 0, curve: Curves.ease)
           .moveX(
-              duration: duration.milliSecs,
+              duration: duration.milliSeconds,
               begin: -horizontalOffset,
               end: 0,
               curve: Curves.ease)
           .then()
           .moveX(
-              duration: duration.milliSecs,
+              duration: duration.milliSeconds,
               begin: -horizontalOffset,
               end: 0,
               curve: Curves.elasticOut);
@@ -321,7 +321,7 @@ extension FadeInAnimationExtensions on Widget {
           Curve? curve,
           void Function(AnimationController)? onInit}) =>
       animate(
-              delay: delay.milliSecs,
+              delay: delay.milliSeconds,
               autoPlay: autoPlay,
               onInit: onInit,
               onPlay: (controller) {
@@ -330,11 +330,11 @@ extension FadeInAnimationExtensions on Widget {
                 }
               })
           .fadeIn(
-              duration: duration.milliSecs,
+              duration: duration.milliSeconds,
               begin: 0,
               curve: curve ?? Curves.ease)
           .moveX(
-              duration: duration.milliSecs,
+              duration: duration.milliSeconds,
               begin: horizontalOffset,
               end: 0,
               curve: curve ?? Curves.ease);
@@ -350,7 +350,7 @@ extension FadeInAnimationExtensions on Widget {
           Curve? curve,
           void Function(AnimationController)? onInit}) =>
       animate(
-              delay: delay.milliSecs,
+              delay: delay.milliSeconds,
               autoPlay: autoPlay,
               onInit: onInit,
               onPlay: (controller) {
@@ -359,16 +359,16 @@ extension FadeInAnimationExtensions on Widget {
                 }
               })
           .fadeIn(
-              duration: duration.milliSecs,
+              duration: duration.milliSeconds,
               begin: 0,
               curve: curve ?? Curves.ease)
           .moveX(
-              duration: duration.milliSecs,
+              duration: duration.milliSeconds,
               begin: horizontalOffset,
               end: 0,
               curve: curve ?? Curves.ease)
           .then()
-          .moveX(duration: duration.milliSecs, begin: -30, curve: Curves.ease);
+          .moveX(duration: duration.milliSeconds, begin: -30, curve: Curves.ease);
 
   /// Fade In Move In Right Sticky Bouncy Animation
   Widget fadeInMoveInRightStickyBouncy(
@@ -381,7 +381,7 @@ extension FadeInAnimationExtensions on Widget {
           Curve? curve,
           void Function(AnimationController)? onInit}) =>
       animate(
-              delay: delay.milliSecs,
+              delay: delay.milliSeconds,
               autoPlay: autoPlay,
               onInit: onInit,
               onPlay: (controller) {
@@ -390,17 +390,17 @@ extension FadeInAnimationExtensions on Widget {
                 }
               })
           .fadeIn(
-              duration: duration.milliSecs,
+              duration: duration.milliSeconds,
               begin: 0,
               curve: curve ?? Curves.ease)
           .moveX(
-              duration: duration.milliSecs,
+              duration: duration.milliSeconds,
               begin: horizontalOffset,
               end: 0,
               curve: curve ?? Curves.ease)
           .then()
           .moveX(
-              duration: duration.milliSecs,
+              duration: duration.milliSeconds,
               begin: horizontalOffset,
               end: 0,
               curve: Curves.elasticOut);
