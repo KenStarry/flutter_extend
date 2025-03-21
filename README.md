@@ -483,11 +483,17 @@ A huge shoutout to the amazing people who have contributed to making **Flutter E
 <table style="border: none;">
   <tr style="border: none;">
     <a href="https://github.com/KenStarry" target="_blank"><td style="border: none; text-align: center; vertical-align: middle;">
-        <img src="https://github.com/KenStarry.png?s=80&v=4" width="80" style="border-radius: 50%;"  alt="KenStarry"/><br /><sub><b>KenStarry(Owner)</b></sub></td>
+        <img src="https://github.com/KenStarry.png" width="80" style="border-radius: 50%;"  alt="KenStarry"/><br /><sub><b>KenStarry(Owner)</b></sub></td>
 </a>
     <a href="https://github.com/okelloEnos" target="_blank"><td style="border: none; text-align: center; vertical-align: middle;">
-        <img src="https://github.com/okelloEnos.png?s=80&v=4" width="80" style="border-radius: 50%;"  alt="Enos Okello"/><br /><sub><b>Enos Okello</b></sub></td>
+        <img src="https://github.com/okelloEnos.png" width="80" style="border-radius: 50%;"  alt="Enos Okello"/><br /><sub><b>Enos Okello</b></sub></td>
 </a>
+
+<a href="https://github.com/MohammedHishamFarouk" target="_blank"><td style="border: none; text-align: center; vertical-align: middle;">
+<img src="https://github.com/MohammedHishamFarouk.png" width="80" style="border-radius: 50%;"  alt="Mohammed Hisham"/><br /><sub><b>
+Mohammed Hisham</b></sub></td>
+</a>
+
   </tr>
 </table>
 
