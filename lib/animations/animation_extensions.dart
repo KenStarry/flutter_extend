@@ -42,5 +42,6 @@ extension AnimationExtensions on Widget {
               })
           .scaleXY(begin: 0.8, end: 1.1, duration: duration.milliSeconds)
           .then()
-          .scaleXY(begin: 1.1, end: 1.0, duration: (duration ~/ 2).milliSeconds);
+          .scaleXY(
+              begin: 1.1, end: 1.0, duration: (duration ~/ 2).milliSeconds);
 }

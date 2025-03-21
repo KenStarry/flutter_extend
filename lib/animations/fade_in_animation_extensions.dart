@@ -103,7 +103,8 @@ extension FadeInAnimationExtensions on Widget {
               end: 0,
               curve: Curves.ease)
           .then()
-          .moveY(duration: duration.milliSeconds, begin: -30, curve: Curves.ease);
+          .moveY(
+              duration: duration.milliSeconds, begin: -30, curve: Curves.ease);
 
   /// Fade In Move In Bottom Sticky Bouncy Animation
   Widget fadeInMoveInBottomStickyBouncy(
@@ -190,7 +191,8 @@ extension FadeInAnimationExtensions on Widget {
               end: 0,
               curve: Curves.ease)
           .then()
-          .moveY(duration: duration.milliSeconds, begin: 30, curve: Curves.ease);
+          .moveY(
+              duration: duration.milliSeconds, begin: 30, curve: Curves.ease);
 
   /// Fade In Move In Bottom Sticky Bouncy Animation
   Widget fadeInMoveInTopStickyBouncy(
@@ -277,7 +279,8 @@ extension FadeInAnimationExtensions on Widget {
               end: 0,
               curve: Curves.ease)
           .then()
-          .moveX(duration: duration.milliSeconds, begin: 30, curve: Curves.ease);
+          .moveX(
+              duration: duration.milliSeconds, begin: 30, curve: Curves.ease);
 
   /// Fade In Move In Left Bouncy Animation
   Widget fadeInMoveInLeftStickyBouncy(
@@ -368,7 +371,8 @@ extension FadeInAnimationExtensions on Widget {
               end: 0,
               curve: curve ?? Curves.ease)
           .then()
-          .moveX(duration: duration.milliSeconds, begin: -30, curve: Curves.ease);
+          .moveX(
+              duration: duration.milliSeconds, begin: -30, curve: Curves.ease);
 
   /// Fade In Move In Right Sticky Bouncy Animation
   Widget fadeInMoveInRightStickyBouncy(
