@@ -1,3 +1,9 @@
+## 0.1.2
+* Added Future Extensions
+* Added New Context Extensions
+* Number Duration Extensions have been modified and naming conventions have been restructured.
+* Updated README
+
 ## 0.1.1
 * Added New Number Currency Extensions
 * Updated README

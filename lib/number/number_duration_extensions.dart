@@ -8,14 +8,14 @@ extension NumberDurationExtensions on int {
   Duration get hours => Duration(hours: this);
 
   /// Minutes
-  Duration get mins => Duration(minutes: this);
+  Duration get minutes => Duration(minutes: this);
 
   /// Seconds
-  Duration get secs => Duration(seconds: this);
+  Duration get seconds => Duration(seconds: this);
 
   /// Milliseconds
-  Duration get milliSecs => Duration(milliseconds: this);
+  Duration get milliSeconds => Duration(milliseconds: this);
 
   /// Microseconds
-  Duration get microSecs => Duration(microseconds: this);
+  Duration get microSeconds => Duration(microseconds: this);
 }

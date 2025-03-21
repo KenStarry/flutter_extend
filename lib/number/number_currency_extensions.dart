@@ -34,20 +34,25 @@ extension NumberCurrencyExtensions on num {
     String? currencySymbol,
     CurrencyDirection currencyDirection = CurrencyDirection.left,
   }) {
-    if (this >= 1e9) {
-      return currencyDirection == CurrencyDirection.left
-          ? '${currencySymbol == null ? '' : '$currencySymbol '}${(this / 1e9).toStringAsFixed(decimalCount)}${isLowercase ? 'b' : 'B'}'
-          : '${(this / 1e9).toStringAsFixed(decimalCount)}${isLowercase ? 'b' : 'B'}${currencySymbol == null ? '' : ' $currencySymbol'}';
-    }
-    if (this >= 1e6) {
-      return currencyDirection == CurrencyDirection.left
-          ? '${currencySymbol == null ? '' : '$currencySymbol '}${(this / 1e6).toStringAsFixed(decimalCount)}${isLowercase ? 'm' : 'M'}'
-          : '${(this / 1e6).toStringAsFixed(decimalCount)}${isLowercase ? 'm' : 'M'}${currencySymbol == null ? '' : ' $currencySymbol'}';
-    }
-    if (this >= 1e3) {
-      return currencyDirection == CurrencyDirection.left
-          ? '${currencySymbol == null ? '' : '$currencySymbol '}${(this / 1e3).toStringAsFixed(decimalCount)}${isLowercase ? 'k' : 'K'}'
-          : '${(this / 1e3).toStringAsFixed(decimalCount)}${isLowercase ? 'k' : 'K'}${currencySymbol == null ? '' : ' $currencySymbol'}';
+    final Map<double, List<String>> suffixes = {
+      1e9: ['B', 'b'],
+      1e6: ['M', 'm'],
+      1e3: ['K', 'k']
+    };
+    // Store the absolute value to ensure correct abbreviation logic for negative numbers.
+    var value = this;
+    for (final entry in suffixes.entries) {
+      // Convert to positive for comparison, but keep the original number's sign.
+      if (this < 0) value = -this;
+      if (value >= entry.key) {
+        final formattedValue = (this / entry.key).toStringAsFixed(decimalCount);
+        final suffix = isLowercase ? entry.value[1] : entry.value[0];
+        final symbol = currencySymbol != null ? '$currencySymbol ' : '';
+
+        return currencyDirection == CurrencyDirection.left
+            ? '$symbol$formattedValue$suffix'.trim()
+            : '$formattedValue$suffix ${currencySymbol ?? ''}'.trim();
+      }
     }
 
     return toString();

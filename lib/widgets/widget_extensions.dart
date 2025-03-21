@@ -30,7 +30,7 @@ extension WidgetExtensions on Widget {
   Widget expanded({int flex = 1}) => Expanded(flex: flex, child: this);
 
   /// Add Flexible
-  Widget flexibe({int flex = 1, FlexFit fit = FlexFit.loose}) =>
+  Widget flexible({int flex = 1, FlexFit fit = FlexFit.loose}) =>
       Flexible(flex: flex, fit: fit, child: this);
 
   /// Add Padding to Widget
@@ -62,8 +62,8 @@ extension WidgetExtensions on Widget {
   Widget visibility({bool visible = true}) =>
       Visibility(visible: visible, child: this);
 
-  /// Invinsible
-  Widget invinsible() => Visibility(visible: false, child: this);
+  /// Invisible
+  Widget invisible() => Visibility(visible: false, child: this);
 
   /// Visible
   Widget visible() => Visibility(visible: true, child: this);
