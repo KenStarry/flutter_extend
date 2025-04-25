@@ -46,4 +46,22 @@ extension StringTransformerExtensions on String {
         return '${this}th';
     }
   }
+
+  /// Ensure String ends with Suffix
+  String ensureEndsWith(String suffix) {
+    if (!endsWith(suffix) && isNotEmpty) {
+      return '$this$suffix';
+    }
+
+    return this;
+  }
+
+  /// Ensure String Starts With Prefix
+  String ensureStartsWith(String prefix) {
+    if (!startsWith(prefix) && isNotEmpty) {
+      return '$prefix$this';
+    }
+
+    return this;
+  }
 }

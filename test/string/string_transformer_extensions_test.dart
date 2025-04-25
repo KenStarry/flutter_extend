@@ -39,6 +39,46 @@ void main() {
     });
   });
 
+  group("Ends With", () {
+    test("Ensure an empty String returns the empty String", () {
+      final text = '';
+
+      expect(text.ensureEndsWith(".pdf"), '');
+    });
+
+    test("Ensure a String without the suffix returns the String + the suffix", () {
+      final text = 'file';
+
+      expect(text.ensureEndsWith(".pdf"), 'file.pdf');
+    });
+
+    test("Ensure a String with the suffix returns the String + the suffix", () {
+      final text = 'file.pdf';
+
+      expect(text.ensureEndsWith(".pdf"), 'file.pdf');
+    });
+  });
+
+  group("Starts With", () {
+    test("Ensure an empty String returns the empty String", () {
+      final text = '';
+
+      expect(text.ensureStartsWith("hey"), '');
+    });
+
+    test("Ensure a String without the prefix returns the String + the prefix", () {
+      final text = 'file';
+
+      expect(text.ensureStartsWith("hey"), 'heyfile');
+    });
+
+    test("Ensure a String with the prefix returns the String + the prefix", () {
+      final text = 'heyfile.pdf';
+
+      expect(text.ensureStartsWith("hey"), 'heyfile.pdf');
+    });
+  });
+
   test("Encode a String to URI format", () {
     String text = 'hello world';
 
