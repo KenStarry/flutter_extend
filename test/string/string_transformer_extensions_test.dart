@@ -46,7 +46,8 @@ void main() {
       expect(text.ensureEndsWith(".pdf"), '');
     });
 
-    test("Ensure a String without the suffix returns the String + the suffix", () {
+    test("Ensure a String without the suffix returns the String + the suffix",
+        () {
       final text = 'file';
 
       expect(text.ensureEndsWith(".pdf"), 'file.pdf');
@@ -66,7 +67,8 @@ void main() {
       expect(text.ensureStartsWith("hey"), '');
     });
 
-    test("Ensure a String without the prefix returns the String + the prefix", () {
+    test("Ensure a String without the prefix returns the String + the prefix",
+        () {
       final text = 'file';
 
       expect(text.ensureStartsWith("hey"), 'heyfile');
