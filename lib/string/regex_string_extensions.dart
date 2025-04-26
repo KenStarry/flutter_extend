@@ -25,4 +25,7 @@ extension RegexStringExtensions on String {
       .allMatches(this)
       .map((match) => match.group(0)!)
       .toList();
+
+  /// Split By Upper Case
+  List<String> splitByUpperCase() => split(RegExp(r'(?=[A-Z])'));
 }
