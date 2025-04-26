@@ -1,3 +1,6 @@
+## 0.1.3
+* Added More Regex Extensions
+
 ## 0.1.2
 * Added Future Extensions
 * Added New Context Extensions
