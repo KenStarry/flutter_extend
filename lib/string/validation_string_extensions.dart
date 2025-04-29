@@ -37,4 +37,25 @@ extension ValidationStringExtensions on String {
 
     return isValidURL;
   }
+
+  /// Check if String is a valid JWT
+  bool isValidJWT() {
+    if (isEmpty) return false;
+
+    // A valid JWT should have atleast 2 parts. Standard have 3 parts.
+    if (split('.').length < 2) return false;
+
+    // Decode token.
+    final decodedList = base64Url.decode(base64Url.normalize(split(".")[1]));
+    final payloadMap = utf8.decode(decodedList);
+
+    Map<String, dynamic> map = json.decode(payloadMap);
+
+    // Check if it has exp value.
+    if (map['exp'] == null) return false;
+    final expiry = DateTime.fromMillisecondsSinceEpoch(map['exp'] * 1000);
+
+    // Check if the token is expired
+    return expiry.isFuture();
+  }
 }

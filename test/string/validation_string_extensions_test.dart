@@ -1,3 +1,5 @@
+import 'dart:convert';
+
 import 'package:flutter_extend/flutter_extend.dart';
 import 'package:flutter_test/flutter_test.dart';
 
@@ -109,6 +111,49 @@ void main() {
       final password = "TeFDGGSEdfdst1234@%";
       final isValid = password.isPasswordValid(
           minLength: 6, minNumbers: 3, minSpecialChars: 2, minUppercase: 4);
+      expect(isValid, true);
+    });
+  });
+
+  group("Is JWT Valid", () {
+    test("Empty token should be invalid", () {
+      final token = "";
+      final isValid = token.isValidJWT();
+      expect(isValid, false);
+    });
+
+    test("Token with less than 2 parts should be invalid", () {
+      final token = "onlyonepart";
+      final isValid = token.isValidJWT();
+      expect(isValid, false);
+    });
+
+    test("Token without exp should be invalid", () {
+      final partOne = base64Url.encode(utf8.encode('{"alg":"none"}'));
+      final partTwo = base64Url.encode(utf8.encode('{"something":9999999999}'));
+      final token = '$partOne.$partTwo';
+
+      final isValid = token.isValidJWT();
+      expect(isValid, false);
+    });
+
+    test("Expired token should be invalid", () {
+      final partOne = base64Url.encode(utf8.encode('{"alg":"none"}'));
+      final exp = DateTime(2025, 1, 1).millisecondsSinceEpoch ~/ 1000;
+      final partTwo = base64Url.encode(utf8.encode('{"exp": $exp}'));
+      final token = '$partOne.$partTwo';
+
+      final isValid = token.isValidJWT();
+      expect(isValid, false);
+    });
+
+    test("Token with correct exp should be valid", () {
+      final partOne = base64Url.encode(utf8.encode('{"alg":"none"}'));
+      final exp = DateTime.now().addDays(5).millisecondsSinceEpoch ~/ 1000;
+      final partTwo = base64Url.encode(utf8.encode('{"exp": $exp}'));
+      final token = '$partOne.$partTwo';
+
+      final isValid = token.isValidJWT();
       expect(isValid, true);
     });
   });
