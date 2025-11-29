@@ -1,3 +1,19 @@
+## 0.2.0
+* Added Focus Node Extensions
+* Fixed MediaQuery Platform Brightness implementation
+* New popUntil() extension for the Navigator class
+* ### Added
+* Added `30.loremWords` as the new preferred method for generating Lorem Ipsum words.
+* Added `30.loremParagraphs` as the new preferred method for generating Lorem Ipsum paragraphs.
+* Added `5.randomString` as the new preferred method for generating a random alphanumeric string of [this] length.
+* Added `ExtendGenerator.uuid` as the new preferred method for generating a random uuid.
+* Added `ExtendGenerator.clipboardData` as the new preferred method for getting clipboard data and content.
+### Deprecated
+* `"".generateLoremIpsum()` is now deprecated. It will be removed in version 1.0.0. Please migrate to `30.loremWords` immediately.
+* `"".generateRandomString()` is now deprecated. It will be removed in version 1.0.0. Please migrate to `30.randomString` immediately.
+* `"".generateUUID()` is now deprecated. It will be removed in version 1.0.0. Please migrate to `ExtendGenerator.uuid` immediately.
+* `"".generateClipboardContents()` is now deprecated. It will be removed in version 1.0.0. Please migrate to `ExtendGenerator.clipboardData` immediately.
+
 ## 0.1.3
 * Added More Regex Extensions
 
