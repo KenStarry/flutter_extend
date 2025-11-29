@@ -54,22 +54,4 @@ extension ThemeContextExtensions on BuildContext {
   /// ```
   /// @returns The current [IconThemeData] object.
   IconThemeData get iconTheme => Theme.of(this).iconTheme;
-
-  /// Retrieves the application's primary [AppBarThemeData].
-  ///
-  /// This provides direct access to default colors, elevation, and text styles
-  /// set for all [AppBar] widgets in the application theme.
-  ///
-  /// Example:
-  /// ```dart
-  /// final appBarColor = context.appBarTheme.backgroundColor;
-  ///
-  /// // Use the AppBar title style for a large custom header:
-  /// Text(
-  ///   'Custom Title',
-  ///   style: context.appBarTheme.titleTextStyle,
-  /// )
-  /// ```
-  /// @returns The current [AppBarThemeData] object.
-  AppBarThemeData get appBarTheme => Theme.of(this).appBarTheme;
 }

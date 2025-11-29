@@ -128,6 +128,6 @@ extension GlobalColorExtensions on Color {
         1,
       );
     }
-    return MaterialColor(toARGB32(), swatch);
+    return MaterialColor(value, swatch);
   }
 }
