@@ -6,6 +6,7 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_extend/string/regex_string_extensions.dart';
+import 'package:flutter_extend/utils.dart';
 import 'package:intl/intl.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 
@@ -36,6 +37,8 @@ part 'date_time/date_time_comparison_extensions.dart';
 // part 'images/image_extensions.dart';
 
 /// List Extensions
+part 'lists/list_access_extensions.dart';
+part 'lists/list_transform_extensions.dart';
 part 'lists/list_extensions.dart';
 
 /// Future Extensions
@@ -44,6 +47,11 @@ part 'futures/future_extensions.dart';
 part 'futures/future_iterable_extensions.dart';
 
 /// Generator Extensions
+part 'generators/class/extend_generator.dart';
+part 'generators/enum/dicebear_style.dart';
+part 'generators/enum/dicebear_image_type.dart';
+part 'generators/enum/card_type.dart';
+part 'generators/int_generator_extensions.dart';
 part 'generators/string_generator_extensions.dart';
 part 'generators/widget_generator_extensions.dart';
 
