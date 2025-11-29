@@ -1,33 +1,115 @@
 part of '../flutter_extend.dart';
 
 extension StringTransformerExtensionsNullable on String? {
-  /// With Default Value - Returns a default value if String is Empty or null
+  /// Returns the original string if it is not null and not empty,
+  /// otherwise returns the provided [defaultValue].
+  ///
+  /// This is an essential utility for safely displaying text, guaranteeing
+  /// a non-null, non-empty string result.
+  ///
+  /// @param defaultValue The string to return if the original string is null or empty.
+  /// @returns The original string (if valid) or the [defaultValue].
+  ///
+  /// Example:
+  /// ```dart
+  /// String? title = getTitleFromAPI(); // Could be null
+  /// print(title.withDefaultValue('Untitled Document'));
+  /// // If title is null or '', prints "Untitled Document"
+  /// ```
   String withDefaultValue(String defaultValue) =>
       (this == null || (this != null && this!.isEmpty)) ? defaultValue : this!;
 }
 
 extension StringTransformerExtensions on String {
-  /// Add Emoji
+  /// Appends a graphical emoji representation to the end of the string.
+  ///
+  /// **Note:** This requires that the [Emoji] class and enum (or similar structure)
+  /// is defined elsewhere in the package.
+  ///
+  /// @param emoji The [Emoji] object containing the string representation of the emoji.
+  /// @returns A new string with the emoji appended, separated by a space.
+  ///
+  /// Example:
+  /// ```dart
+  /// // Assuming Emoji.star is a defined constant
+  /// print('Great Job'.withEmoji(Emoji.star)); // "Great Job ⭐"
+  /// ```
   String withEmoji(Emoji emoji) => '$this ${emoji.emoji}';
 
-  /// Encode a String
+  /// URL-encodes the string.
+  ///
+  /// This replaces characters that are illegal or unsafe in a URL (e.g., spaces,
+  /// ampersands, slashes) with their percent-encoded equivalents.
+  ///
+  /// @returns The URL-encoded string.
+  ///
+  /// Example:
+  /// ```dart
+  /// final urlParam = 'user name'.withUrlEncoded(); // "user%20name"
+  /// ```
   String withUrlEncoded() => Uri.encodeComponent(this);
 
-  /// Add a Hashtag to String
+  /// Prepends a '#' symbol to the string and removes all spaces.
+  ///
+  /// This is typically used to format user input into a standardized hashtag.
+  ///
+  /// @returns A hashtag-formatted string.
+  ///
+  /// Example:
+  /// ```dart
+  /// print('flutter extend'.withHashtag()); // "#flutterextend"
+  /// ```
   String withHashtag() => '#${replaceAll(' ', '').trim()}';
 
-  /// Truncate the String and add Ellipsis if its too long
+  /// Truncates the string if its length exceeds [maxLength] and appends an ellipsis ("...").
+  ///
+  /// If the string is shorter than or equal to [maxLength], the original string is returned.
+  /// The resulting string will have a length of [maxLength] + 3 (for the ellipsis).
+  ///
+  /// @param maxLength The maximum number of characters allowed before truncation.
+  /// @returns A potentially truncated string with an ellipsis.
+  ///
+  /// Example:
+  /// ```dart
+  /// final long = 'This is a long message';
+  /// print(long.withEllipsis(10)); // "This is a ..."
+  /// ```
   String withEllipsis(int maxLength) {
     if (length <= maxLength) return this;
 
     return '${substring(0, maxLength)}...';
   }
 
-  /// Wrap a String in brackets
+  /// Wraps the string with the specified left and right delimiters.
+  ///
+  /// @param left The opening delimiter (default: '(').
+  /// @param right The closing delimiter (default: ')').
+  /// @returns The wrapped string.
+  ///
+  /// Example:
+  /// ```dart
+  /// print('pending'.withBrackets());          // "(pending)"
+  /// print('success'.withBrackets('[', ']')); // "[success]"
+  /// ```
   String withBrackets([String left = '(', String right = ')']) =>
       '$left$this$right';
 
-  /// Convert String to Ordinal eg. 1st, 2nd, 23rd
+  /// Converts a numeric string into its ordinal form (e.g., 1st, 2nd, 23rd).
+  ///
+  /// If the string is not purely numeric or is empty, the original string is returned.
+  /// Uses the specific rules for English ordinals (handling '11th', '12th', '13th' exceptions).
+  ///
+  /// **Note:** This requires the `isDigitsOnly()` method (from [RegexStringExtensions]) to be available.
+  ///
+  /// @returns The ordinal string (e.g., "1st", "2nd", "23rd").
+  ///
+  /// Example:
+  /// ```dart
+  /// print('1'.withOrdinal());  // "1st"
+  /// print('2'.withOrdinal());  // "2nd"
+  /// print('11'.withOrdinal()); // "11th"
+  /// print('23'.withOrdinal()); // "23rd"
+  /// ```
   String withOrdinal() {
     if (isEmpty || !isDigitsOnly()) return this;
 
@@ -47,7 +129,18 @@ extension StringTransformerExtensions on String {
     }
   }
 
-  /// Ensure String ends with Suffix
+  /// Ensures that the string ends with the specified [suffix].
+  ///
+  /// If the string is not empty and does not already end with [suffix], the suffix is appended.
+  ///
+  /// @param suffix The suffix to ensure the string ends with.
+  /// @returns The string, guaranteed to end with the suffix.
+  ///
+  /// Example:
+  /// ```dart
+  /// print('user'.ensureEndsWith('.json'));    // "user.json"
+  /// print('index.html'.ensureEndsWith('.html')); // "index.html"
+  /// ```
   String ensureEndsWith(String suffix) {
     if (!endsWith(suffix) && isNotEmpty) {
       return '$this$suffix';
@@ -56,7 +149,18 @@ extension StringTransformerExtensions on String {
     return this;
   }
 
-  /// Ensure String Starts With Prefix
+  /// Ensures that the string starts with the specified [prefix].
+  ///
+  /// If the string is not empty and does not already start with [prefix], the prefix is prepended.
+  ///
+  /// @param prefix The prefix to ensure the string starts with.
+  /// @returns The string, guaranteed to start with the prefix.
+  ///
+  /// Example:
+  /// ```dart
+  /// print('data'.ensureStartsWith('/api/')); // "/api/data"
+  /// print('/users'.ensureStartsWith('/'));  // "/users"
+  /// ```
   String ensureStartsWith(String prefix) {
     if (!startsWith(prefix) && isNotEmpty) {
       return '$prefix$this';

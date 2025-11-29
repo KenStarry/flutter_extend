@@ -1,7 +1,36 @@
 part of '../flutter_extend.dart';
 
 extension NumberCurrencyExtensions on num {
-  /// Converts the Number to a Given currency
+  /// Converts the number to a given currency format with customizable separators and symbol placement.
+  ///
+  /// This method correctly handles thousand separators for the whole number part
+  /// and applies rounding based on [decimalPlaces].
+  ///
+  /// @param decimalPlaces The number of digits to display after the decimal point (default: 2).
+  /// @param currencySymbol The symbol to use (e.g., 'KES', '$'). If null, no symbol is used (default: 'KES').
+  /// @param currencyDirection Placement of the currency symbol (left or right, default: left).
+  /// @param thousandsSeparator The character used to separate thousands (default: ',').
+  /// @param decimalSeparator The character used to separate the whole number from the decimals (default: '.').
+  /// @returns A formatted string representing the currency value.
+  ///
+  /// Example (Standard KES):
+  /// ```dart
+  /// final amount = 12345.678;
+  /// print(amount.toCurrency());
+  /// // KES 12,345.68
+  /// ```
+  ///
+  /// Example (Euro format):
+  /// ```dart
+  /// final euroAmount = 9876.5;
+  /// print(euroAmount.toCurrency(
+  ///   currencySymbol: '€',
+  ///   thousandsSeparator: '.',
+  ///   decimalSeparator: ',',
+  ///   currencyDirection: CurrencyDirection.right,
+  /// ));
+  /// // 9.876,50 €
+  /// ```
   String toCurrency(
       {int decimalPlaces = 2,
       String? currencySymbol = 'KES',
@@ -27,7 +56,23 @@ extension NumberCurrencyExtensions on num {
         : '$result${currencySymbol == null ? '' : ' $currencySymbol'}';
   }
 
-  /// Abbreviates the Given Number to a format eg 1.1B, 2.0K etc
+  /// Abbreviates the number to a concise format (e.g., 1.1B, 2.0K).
+  ///
+  /// This is used to display large numbers cleanly in UIs (e.g., social media counts, stock prices).
+  /// Supports positive and negative values.
+  ///
+  /// @param decimalCount The number of decimal places to include (default: 1).
+  /// @param isLowercase If true, uses lowercase suffixes (b, m, k) (default: false).
+  /// @param currencySymbol An optional symbol to prefix/suffix the result.
+  /// @param currencyDirection Placement of the currency symbol (left or right, default: left).
+  /// @returns An abbreviated string representation (e.g., "1.2M").
+  ///
+  /// Example:
+  /// ```dart
+  /// print(12345678.toAbbreviated());                       // 12.3M
+  /// print((-5000).toAbbreviated(isLowercase: true));      // -5.0k
+  /// print(1000000000.toAbbreviated(currencySymbol: 'USD')); // USD 1.0B
+  /// ```
   String toAbbreviated({
     int decimalCount = 1,
     bool isLowercase = false,

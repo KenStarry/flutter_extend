@@ -9,3 +9,5 @@ const kLoremWords = [
   'sunt', 'in', 'culpa', 'qui', 'officia', 'deserunt', 'mollit', 'anim', 'id',
   'est', 'laborum'
 ];
+
+const characters = ['abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789'];
