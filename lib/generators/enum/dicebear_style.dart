@@ -35,9 +35,9 @@ enum DiceBearStyle {
   /// Converts the enum to the API-friendly string format (kebab-case).
   String get _apiName {
     // Converts "adventurerNeutral" -> "adventurer-neutral"
-    return name.replaceAllMapped(
-        RegExp(r'(?<!^)(?=[A-Z])'),
-            (match) => '-${match.group(0)}'
-    ).toLowerCase();
+    return name
+        .replaceAllMapped(
+            RegExp(r'(?<!^)(?=[A-Z])'), (match) => '-${match.group(0)}')
+        .toLowerCase();
   }
 }

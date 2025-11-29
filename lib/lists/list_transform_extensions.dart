@@ -1,7 +1,6 @@
 part of '../flutter_extend.dart';
 
 extension ListTransformExtensions<T> on List<T> {
-
   /// Returns a new [List<T>] containing the elements of the original list in reverse order.
   ///
   /// This is a convenience getter that immediately converts the result of the built-in

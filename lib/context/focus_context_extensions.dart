@@ -1,7 +1,6 @@
 part of '../flutter_extend.dart';
 
 extension FocusContextExtensions on BuildContext {
-
   /// Retrieves the [FocusScopeNode] for the current context.
   ///
   /// The [FocusScopeNode] is the central component for managing the focus

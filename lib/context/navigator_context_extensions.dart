@@ -54,13 +54,15 @@ extension NavigatorContextExtensions on BuildContext {
   ///
   /// This is the preferred method for standard navigation and waiting for a result.
   Future<T?> push<T extends Object?>(Widget page) {
-    return Navigator.push<T>(this, MaterialPageRoute(builder: (context) => page));
+    return Navigator.push<T>(
+        this, MaterialPageRoute(builder: (context) => page));
   }
 
   /// Pushes a named route onto the navigator stack.
   ///
   /// Use this when your application uses the [onGenerateRoute] or [routes] mechanism.
-  Future<T?> pushNamed<T extends Object?>(String routeName, {Object? arguments}) {
+  Future<T?> pushNamed<T extends Object?>(String routeName,
+      {Object? arguments}) {
     return Navigator.pushNamed<T>(this, routeName, arguments: arguments);
   }
 
@@ -68,7 +70,9 @@ extension NavigatorContextExtensions on BuildContext {
   ///
   /// Useful for scenarios like post-login screens, splash screens, or checkout flows
   /// where the user should not be able to navigate back to the previous screen.
-  Future<T?> pushReplacement<T extends Object?, TO extends Object?>(Widget page) {
-    return Navigator.pushReplacement<T, TO>(this, MaterialPageRoute(builder: (context) => page));
+  Future<T?> pushReplacement<T extends Object?, TO extends Object?>(
+      Widget page) {
+    return Navigator.pushReplacement<T, TO>(
+        this, MaterialPageRoute(builder: (context) => page));
   }
 }

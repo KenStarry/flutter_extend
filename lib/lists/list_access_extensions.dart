@@ -97,6 +97,4 @@ extension ListAccessExtensions<T> on List<T> {
 
     return null;
   }
-
-
 }

@@ -30,7 +30,8 @@ extension StringGeneratorExtensions on String {
     String? backgroundColor,
   }) {
     // Base API URL (Using 9.x which is stable)
-    final baseUrl = 'https://api.dicebear.com/9.x/${style._apiName}/${type.label}';
+    final baseUrl =
+        'https://api.dicebear.com/9.x/${style._apiName}/${type.label}';
 
     // Build Query Parameters
     final queryParams = <String>[
@@ -42,7 +43,6 @@ extension StringGeneratorExtensions on String {
 
     return '$baseUrl?${queryParams.join('&')}';
   }
-
 
   /// Lorem Generator - Generate Lorem Ipsum Text
   @Deprecated(
