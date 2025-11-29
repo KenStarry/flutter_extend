@@ -7,6 +7,12 @@ extension ListAccessExtensions<T> on List<T> {
   /// Gets the Last Element of a list or null if the list is empty
   T? get lastOrNull => isNotEmpty ? last : null;
 
+  /// Get the Index of the [element] or null if the element doesn't exist in the list
+  int? indexOfOrNull(T element) {
+    final index = indexOf(element);
+    return index != -1 ? index : null;
+  }
+
   /// Safely retrieves an element at a given [index],
   /// returning null if the index is out of bounds.
   T? elementAtOrNull(int index) {
@@ -27,4 +33,6 @@ extension ListAccessExtensions<T> on List<T> {
 
     return null;
   }
+
+
 }
