@@ -65,6 +65,8 @@ part 'widgets/text_extensions.dart';
 
 /// Context Extensions
 part 'context/context_extensions.dart';
+part 'context/dialog_context_extensions.dart';
+part 'context/focus_context_extensions.dart';
 part 'context/theme_context_extensions.dart';
 part 'context/media_query_context_extensions.dart';
 part 'context/navigator_context_extensions.dart';

@@ -12,4 +12,8 @@ extension PlatformContextExtensions on BuildContext {
   bool get isLinux => Platform.isLinux;
 
   bool get isFuchsia => Platform.isFuchsia;
+
+  bool get isMobile => isAndroid || isIOS;
+
+  bool get isDesktop => isWindows || isLinux || isMacOS;
 }

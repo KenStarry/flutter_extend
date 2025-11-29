@@ -17,7 +17,7 @@ extension MediaQueryContextExtensions on BuildContext {
   Orientation get orientation => MediaQuery.of(this).orientation;
 
   /// Check Platform Brightness
-  Brightness get brightness => MediaQuery.of(this).platformBrightness;
+  Brightness get brightness => MediaQuery.platformBrightnessOf(this);
 
   /// Check Dark Mode
   bool get isDarkMode =>

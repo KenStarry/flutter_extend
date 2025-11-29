@@ -8,4 +8,7 @@ extension NavigatorContextExtensions on BuildContext {
 
   /// Simplified Pop Screen
   void popScreen() => Navigator.pop(this);
+
+  /// Pops all routes until the predicate is true (i.e., until the root).
+  void popUntilRoot() => Navigator.popUntil(this, (route) => route.isFirst);
 }
