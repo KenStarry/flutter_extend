@@ -5,6 +5,7 @@ import 'dart:math';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_extend/files/enum/file_type_enum.dart';
 import 'package:flutter_extend/string/regex_string_extensions.dart';
 import 'package:flutter_extend/utils.dart';
 import 'package:intl/intl.dart';
