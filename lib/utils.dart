@@ -1,3 +1,5 @@
+import 'dart:math';
+
 const kLoremWords = [
   'lorem',
   'ipsum',
@@ -70,6 +72,6 @@ const kLoremWords = [
   'laborum'
 ];
 
-const characters = [
-  'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789'
-];
+const chars = 'AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz1234567890';
+
+final secureRnd = Random.secure();

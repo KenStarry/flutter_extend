@@ -1,8 +1,6 @@
 part of '../flutter_extend.dart';
 
 extension IntGeneratorExtensions on int {
-  // --- Lorem Ipsum Generators ---
-
   /// Generates a string with [this] number of Lorem Ipsum words.
   ///
   /// The words are generated sequentially from the internal constant word list.
@@ -15,10 +13,16 @@ extension IntGeneratorExtensions on int {
   /// ```
   /// @returns A single string containing the requested number of words, separated by spaces.
   String get loremWords {
+    // Safety check: if the number is 0 or less, return empty
     if (this <= 0) return '';
 
-    return List.generate(
-        this, (index) => kLoremWords[index % kLoremWords.length]).join(' ');
+    // Safety check: if word list is somehow empty (unlikely with const)
+    if (kLoremWords.isEmpty) return '';
+
+    return List.generate(this, (_) {
+      // Pick a random index from 0 to 68
+      return kLoremWords[secureRnd.nextInt(kLoremWords.length)];
+    }).join(' ');
   }
 
   /// Generates [this] number of Lorem Ipsum paragraphs.
@@ -53,14 +57,10 @@ extension IntGeneratorExtensions on int {
   String get randomString {
     if (this <= 0) return '';
 
-    final rnd = Random();
-
     final buffer = StringBuffer();
-
     for (var i = 0; i < this; i++) {
-      buffer.write(characters[rnd.nextInt(characters.length)]);
+      buffer.write(chars[secureRnd.nextInt(chars.length)]);
     }
-
     return buffer.toString();
   }
 
