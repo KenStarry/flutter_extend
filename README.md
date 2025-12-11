@@ -1,23 +1,20 @@
 <div align="center">
 
 # 🎩 Flutter Extend
-
 ### *The Ultimate Cheat Code for Flutter Developers*
 
-![FLUTTER EXTEND](https://github.com/user-attachments/assets/b3a4d7ae-e1b6-4f3d-b485-857567a2cc2b)
-
-![Pub Version](https://img.shields.io/pub/v/flutter_extend?style=for-the-badge&color=blue)
-![Pub Points](https://img.shields.io/pub/points/flutter_extend?style=for-the-badge&color=green)
-![License](https://img.shields.io/github/license/KenStarry/flutter_extend?style=for-the-badge&color=orange)
-![Stars](https://img.shields.io/github/stars/KenStarry/flutter_extend?style=for-the-badge&logo=github)
+[![Mintlify Docs](https://img.shields.io/badge/Documentation-Starry%20Hub-blue?style=for-the-badge&logo=rocket&logoColor=white)](https://docs.yourdomain.com/flutter_extend)
+[![Pub Version](https://img.shields.io/pub/v/flutter_extend?style=for-the-badge&color=blue)](https://pub.dev/packages/flutter_extend)
+[![License](https://img.shields.io/github/license/KenStarry/flutter_extend?style=for-the-badge&color=orange)](https://github.com/KenStarry/flutter_extend/blob/main/LICENSE)
 
 <br/>
 
-**Stop writing boilerplate. Start writing magic.** `flutter_extend` supercharges your development with intuitive
-extensions for Widgets, Context, Data Generation, Animations, and more.
+**Stop writing boilerplate. Start writing magic.**
+<br/>
+`flutter_extend` supercharges your workflow with intuitive extensions for Widgets, Context, Data Generation, and more.
 
-[**Get Started**](#-installation) • [**Documentation**](https://pub.dev/packages/flutter_extend) • [**Examples
-**](https://github.com/KenStarry/flutter_extend/tree/main/example/lib)
+# 🚀 [Read the Full Documentation on Starry Hub](https://starrycodes.mintlify.app/flutter_extend_docs/introduction)
+**All guides, advanced examples, and API references have moved to our official documentation site.**
 
 </div>
 
@@ -39,20 +36,20 @@ Because you have better things to do than writing `MediaQuery.of(context).size.w
 
 ## ⚒️ Installation
 
-1. **Summon Flutter Extend into your project** by adding this to your `pubspec.yaml`:
+1. Add the package to your `pubspec.yaml`:
 
 ```yaml
 dependencies:
   flutter_extend: ^0.0.6
 ```  
 
-2. **Run this spell** in your terminal:
+2. Run this spell in your terminal:
 
 ```bash
 flutter pub get
 ```  
 
-3. **Import the package** and start your journey to developer enlightenment:
+3. Import it and unleash the power:
 
 ```dart
 import 'package:flutter_extend/flutter_extend.dart';
@@ -62,445 +59,781 @@ BOOM. 💥 You’re now **10x more powerful** (results may vary).
 
 ---
 
-## 🤯 **Behold, The Extensions That Will Blow Your Mind!**
+## 🏎️ Quick Start
 
-### 🔥 The "Wow" Features (New!)
-
-| **Feature**        | **Code Example**                                    | **Output**                                                    |
-|:-------------------|:----------------------------------------------------|---------------------------------------------------------------|
-| User Avatars       | `user_123'.avatar(style: DiceBearStyle.adventurer)` | Generates a consistent, unique avatar URL using DiceBear API. |
-| Placeholder Images | `300.placeholderImage(grayscale: true)`             | A 300x300 grayscale image URL from Lorem Picsum.              |
-| Lorem Ipsum        | `20.loremWords / 3.loremParagraphs`                 | "Lorem ipsum dolor sit amet..."                               |
-| Mock UUIDs         | `ExtendGenerator.uuid`                              | a1b2c3d4-e5f6...                                              |
-| Random Colors      | `ExtendGenerator.randomColor`                       | A random opaque Color.                                        |
-| Credit Cards       | `ExtendGenerator.randomCreditCard()`                | A valid mock Visa/Mastercard number.                          |
-
-### 🎨 **Color Extensions – For When You Need to Make Things Pretty**
-
-<details>
-
-<summary>🖍️ Global Color Extensions (Click to open)</summary>
-
-| Extension                   | Description                                        | Example                          |
-|:----------------------------|:---------------------------------------------------|----------------------------------|
-| `.getLighterShade(percent)` | Turns red into diet red (10\% lighter)\!           | `Colors.red.getLighterShade(10)` |
-| `.isDark`                   | Checks if the color is dark. 🌑                    | `Colors.red.isDark`              |
-| `.isLight`                  | Checks if the color is light. 🌞                   | `Colors.red.isLight`             |
-| `.luminance`                | Computes the luminance to determine brightness. 🌟 | `Colors.red.luminance`           |
-| `.toHex()`                  | Converts red into that fancy \#FF0000 format.      | `Colors.red.toHex()`             |
-
-</details> 
-
-🔥 No more googling **“Flutter color to hex”** like a caveman.
+This is just a taste. [**See all 50+ extensions in the Official Docs.**](https://starrycodes.mintlify.app/flutter_extend_docs/introduction)
 
 ---
 
-### 📏 **Context Extensions – Your App’s Sixth Sense**
+### 1. Context Magic 🪄
 
-<details>
+```dart
+// The Old Way
+double width = MediaQuery.of(context).size.width;
+bool isDark = Theme.of(context).brightness == Brightness.dark;
 
-<summary>🧠 Global Context Extensions</summary>
+// The New Way
+double width = context.screenWidth;
+bool isDark = context.isDarkMode;
+```
 
-| Extension                        | Description                            |
-|:---------------------------------|:---------------------------------------|
-| `context.hideKeyboard()`         | Hides the keyboard when needed. ⌨️     |
-| `context.safeSetState(callback)` | Performs safe setState operations. 🏷️ |
+### 2. String Power ⚡
 
-</details> 
+```dart
+String email = "badEmail.com";
 
-<details>
+if (!email.isEmailValid()) {
+print("Invalid Email!"); // Prints: Invalid Email!
+}
 
-<summary>📱 MediaQuery Context Extensions</summary>
+String title = "hello world".toTitleCase(); // Hello World
+```
 
-| Extension                   | Description                                     |
-|:----------------------------|:------------------------------------------------|
-| `context.isDarkMode`        | Detects if your app has gone full Sith mode. 🌑 |
-| `context.screenSize`        | Retrieves the full screen size. 📏              |
-| `context.screenHeight`      | Measures how tall your app stands. 📏           |
-| `context.screenWidth`       | Measures the width, because size matters. 📐    |
-| `context.theme`             | Retrieves the whole theme like a style guru. 👔 |
-| `context.safePadding`       | Retrieves the safe padding from MediaQuery. 🛏️ |
-| `context.orientation`       | Gets the screen orientation. 🔄                 |
-| `context.brightness`        | Checks platform brightness. 🌌                  |
-| `context.isKeyboardVisible` | Detects if the keyboard is on screen. ⌨️        |
-| `context.isLandscape`       | Detects if the device is in landscape mode. 🎢  |
-| `context.isPortrait`        | Detects if the device is in portrait mode. 🌆   |
+### 3. Widget Shortcuts 🖼️
 
-</details> 
+```dart
+// Add padding, alignment, and click events without nesting hell
+Text("Click Me")
+    .center()
+    .padding(all: 16)
+    .clickable(onTap: () => print("Clicked!"));
+```
 
-<details>
+[//]: # (## 🤯 **Behold, The Extensions That Will Blow Your Mind!**)
 
-<summary>↗️ Navigator Context Extensions</summary>
+[//]: # ()
+[//]: # (### 🔥 The "Wow" Features &#40;New!&#41;)
 
-| Extension                  | Description                                |
-|:---------------------------|:-------------------------------------------|
-| `context.navigateTo(page)` | Simplifies navigation to a new screen. 🚀  |
-| `context.popScreen()`      | Pops the current screen from the stack. ⏏️ |
+[//]: # ()
+[//]: # (| **Feature**        | **Code Example**                                    | **Output**                                                    |)
 
-</details> 
+[//]: # (|:-------------------|:----------------------------------------------------|---------------------------------------------------------------|)
 
-<details>
+[//]: # (| User Avatars       | `user_123'.avatar&#40;style: DiceBearStyle.adventurer&#41;` | Generates a consistent, unique avatar URL using DiceBear API. |)
 
-<summary>💻 Platform Context Extensions</summary>
+[//]: # (| Placeholder Images | `300.placeholderImage&#40;grayscale: true&#41;`             | A 300x300 grayscale image URL from Lorem Picsum.              |)
 
-| Extension           | Description                            |
-|:--------------------|:---------------------------------------|
-| `context.isIOS`     | Checks if the platform is iOS. 🌐      |
-| `context.isAndroid` | Checks if the platform is Android. 📱  |
-| `context.isWindows` | Checks if the platform is Windows. 🖥️ |
-| `context.isMacOS`   | Checks if the platform is macOS. 💻    |
-| `context.isLinux`   | Checks if the platform is Linux. 🐟    |
-| `context.isFuchsia` | Checks if the platform is Fuchsia. 🛶  |
+[//]: # (| Lorem Ipsum        | `20.loremWords / 3.loremParagraphs`                 | "Lorem ipsum dolor sit amet..."                               |)
 
-</details> 
+[//]: # (| Mock UUIDs         | `ExtendGenerator.uuid`                              | a1b2c3d4-e5f6...                                              |)
 
-<details>
+[//]: # (| Random Colors      | `ExtendGenerator.randomColor`                       | A random opaque Color.                                        |)
 
-<summary>🖍️ Theme Context Extensions</summary>
+[//]: # (| Credit Cards       | `ExtendGenerator.randomCreditCard&#40;&#41;`                | A valid mock Visa/Mastercard number.                          |)
 
-| Extension             | Description                                     |
-|:----------------------|:------------------------------------------------|
-| `context.theme`       | Retrieves the whole theme like a style guru. 👔 |
-| `context.textTheme`   | Retrieves the text theme of the app. 🖊️        |
-| `context.colorScheme` | Retrieves the color scheme of the app. 🌐       |
-| `context.iconTheme`   | Retrieves the icon theme data. 💎               |
+[//]: # ()
+[//]: # (### 🎨 **Color Extensions – For When You Need to Make Things Pretty**)
 
-</details> 
+[//]: # ()
+[//]: # (<details>)
 
-💡 These context extensions **always know what’s up** (literally).
+[//]: # ()
+[//]: # (<summary>🖍️ Global Color Extensions &#40;Click to open&#41;</summary>)
 
----
+[//]: # ()
+[//]: # (| Extension                   | Description                                        | Example                          |)
 
-### 📆 **DateTime Extensions – Manipulate Time Like Doctor Strange**
+[//]: # (|:----------------------------|:---------------------------------------------------|----------------------------------|)
 
-<details>
+[//]: # (| `.getLighterShade&#40;percent&#41;` | Turns red into diet red &#40;10\% lighter&#41;\!           | `Colors.red.getLighterShade&#40;10&#41;` |)
 
-<summary>⏳ DateTime Comparison Extensions (Click to open)</summary>
+[//]: # (| `.isDark`                   | Checks if the color is dark. 🌑                    | `Colors.red.isDark`              |)
 
-| Extension        | What It Does                         |  
-|------------------|--------------------------------------|  
-| `.isToday()`     | Is today… today? 🤔                  |  
-| `.isPast()`      | Confirms if your date is ancient. 📜 |  
-| `.isFuture()`    | Predicts the future… kinda. 🔮       |  
-| `.isYesterday()` | Checks if it was **Laundry Day**.    |  
-| `.isTomorrow()`  | Future You says hello. 👋            |  
+[//]: # (| `.isLight`                  | Checks if the color is light. 🌞                   | `Colors.red.isLight`             |)
 
-</details>
+[//]: # (| `.luminance`                | Computes the luminance to determine brightness. 🌟 | `Colors.red.luminance`           |)
 
-<details>
+[//]: # (| `.toHex&#40;&#41;`                  | Converts red into that fancy \#FF0000 format.      | `Colors.red.toHex&#40;&#41;`             |)
 
-<summary>🗓️ DateTime Formatting Extensions (Click to open)</summary>
+[//]: # ()
+[//]: # (</details> )
 
-| Extension           | Example                               | Output       |
-|:--------------------|:--------------------------------------|--------------|
-| `.timeAgo()`        | DateTime(2024, 1, 1).timeAgo()        | "1 year ago" |
-| `.timeUntil()`      | DateTime(2026, 1, 1).timeUntil()      | "in 1 year"  |
-| `.monthName()`      | DateTime(2024, 1, 1).monthName()      | "January"    |
-| `.monthNameShort()` | DateTime(2024, 1, 1).monthNameShort() | "Jan"        |
-| `.dayName()`        | DateTime(2024, 1, 1).dayName()        | "Monday"     |
-| `.dayNameShort()`   | DateTime(2024, 1, 1).dayNameShort()   | "Mon"        |
-| `.slashedDate()`    | DateTime(2024, 1, 1).slashedDate()    | "01/01/2024" |
-| `.weekNumber()`     | DateTime(2024, 1, 1).weekNumber()     | 1            |
+[//]: # ()
+[//]: # (🔥 No more googling **“Flutter color to hex”** like a caveman.)
 
-</details>
+[//]: # ()
+[//]: # (---)
 
-<details>
+[//]: # ()
+[//]: # (### 📏 **Context Extensions – Your App’s Sixth Sense**)
 
-<summary>🛠️ DateTime Manipulation Extensions (Click to open)</summary>
+[//]: # ()
+[//]: # (<details>)
 
-| Extension                 | Example                                 | Output                 |
-|:--------------------------|:----------------------------------------|------------------------|
-| `.addDays(days)`          | DateTime(2025, 1, 1).addDays(5)         | DateTime(2025, 1, 6)   |
-| `.subtractDays(days)`     | DateTime(2025, 1, 1).subtractDays(5)    | DateTime(2024, 12, 27) |
-| `.addMonths(months)`      | DateTime(2025, 1, 1).addMonths(5)       | DateTime(2025, 6, 1)   |
-| `.subtractMonths(months)` | DateTime(2025, 1, 1).subtractMonths(5)  | DateTime(2024, 8, 1)   |
-| `.addYears(years)`        | DateTime(2025, 1, 1).addYears(5)        | DateTime(2030, 1, 1)   |
-| `.subtractYears(years)`   | DateTime(2025, 1, 1).subtractYears(5)   | DateTime(2020, 1, 1)   |
-| `.addBusinessDays(days)`  | DateTime(2025, 1, 1).addBusinessDays(5) | DateTime(2025, 1, 8)   |
+[//]: # ()
+[//]: # (<summary>🧠 Global Context Extensions</summary>)
 
-</details>
+[//]: # ()
+[//]: # (| Extension                        | Description                            |)
 
+[//]: # (|:---------------------------------|:---------------------------------------|)
 
-🔄 **Master time manipulation and become the Flutter Time Lord!**
+[//]: # (| `context.hideKeyboard&#40;&#41;`         | Hides the keyboard when needed. ⌨️     |)
 
----
+[//]: # (| `context.safeSetState&#40;callback&#41;` | Performs safe setState operations. 🏷️ |)
 
-### 📂 **File Extensions – Handle Files Like a Pro!**
+[//]: # ()
+[//]: # (</details> )
 
-<details>
+[//]: # ()
+[//]: # (<details>)
 
-<summary>📁 File Extensions (Click to open)</summary>
+[//]: # ()
+[//]: # (<summary>📱 MediaQuery Context Extensions</summary>)
 
-| Extension                     | Example                                   | Output                 |
-|:------------------------------|:------------------------------------------|------------------------|
-| `.fileFormattedSize()`        | `File('path').fileFormattedSize()`        | 500 MB                 |
-| `.filePath()`                 | `File('path').filePath()`                 | /emulated/0/storage... |
-| `.fileExtension()`            | `File('path').fileExtension()`            | pdf, jpg, etc.         |
-| `.fileNameWithoutExtension()` | `File('path').fileNameWithoutExtension()` | myAwesomeFile          |
+[//]: # ()
+[//]: # (| Extension                   | Description                                     |)
 
-</details>
+[//]: # (|:----------------------------|:------------------------------------------------|)
 
-🗂️ **Stop wrestling with file paths like it’s 1999!**
+[//]: # (| `context.isDarkMode`        | Detects if your app has gone full Sith mode. 🌑 |)
 
----
+[//]: # (| `context.screenSize`        | Retrieves the full screen size. 📏              |)
 
-### 🔖 **Future Extensions – Async Like a Boss!**
+[//]: # (| `context.screenHeight`      | Measures how tall your app stands. 📏           |)
 
-💡 Tired of waiting for your Futures like they're stuck in dial-up internet? Say hello to **instant gratification**!
-These extensions turn async from a patience test into a **speedrun to success**—no more unnecessary delays, retries, or
-timeout meltdowns!
+[//]: # (| `context.screenWidth`       | Measures the width, because size matters. 📐    |)
 
-<details>
+[//]: # (| `context.theme`             | Retrieves the whole theme like a style guru. 👔 |)
 
-<summary>🕰️ Future Extensions (Click to reveal the magic)</summary>
+[//]: # (| `context.safePadding`       | Retrieves the safe padding from MediaQuery. 🛏️ |)
 
-| Extension                                      | What It Does (In Normal-Person Terms)                          | Example                                                            |
-|------------------------------------------------|----------------------------------------------------------------|--------------------------------------------------------------------|
-| `.wrapInCompleter()`                           | Turns your Future into a **Completer** like a pro.             | `myFuture.wrapInCompleter()`                                       |
-| `.isComplete()`                                | Checks if a Future is **donezo** or still playing hard to get. | `myFuture.isComplete()`                                            |
-| `.retry(retries, delay)`                       | Gives your Future **extra lives** (great for network calls).   | `myFuture.retry(3, delay: Duration(seconds: 2))`                   |
-| `.timeoutWithFallback(timeout, fallbackValue)` | **Stops waiting** after a timeout and gives a backup plan.     | `myFuture.timeoutWithFallback(Duration(seconds: 5), fallbackData)` |
-| `.runAfterDelay(delay)`                        | **Hits snooze** before running the Future.                     | `myFuture.runAfterDelay(Duration(seconds: 2))`                     |
+[//]: # (| `context.orientation`       | Gets the screen orientation. 🔄                 |)
 
-</details>
+[//]: # (| `context.brightness`        | Checks platform brightness. 🌌                  |)
 
-<details>
+[//]: # (| `context.isKeyboardVisible` | Detects if the keyboard is on screen. ⌨️        |)
 
-<summary>🌀 Future Iterable Extensions (Click to reveal the magic)</summary>
+[//]: # (| `context.isLandscape`       | Detects if the device is in landscape mode. 🎢  |)
 
-| Extension                     | What It Does (In Normal-Person Terms)                                      | Example                            |
-|-------------------------------|----------------------------------------------------------------------------|------------------------------------|
-| `.runWithLimit(limit)`        | Runs multiple Futures **at once**, but limits how many run simultaneously. | `myFutures.runWithLimit(3)`        |
-| `.runWithLimitOrdered(limit)` | Runs multiple Futures **in order**, with limited concurrent executions.    | `myFutures.runWithLimitOrdered(2)` |
+[//]: # (| `context.isPortrait`        | Detects if the device is in portrait mode. 🌆   |)
 
-</details>
+[//]: # ()
+[//]: # (</details> )
 
-<details>
+[//]: # ()
+[//]: # (<details>)
 
-<summary>📋 String Future Extensions (Click to reveal the magic)</summary>
+[//]: # ()
+[//]: # (<summary>↗️ Navigator Context Extensions</summary>)
 
-| Extension            | What It Does (In Normal-Person Terms)                     | Example                                   |
-|----------------------|-----------------------------------------------------------|-------------------------------------------|
-| `.copyToClipboard()` | Copies a string to the clipboard **like a sneaky ninja**. | `await 'Hello, world!'.copyToClipboard()` |
+[//]: # ()
+[//]: # (| Extension                  | Description                                |)
 
-</details>
+[//]: # (|:---------------------------|:-------------------------------------------|)
 
-💥 Wave goodbye to async chaos and say hello to Future-powered hyperspeed! No more waiting in the async DMV line—your
-code is now on rollerblades. 🛼⚡
+[//]: # (| `context.navigateTo&#40;page&#41;` | Simplifies navigation to a new screen. 🚀  |)
 
----
+[//]: # (| `context.popScreen&#40;&#41;`      | Pops the current screen from the stack. ⏏️ |)
 
-### 📦 **Generator Extensions – Auto-Magic String Generation!**
+[//]: # ()
+[//]: # (</details> )
 
-_NB: String generator methods should be used on Empty Strings for the best results._
+[//]: # ()
+[//]: # (<details>)
 
-<details>
+[//]: # ()
+[//]: # (<summary>💻 Platform Context Extensions</summary>)
 
-<summary>🔠 String Generator Extensions (Click to open)</summary>
+[//]: # ()
+[//]: # (| Extension           | Description                            |)
 
-| Extension                                | Example                               | Output                                |
-|:-----------------------------------------|:--------------------------------------|---------------------------------------|
-| `.generateLoremIpsum(wordCount)`         | `"".generateLoremIpsum(wordCount: 5)` | `Lorem ipsum dolor sit amet`          |
-| `.generateUUID(length)`                  | `"".generateUUID(length: 10)`         | `Random UUID`                         |
-| `.generateClipboardContents(textIfNull)` | `"".generateClipboardContents()`      | `Returns a String clipboard contents` |
-| `.generateRandomString(length)`          | `"".generateRandomString(10)`         | `Random 10-character string`          |
+[//]: # (|:--------------------|:---------------------------------------|)
 
-</details>
+[//]: # (| `context.isIOS`     | Checks if the platform is iOS. 🌐      |)
 
-📝 **Because manually typing random text is so last year!**
+[//]: # (| `context.isAndroid` | Checks if the platform is Android. 📱  |)
 
----
+[//]: # (| `context.isWindows` | Checks if the platform is Windows. 🖥️ |)
 
-### 📋 **List Extensions – Sorting, Chunking, and More!**
+[//]: # (| `context.isMacOS`   | Checks if the platform is macOS. 💻    |)
 
-<details>
+[//]: # (| `context.isLinux`   | Checks if the platform is Linux. 🐟    |)
 
-<summary>📜 List Extensions (Click to open)</summary>
+[//]: # (| `context.isFuchsia` | Checks if the platform is Fuchsia. 🛶  |)
 
-| Extension                  | Example                                                                                | Output                                                   |
-|:---------------------------|:---------------------------------------------------------------------------------------|----------------------------------------------------------|
-| `.firstOrNull()`           | ["hello", "world", "awesome"].firstOrNull()                                            | hello                                                    |
-| `.lastOrNull()`            | ["hello", "world", "awesome"].lastOrNull()                                             | awesome                                                  |
-| `.sortBy()`                | ["Urus", "BMW", "Aston Martin", "Ferari", "Lambo"].sortBy((car) => car)                | ["Aston Martin", "BMW", "Ferari", "Lambo", "Urus"]       |
-| `.sortByAndReturnSorted()` | ["Urus", "BMW", "Aston Martin", "Ferari", "Lambo"].sortByAndReturnSorted((car) => car) | ["Aston Martin", "BMW", "Ferari", "Lambo", "Urus"]       |
-| `.shuffled()`              | ["Urus", "BMW", "Aston Martin", "Ferari", "Lambo"].shuffled()                          | ["Ferari", "Aston Martin", "BMW", "Lambo", "Urus"]       |
-| `.chunked(size)`           | ["Urus", "BMW", "Aston Martin", "Ferari", "Lambo"].chunked(2)                          | [['Urus', 'BMW'], ['Aston Martin', 'Ferari'], ['Lambo']] |
+[//]: # ()
+[//]: # (</details> )
 
-</details>
+[//]: # ()
+[//]: # (<details>)
 
-📌 **Because sorting lists manually is for mere mortals!**
+[//]: # ()
+[//]: # (<summary>🖍️ Theme Context Extensions</summary>)
 
----
+[//]: # ()
+[//]: # (| Extension             | Description                                     |)
 
-### 🔢 **Number Extensions – Math is Hard, Let’s Make It Easy**
+[//]: # (|:----------------------|:------------------------------------------------|)
 
-<details>
+[//]: # (| `context.theme`       | Retrieves the whole theme like a style guru. 👔 |)
 
-<summary>🕞 Number Duration Extensions</summary>
+[//]: # (| `context.textTheme`   | Retrieves the text theme of the app. 🖊️        |)
 
-| Extension       | Example          | Output                    |
-|:----------------|:-----------------|---------------------------|
-| `.days`         | `5.days`         | Duration(days: 5)         |
-| `.hours`        | `5.hours`        | Duration(hours: 5)        |
-| `.minutes`      | `5.minutes`      | Duration(minutes: 5)      |
-| `.seconds`      | `5.seconds`      | Duration(seconds: 5)      |
-| `.milliSeconds` | `5.milliSeconds` | Duration(milliSeconds: 5) |
-| `.microSeconds` | `5.microSeconds` | Duration(microSeconds: 5) |
+[//]: # (| `context.colorScheme` | Retrieves the color scheme of the app. 🌐       |)
 
-</details> 
+[//]: # (| `context.iconTheme`   | Retrieves the icon theme data. 💎               |)
 
-<details>
+[//]: # ()
+[//]: # (</details> )
 
-<summary>💰 Number Currency Extensions</summary>
+[//]: # ()
+[//]: # (💡 These context extensions **always know what’s up** &#40;literally&#41;.)
 
-| Extension          | Example                  | Output      |
-|:-------------------|:-------------------------|-------------|
-| `.toCurrency()`    | `100000.toCurrency()`    | KES 100,000 |
-| `.toAbbreviated()` | `100000.toAbbreviated()` | 100K        |
+[//]: # ()
+[//]: # (---)
 
-</details> 
+[//]: # ()
+[//]: # (### 📆 **DateTime Extensions – Manipulate Time Like Doctor Strange**)
 
-🧠 **Because numbers should work for you, not the other way around.**
+[//]: # ()
+[//]: # (<details>)
 
----
+[//]: # ()
+[//]: # (<summary>⏳ DateTime Comparison Extensions &#40;Click to open&#41;</summary>)
 
-### 🔤 **String Extensions – Tame Your Text Like a Pro!**
+[//]: # ()
+[//]: # (| Extension        | What It Does                         |  )
 
-<details>
+[//]: # (|------------------|--------------------------------------|  )
 
-<summary>🔑 Validation String Extensions (Click to open)</summary>
+[//]: # (| `.isToday&#40;&#41;`     | Is today… today? 🤔                  |  )
 
-| Extension            | Example                         | Output  |
-|:---------------------|:--------------------------------|---------|
-| `.isEmailValid()`    | `"badEmail.com".isEmailValid()` | `false` |
-| `.isPasswordValid()` | `"weak12".isPasswordValid()`    | `false` |
-| `.isValidURL()`      | `"weirdurl//".isValidURL()`     | `false` |
+[//]: # (| `.isPast&#40;&#41;`      | Confirms if your date is ancient. 📜 |  )
 
-</details>
+[//]: # (| `.isFuture&#40;&#41;`    | Predicts the future… kinda. 🔮       |  )
 
-<details>
+[//]: # (| `.isYesterday&#40;&#41;` | Checks if it was **Laundry Day**.    |  )
 
-<summary>🌍 Global String Extensions (Click to open)</summary>
+[//]: # (| `.isTomorrow&#40;&#41;`  | Future You says hello. 👋            |  )
 
-| Extension                            | Example                                           | Output        |
-|:-------------------------------------|:--------------------------------------------------|---------------|
-| `.capitalizeFirstLetter()`           | `"hello".capitalizeFirstLetter()`                 | `Hello`       |
-| `.capitalizeFirstLetterOfEachWord()` | `"hello world".capitalizeFirstLetterOfEachWord()` | `Hello World` |
-| `.getLastNCharacters(n)`             | `"hello".getLastNCharacters(2)`                   | `lo`          |
-| `.mask(visibleCount)`                | `"helloworld".mask()`                             | `he******ld`  |
-| `.reverse()`                         | `"hello".reverse()`                               | `olleh`       |
-| `.truncateName()`                    | `"Ken Starry".truncateName()`                     | `Ken S.`      |
+[//]: # ()
+[//]: # (</details>)
 
-</details>
+[//]: # ()
+[//]: # (<details>)
 
-<details>
+[//]: # ()
+[//]: # (<summary>🗓️ DateTime Formatting Extensions &#40;Click to open&#41;</summary>)
 
-<summary>🕵️ Regex String Extensions (Click to open)</summary>
+[//]: # ()
+[//]: # (| Extension           | Example                               | Output       |)
 
-| Extension                             | Example                                              | Output               |
-|:--------------------------------------|:-----------------------------------------------------|----------------------|
-| `.extractDigits()`                    | `"abc123".extractDigits()`                           | `"123"`              |
-| `.removeAllDigits()`                  | `"abc123".removeAllDigits()`                         | `"abc"`              |
-| `.removeAllWordsStartingWithNumber()` | `"1abc 2def ghi".removeAllWordsStartingWithNumber()` | `"ghi"`              |
-| `.isDigitsOnly()`                     | `"12345".isDigitsOnly()`                             | `true`               |
-| `.isTextOnly()`                       | `"abc".isTextOnly()`                                 | `true`               |
-| `.removeAllWhiteSpaces()`             | `"a b c".removeAllWhiteSpaces()`                     | `"abc"`              |
-| `.getWords()`                         | `"Hello world!".getWords()`                          | `["Hello", "world"]` |
+[//]: # (|:--------------------|:--------------------------------------|--------------|)
 
-</details>
+[//]: # (| `.timeAgo&#40;&#41;`        | DateTime&#40;2024, 1, 1&#41;.timeAgo&#40;&#41;        | "1 year ago" |)
 
-<details>
+[//]: # (| `.timeUntil&#40;&#41;`      | DateTime&#40;2026, 1, 1&#41;.timeUntil&#40;&#41;      | "in 1 year"  |)
 
-<summary>🔢 String Formatter Extensions (Click to open)</summary>
+[//]: # (| `.monthName&#40;&#41;`      | DateTime&#40;2024, 1, 1&#41;.monthName&#40;&#41;      | "January"    |)
 
-| Extension                  | Example                           | Output          |
-|:---------------------------|:----------------------------------|-----------------|
-| `.capitalizeFirstLetter()` | `'hello'.capitalizeFirstLetter()` | `'Hello'`       |
-| `.toTitleCase()`           | `'hello world'.toTitleCase()`     | `'Hello World'` |
-| `.toCamelCase()`           | `'hello_world'.toCamelCase()`     | `'helloWorld'`  |
-| `.toSlug()`                | `'Hello World!'.toSlug()`         | `'hello-world'` |
-| `.toOrdinal()`             | `'23'.toOrdinal()`                | `'23rd'`        |
-| `.toBase64()`              | `'Hello'.toBase64()`              | `'SGVsbG8='`    |
-| `.fromBase64()`            | `'SGVsbG8='.fromBase64()`         | `'Hello'`       |
+[//]: # (| `.monthNameShort&#40;&#41;` | DateTime&#40;2024, 1, 1&#41;.monthNameShort&#40;&#41; | "Jan"        |)
 
-</details>
+[//]: # (| `.dayName&#40;&#41;`        | DateTime&#40;2024, 1, 1&#41;.dayName&#40;&#41;        | "Monday"     |)
 
-<details>
+[//]: # (| `.dayNameShort&#40;&#41;`   | DateTime&#40;2024, 1, 1&#41;.dayNameShort&#40;&#41;   | "Mon"        |)
 
-<summary>💰 String Currency Extensions</summary>
+[//]: # (| `.slashedDate&#40;&#41;`    | DateTime&#40;2024, 1, 1&#41;.slashedDate&#40;&#41;    | "01/01/2024" |)
 
-| Extension               | Example                         | Output    |
-|:------------------------|:--------------------------------|-----------|
-| `.thousandNumberFormat` | `'100000'.thousandNumberFormat` | '100,000' |
-| `.cleanNumbers`         | `'100,000'.cleanNumbers`        | '100000'  |
+[//]: # (| `.weekNumber&#40;&#41;`     | DateTime&#40;2024, 1, 1&#41;.weekNumber&#40;&#41;     | 1            |)
 
-</details> 
+[//]: # ()
+[//]: # (</details>)
 
-🔠 **Say goodbye to messy text handling forever!**
+[//]: # ()
+[//]: # (<details>)
 
----
+[//]: # ()
+[//]: # (<summary>🛠️ DateTime Manipulation Extensions &#40;Click to open&#41;</summary>)
 
-### 🖼️ **Widget Extensions – Supercharge Your Widgets!**
+[//]: # ()
+[//]: # (| Extension                 | Example                                 | Output                 |)
 
-<details>
+[//]: # (|:--------------------------|:----------------------------------------|------------------------|)
 
-<summary>🧩 Widget Extensions (Click to open)</summary>
+[//]: # (| `.addDays&#40;days&#41;`          | DateTime&#40;2025, 1, 1&#41;.addDays&#40;5&#41;         | DateTime&#40;2025, 1, 6&#41;   |)
 
-| Extension          | Example                                                             | Output                                                                         |
-|--------------------|---------------------------------------------------------------------|--------------------------------------------------------------------------------|
-| `clickableMouse`   | `Text('Click me').clickableMouse(onTap: () { print('Clicked'); })`  | A text widget that shows a mouse pointer on hover and prints 'Clicked' on tap. |
-| `expanded`         | `Text('Expanded').expanded()`                                       | A text widget wrapped with an `Expanded` widget.                               |
-| `flexibe`          | `Text('Flexible').flexibe()`                                        | A text widget wrapped with a `Flexible` widget.                                |
-| `padding`          | `Text('Padded').padding(padding: EdgeInsets.all(16))`               | A text widget with 16 pixels of padding on all sides.                          |
-| `align`            | `Text('Aligned').align(alignment: Alignment.centerRight)`           | A text widget aligned to the center right of its parent.                       |
-| `clip`             | `Image.network('url').clip(borderRadius: BorderRadius.circular(8))` | An image widget clipped with an 8-pixel border radius.                         |
-| `removeScrollbar`  | `ListView().removeScrollbar(context)`                               | A `ListView` without a scrollbar.                                              |
-| `addScrollbar`     | `ListView().addScrollbar(context)`                                  | A `ListView` with a scrollbar.                                                 |
-| `visibility`       | `Text('Visible').visibility(visible: false)`                        | A text widget that is not visible.                                             |
-| `invinsible`       | `Text('Invisible').invinsible()`                                    | A text widget that is not visible.                                             |
-| `visible`          | `Text('Visible').visible()`                                         | A text widget that is visible.                                                 |
-| `addSelectionArea` | `Text('Selectable').addSelectionArea()`                             | A text widget that can be selected.                                            |
-| `center`           | `Text('Centered').center()`                                         | A text widget centered within its parent.                                      |
+[//]: # (| `.subtractDays&#40;days&#41;`     | DateTime&#40;2025, 1, 1&#41;.subtractDays&#40;5&#41;    | DateTime&#40;2024, 12, 27&#41; |)
 
-</details>
+[//]: # (| `.addMonths&#40;months&#41;`      | DateTime&#40;2025, 1, 1&#41;.addMonths&#40;5&#41;       | DateTime&#40;2025, 6, 1&#41;   |)
 
-<details>
+[//]: # (| `.subtractMonths&#40;months&#41;` | DateTime&#40;2025, 1, 1&#41;.subtractMonths&#40;5&#41;  | DateTime&#40;2024, 8, 1&#41;   |)
 
-<summary>🛠️ Scaffold Extensions (Click to open)</summary>
+[//]: # (| `.addYears&#40;years&#41;`        | DateTime&#40;2025, 1, 1&#41;.addYears&#40;5&#41;        | DateTime&#40;2030, 1, 1&#41;   |)
 
-| Extension               | Example                                                                                                                                                                       | Output                                                                                   |
-|:------------------------|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------|
-| `.addAnnotatedRegion()` | `Scaffold().addAnnotatedRegion(statusBarColor: Colors.red, statusBarBrightness: Brightness.dark, navigationBarColor: Colors.blue, navigationBarBrightness: Brightness.light)` | A `Scaffold` widget with customized status bar and navigation bar colors and brightness. |
+[//]: # (| `.subtractYears&#40;years&#41;`   | DateTime&#40;2025, 1, 1&#41;.subtractYears&#40;5&#41;   | DateTime&#40;2020, 1, 1&#41;   |)
 
-</details>
+[//]: # (| `.addBusinessDays&#40;days&#41;`  | DateTime&#40;2025, 1, 1&#41;.addBusinessDays&#40;5&#41; | DateTime&#40;2025, 1, 8&#41;   |)
 
-<details>
+[//]: # ()
+[//]: # (</details>)
 
-<summary>🔗 Text Extensions (Click to open)</summary>
+[//]: # ()
+[//]: # ()
+[//]: # (🔄 **Master time manipulation and become the Flutter Time Lord!**)
 
-| Extension        | Example                                                                                                      | Output                                                                                               |
-|:-----------------|:-------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------|
-| `.addHyperLinks` | `Text('Click here for more info').addHyperLinks(hyperLinkTexts: ['here'], onHyperlinkClicked: (word) => {})` | A `Text` widget with the word "here" as a hyperlink that triggers the `onHyperlinkClicked` function. |
+[//]: # ()
+[//]: # (---)
 
-</details>
+[//]: # ()
+[//]: # (### 📂 **File Extensions – Handle Files Like a Pro!**)
 
-🖍️ **Make your widgets do more with less code!**
+[//]: # ()
+[//]: # (<details>)
 
----
+[//]: # ()
+[//]: # (<summary>📁 File Extensions &#40;Click to open&#41;</summary>)
 
-## ⏳ **Coming Soon – The Future is Bright!**
+[//]: # ()
+[//]: # (| Extension                     | Example                                   | Output                 |)
 
-### 📦 **Animation Extensions – Because Motion is Magic!**
+[//]: # (|:------------------------------|:------------------------------------------|------------------------|)
 
-_(Coming soon… if I ever stop procrastinating.)_
+[//]: # (| `.fileFormattedSize&#40;&#41;`        | `File&#40;'path'&#41;.fileFormattedSize&#40;&#41;`        | 500 MB                 |)
 
----
+[//]: # (| `.filePath&#40;&#41;`                 | `File&#40;'path'&#41;.filePath&#40;&#41;`                 | /emulated/0/storage... |)
 
-### 🎭 **Widget Generators – The Magic is Brewing! ☕🔮**
+[//]: # (| `.fileExtension&#40;&#41;`            | `File&#40;'path'&#41;.fileExtension&#40;&#41;`            | pdf, jpg, etc.         |)
 
-_(Coming soon... currently summoning the code wizards for this one. 🧙‍♂️✨)_
+[//]: # (| `.fileNameWithoutExtension&#40;&#41;` | `File&#40;'path'&#41;.fileNameWithoutExtension&#40;&#41;` | myAwesomeFile          |)
 
----
+[//]: # ()
+[//]: # (</details>)
+
+[//]: # ()
+[//]: # (🗂️ **Stop wrestling with file paths like it’s 1999!**)
+
+[//]: # ()
+[//]: # (---)
+
+[//]: # ()
+[//]: # (### 🔖 **Future Extensions – Async Like a Boss!**)
+
+[//]: # ()
+[//]: # (💡 Tired of waiting for your Futures like they're stuck in dial-up internet? Say hello to **instant gratification**!)
+
+[//]: # (These extensions turn async from a patience test into a **speedrun to success**—no more unnecessary delays, retries, or)
+
+[//]: # (timeout meltdowns!)
+
+[//]: # ()
+[//]: # (<details>)
+
+[//]: # ()
+[//]: # (<summary>🕰️ Future Extensions &#40;Click to reveal the magic&#41;</summary>)
+
+[//]: # ()
+[//]: # (| Extension                                      | What It Does &#40;In Normal-Person Terms&#41;                          | Example                                                            |)
+
+[//]: # (|------------------------------------------------|----------------------------------------------------------------|--------------------------------------------------------------------|)
+
+[//]: # (| `.wrapInCompleter&#40;&#41;`                           | Turns your Future into a **Completer** like a pro.             | `myFuture.wrapInCompleter&#40;&#41;`                                       |)
+
+[//]: # (| `.isComplete&#40;&#41;`                                | Checks if a Future is **donezo** or still playing hard to get. | `myFuture.isComplete&#40;&#41;`                                            |)
+
+[//]: # (| `.retry&#40;retries, delay&#41;`                       | Gives your Future **extra lives** &#40;great for network calls&#41;.   | `myFuture.retry&#40;3, delay: Duration&#40;seconds: 2&#41;&#41;`                   |)
+
+[//]: # (| `.timeoutWithFallback&#40;timeout, fallbackValue&#41;` | **Stops waiting** after a timeout and gives a backup plan.     | `myFuture.timeoutWithFallback&#40;Duration&#40;seconds: 5&#41;, fallbackData&#41;` |)
+
+[//]: # (| `.runAfterDelay&#40;delay&#41;`                        | **Hits snooze** before running the Future.                     | `myFuture.runAfterDelay&#40;Duration&#40;seconds: 2&#41;&#41;`                     |)
+
+[//]: # ()
+[//]: # (</details>)
+
+[//]: # ()
+[//]: # (<details>)
+
+[//]: # ()
+[//]: # (<summary>🌀 Future Iterable Extensions &#40;Click to reveal the magic&#41;</summary>)
+
+[//]: # ()
+[//]: # (| Extension                     | What It Does &#40;In Normal-Person Terms&#41;                                      | Example                            |)
+
+[//]: # (|-------------------------------|----------------------------------------------------------------------------|------------------------------------|)
+
+[//]: # (| `.runWithLimit&#40;limit&#41;`        | Runs multiple Futures **at once**, but limits how many run simultaneously. | `myFutures.runWithLimit&#40;3&#41;`        |)
+
+[//]: # (| `.runWithLimitOrdered&#40;limit&#41;` | Runs multiple Futures **in order**, with limited concurrent executions.    | `myFutures.runWithLimitOrdered&#40;2&#41;` |)
+
+[//]: # ()
+[//]: # (</details>)
+
+[//]: # ()
+[//]: # (<details>)
+
+[//]: # ()
+[//]: # (<summary>📋 String Future Extensions &#40;Click to reveal the magic&#41;</summary>)
+
+[//]: # ()
+[//]: # (| Extension            | What It Does &#40;In Normal-Person Terms&#41;                     | Example                                   |)
+
+[//]: # (|----------------------|-----------------------------------------------------------|-------------------------------------------|)
+
+[//]: # (| `.copyToClipboard&#40;&#41;` | Copies a string to the clipboard **like a sneaky ninja**. | `await 'Hello, world!'.copyToClipboard&#40;&#41;` |)
+
+[//]: # ()
+[//]: # (</details>)
+
+[//]: # ()
+[//]: # (💥 Wave goodbye to async chaos and say hello to Future-powered hyperspeed! No more waiting in the async DMV line—your)
+
+[//]: # (code is now on rollerblades. 🛼⚡)
+
+[//]: # ()
+[//]: # (---)
+
+[//]: # ()
+[//]: # (### 📦 **Generator Extensions – Auto-Magic String Generation!**)
+
+[//]: # ()
+[//]: # (_NB: String generator methods should be used on Empty Strings for the best results._)
+
+[//]: # ()
+[//]: # (<details>)
+
+[//]: # ()
+[//]: # (<summary>🔠 String Generator Extensions &#40;Click to open&#41;</summary>)
+
+[//]: # ()
+[//]: # (| Extension                                | Example                               | Output                                |)
+
+[//]: # (|:-----------------------------------------|:--------------------------------------|---------------------------------------|)
+
+[//]: # (| `.generateLoremIpsum&#40;wordCount&#41;`         | `"".generateLoremIpsum&#40;wordCount: 5&#41;` | `Lorem ipsum dolor sit amet`          |)
+
+[//]: # (| `.generateUUID&#40;length&#41;`                  | `"".generateUUID&#40;length: 10&#41;`         | `Random UUID`                         |)
+
+[//]: # (| `.generateClipboardContents&#40;textIfNull&#41;` | `"".generateClipboardContents&#40;&#41;`      | `Returns a String clipboard contents` |)
+
+[//]: # (| `.generateRandomString&#40;length&#41;`          | `"".generateRandomString&#40;10&#41;`         | `Random 10-character string`          |)
+
+[//]: # ()
+[//]: # (</details>)
+
+[//]: # ()
+[//]: # (📝 **Because manually typing random text is so last year!**)
+
+[//]: # ()
+[//]: # (---)
+
+[//]: # ()
+[//]: # (### 📋 **List Extensions – Sorting, Chunking, and More!**)
+
+[//]: # ()
+[//]: # (<details>)
+
+[//]: # ()
+[//]: # (<summary>📜 List Extensions &#40;Click to open&#41;</summary>)
+
+[//]: # ()
+[//]: # (| Extension                  | Example                                                                                | Output                                                   |)
+
+[//]: # (|:---------------------------|:---------------------------------------------------------------------------------------|----------------------------------------------------------|)
+
+[//]: # (| `.firstOrNull&#40;&#41;`           | ["hello", "world", "awesome"].firstOrNull&#40;&#41;                                            | hello                                                    |)
+
+[//]: # (| `.lastOrNull&#40;&#41;`            | ["hello", "world", "awesome"].lastOrNull&#40;&#41;                                             | awesome                                                  |)
+
+[//]: # (| `.sortBy&#40;&#41;`                | ["Urus", "BMW", "Aston Martin", "Ferari", "Lambo"].sortBy&#40;&#40;car&#41; => car&#41;                | ["Aston Martin", "BMW", "Ferari", "Lambo", "Urus"]       |)
+
+[//]: # (| `.sortByAndReturnSorted&#40;&#41;` | ["Urus", "BMW", "Aston Martin", "Ferari", "Lambo"].sortByAndReturnSorted&#40;&#40;car&#41; => car&#41; | ["Aston Martin", "BMW", "Ferari", "Lambo", "Urus"]       |)
+
+[//]: # (| `.shuffled&#40;&#41;`              | ["Urus", "BMW", "Aston Martin", "Ferari", "Lambo"].shuffled&#40;&#41;                          | ["Ferari", "Aston Martin", "BMW", "Lambo", "Urus"]       |)
+
+[//]: # (| `.chunked&#40;size&#41;`           | ["Urus", "BMW", "Aston Martin", "Ferari", "Lambo"].chunked&#40;2&#41;                          | [['Urus', 'BMW'], ['Aston Martin', 'Ferari'], ['Lambo']] |)
+
+[//]: # ()
+[//]: # (</details>)
+
+[//]: # ()
+[//]: # (📌 **Because sorting lists manually is for mere mortals!**)
+
+[//]: # ()
+[//]: # (---)
+
+[//]: # ()
+[//]: # (### 🔢 **Number Extensions – Math is Hard, Let’s Make It Easy**)
+
+[//]: # ()
+[//]: # (<details>)
+
+[//]: # ()
+[//]: # (<summary>🕞 Number Duration Extensions</summary>)
+
+[//]: # ()
+[//]: # (| Extension       | Example          | Output                    |)
+
+[//]: # (|:----------------|:-----------------|---------------------------|)
+
+[//]: # (| `.days`         | `5.days`         | Duration&#40;days: 5&#41;         |)
+
+[//]: # (| `.hours`        | `5.hours`        | Duration&#40;hours: 5&#41;        |)
+
+[//]: # (| `.minutes`      | `5.minutes`      | Duration&#40;minutes: 5&#41;      |)
+
+[//]: # (| `.seconds`      | `5.seconds`      | Duration&#40;seconds: 5&#41;      |)
+
+[//]: # (| `.milliSeconds` | `5.milliSeconds` | Duration&#40;milliSeconds: 5&#41; |)
+
+[//]: # (| `.microSeconds` | `5.microSeconds` | Duration&#40;microSeconds: 5&#41; |)
+
+[//]: # ()
+[//]: # (</details> )
+
+[//]: # ()
+[//]: # (<details>)
+
+[//]: # ()
+[//]: # (<summary>💰 Number Currency Extensions</summary>)
+
+[//]: # ()
+[//]: # (| Extension          | Example                  | Output      |)
+
+[//]: # (|:-------------------|:-------------------------|-------------|)
+
+[//]: # (| `.toCurrency&#40;&#41;`    | `100000.toCurrency&#40;&#41;`    | KES 100,000 |)
+
+[//]: # (| `.toAbbreviated&#40;&#41;` | `100000.toAbbreviated&#40;&#41;` | 100K        |)
+
+[//]: # ()
+[//]: # (</details> )
+
+[//]: # ()
+[//]: # (🧠 **Because numbers should work for you, not the other way around.**)
+
+[//]: # ()
+[//]: # (---)
+
+[//]: # ()
+[//]: # (### 🔤 **String Extensions – Tame Your Text Like a Pro!**)
+
+[//]: # ()
+[//]: # (<details>)
+
+[//]: # ()
+[//]: # (<summary>🔑 Validation String Extensions &#40;Click to open&#41;</summary>)
+
+[//]: # ()
+[//]: # (| Extension            | Example                         | Output  |)
+
+[//]: # (|:---------------------|:--------------------------------|---------|)
+
+[//]: # (| `.isEmailValid&#40;&#41;`    | `"badEmail.com".isEmailValid&#40;&#41;` | `false` |)
+
+[//]: # (| `.isPasswordValid&#40;&#41;` | `"weak12".isPasswordValid&#40;&#41;`    | `false` |)
+
+[//]: # (| `.isValidURL&#40;&#41;`      | `"weirdurl//".isValidURL&#40;&#41;`     | `false` |)
+
+[//]: # ()
+[//]: # (</details>)
+
+[//]: # ()
+[//]: # (<details>)
+
+[//]: # ()
+[//]: # (<summary>🌍 Global String Extensions &#40;Click to open&#41;</summary>)
+
+[//]: # ()
+[//]: # (| Extension                            | Example                                           | Output        |)
+
+[//]: # (|:-------------------------------------|:--------------------------------------------------|---------------|)
+
+[//]: # (| `.capitalizeFirstLetter&#40;&#41;`           | `"hello".capitalizeFirstLetter&#40;&#41;`                 | `Hello`       |)
+
+[//]: # (| `.capitalizeFirstLetterOfEachWord&#40;&#41;` | `"hello world".capitalizeFirstLetterOfEachWord&#40;&#41;` | `Hello World` |)
+
+[//]: # (| `.getLastNCharacters&#40;n&#41;`             | `"hello".getLastNCharacters&#40;2&#41;`                   | `lo`          |)
+
+[//]: # (| `.mask&#40;visibleCount&#41;`                | `"helloworld".mask&#40;&#41;`                             | `he******ld`  |)
+
+[//]: # (| `.reverse&#40;&#41;`                         | `"hello".reverse&#40;&#41;`                               | `olleh`       |)
+
+[//]: # (| `.truncateName&#40;&#41;`                    | `"Ken Starry".truncateName&#40;&#41;`                     | `Ken S.`      |)
+
+[//]: # ()
+[//]: # (</details>)
+
+[//]: # ()
+[//]: # (<details>)
+
+[//]: # ()
+[//]: # (<summary>🕵️ Regex String Extensions &#40;Click to open&#41;</summary>)
+
+[//]: # ()
+[//]: # (| Extension                             | Example                                              | Output               |)
+
+[//]: # (|:--------------------------------------|:-----------------------------------------------------|----------------------|)
+
+[//]: # (| `.extractDigits&#40;&#41;`                    | `"abc123".extractDigits&#40;&#41;`                           | `"123"`              |)
+
+[//]: # (| `.removeAllDigits&#40;&#41;`                  | `"abc123".removeAllDigits&#40;&#41;`                         | `"abc"`              |)
+
+[//]: # (| `.removeAllWordsStartingWithNumber&#40;&#41;` | `"1abc 2def ghi".removeAllWordsStartingWithNumber&#40;&#41;` | `"ghi"`              |)
+
+[//]: # (| `.isDigitsOnly&#40;&#41;`                     | `"12345".isDigitsOnly&#40;&#41;`                             | `true`               |)
+
+[//]: # (| `.isTextOnly&#40;&#41;`                       | `"abc".isTextOnly&#40;&#41;`                                 | `true`               |)
+
+[//]: # (| `.removeAllWhiteSpaces&#40;&#41;`             | `"a b c".removeAllWhiteSpaces&#40;&#41;`                     | `"abc"`              |)
+
+[//]: # (| `.getWords&#40;&#41;`                         | `"Hello world!".getWords&#40;&#41;`                          | `["Hello", "world"]` |)
+
+[//]: # ()
+[//]: # (</details>)
+
+[//]: # ()
+[//]: # (<details>)
+
+[//]: # ()
+[//]: # (<summary>🔢 String Formatter Extensions &#40;Click to open&#41;</summary>)
+
+[//]: # ()
+[//]: # (| Extension                  | Example                           | Output          |)
+
+[//]: # (|:---------------------------|:----------------------------------|-----------------|)
+
+[//]: # (| `.capitalizeFirstLetter&#40;&#41;` | `'hello'.capitalizeFirstLetter&#40;&#41;` | `'Hello'`       |)
+
+[//]: # (| `.toTitleCase&#40;&#41;`           | `'hello world'.toTitleCase&#40;&#41;`     | `'Hello World'` |)
+
+[//]: # (| `.toCamelCase&#40;&#41;`           | `'hello_world'.toCamelCase&#40;&#41;`     | `'helloWorld'`  |)
+
+[//]: # (| `.toSlug&#40;&#41;`                | `'Hello World!'.toSlug&#40;&#41;`         | `'hello-world'` |)
+
+[//]: # (| `.toOrdinal&#40;&#41;`             | `'23'.toOrdinal&#40;&#41;`                | `'23rd'`        |)
+
+[//]: # (| `.toBase64&#40;&#41;`              | `'Hello'.toBase64&#40;&#41;`              | `'SGVsbG8='`    |)
+
+[//]: # (| `.fromBase64&#40;&#41;`            | `'SGVsbG8='.fromBase64&#40;&#41;`         | `'Hello'`       |)
+
+[//]: # ()
+[//]: # (</details>)
+
+[//]: # ()
+[//]: # (<details>)
+
+[//]: # ()
+[//]: # (<summary>💰 String Currency Extensions</summary>)
+
+[//]: # ()
+[//]: # (| Extension               | Example                         | Output    |)
+
+[//]: # (|:------------------------|:--------------------------------|-----------|)
+
+[//]: # (| `.thousandNumberFormat` | `'100000'.thousandNumberFormat` | '100,000' |)
+
+[//]: # (| `.cleanNumbers`         | `'100,000'.cleanNumbers`        | '100000'  |)
+
+[//]: # ()
+[//]: # (</details> )
+
+[//]: # ()
+[//]: # (🔠 **Say goodbye to messy text handling forever!**)
+
+[//]: # ()
+[//]: # (---)
+
+[//]: # ()
+[//]: # (### 🖼️ **Widget Extensions – Supercharge Your Widgets!**)
+
+[//]: # ()
+[//]: # (<details>)
+
+[//]: # ()
+[//]: # (<summary>🧩 Widget Extensions &#40;Click to open&#41;</summary>)
+
+[//]: # ()
+[//]: # (| Extension          | Example                                                             | Output                                                                         |)
+
+[//]: # (|--------------------|---------------------------------------------------------------------|--------------------------------------------------------------------------------|)
+
+[//]: # (| `clickableMouse`   | `Text&#40;'Click me'&#41;.clickableMouse&#40;onTap: &#40;&#41; { print&#40;'Clicked'&#41;; }&#41;`  | A text widget that shows a mouse pointer on hover and prints 'Clicked' on tap. |)
+
+[//]: # (| `expanded`         | `Text&#40;'Expanded'&#41;.expanded&#40;&#41;`                                       | A text widget wrapped with an `Expanded` widget.                               |)
+
+[//]: # (| `flexibe`          | `Text&#40;'Flexible'&#41;.flexibe&#40;&#41;`                                        | A text widget wrapped with a `Flexible` widget.                                |)
+
+[//]: # (| `padding`          | `Text&#40;'Padded'&#41;.padding&#40;padding: EdgeInsets.all&#40;16&#41;&#41;`               | A text widget with 16 pixels of padding on all sides.                          |)
+
+[//]: # (| `align`            | `Text&#40;'Aligned'&#41;.align&#40;alignment: Alignment.centerRight&#41;`           | A text widget aligned to the center right of its parent.                       |)
+
+[//]: # (| `clip`             | `Image.network&#40;'url'&#41;.clip&#40;borderRadius: BorderRadius.circular&#40;8&#41;&#41;` | An image widget clipped with an 8-pixel border radius.                         |)
+
+[//]: # (| `removeScrollbar`  | `ListView&#40;&#41;.removeScrollbar&#40;context&#41;`                               | A `ListView` without a scrollbar.                                              |)
+
+[//]: # (| `addScrollbar`     | `ListView&#40;&#41;.addScrollbar&#40;context&#41;`                                  | A `ListView` with a scrollbar.                                                 |)
+
+[//]: # (| `visibility`       | `Text&#40;'Visible'&#41;.visibility&#40;visible: false&#41;`                        | A text widget that is not visible.                                             |)
+
+[//]: # (| `invinsible`       | `Text&#40;'Invisible'&#41;.invinsible&#40;&#41;`                                    | A text widget that is not visible.                                             |)
+
+[//]: # (| `visible`          | `Text&#40;'Visible'&#41;.visible&#40;&#41;`                                         | A text widget that is visible.                                                 |)
+
+[//]: # (| `addSelectionArea` | `Text&#40;'Selectable'&#41;.addSelectionArea&#40;&#41;`                             | A text widget that can be selected.                                            |)
+
+[//]: # (| `center`           | `Text&#40;'Centered'&#41;.center&#40;&#41;`                                         | A text widget centered within its parent.                                      |)
+
+[//]: # ()
+[//]: # (</details>)
+
+[//]: # ()
+[//]: # (<details>)
+
+[//]: # ()
+[//]: # (<summary>🛠️ Scaffold Extensions &#40;Click to open&#41;</summary>)
+
+[//]: # ()
+[//]: # (| Extension               | Example                                                                                                                                                                       | Output                                                                                   |)
+
+[//]: # (|:------------------------|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------|)
+
+[//]: # (| `.addAnnotatedRegion&#40;&#41;` | `Scaffold&#40;&#41;.addAnnotatedRegion&#40;statusBarColor: Colors.red, statusBarBrightness: Brightness.dark, navigationBarColor: Colors.blue, navigationBarBrightness: Brightness.light&#41;` | A `Scaffold` widget with customized status bar and navigation bar colors and brightness. |)
+
+[//]: # ()
+[//]: # (</details>)
+
+[//]: # ()
+[//]: # (<details>)
+
+[//]: # ()
+[//]: # (<summary>🔗 Text Extensions &#40;Click to open&#41;</summary>)
+
+[//]: # ()
+[//]: # (| Extension        | Example                                                                                                      | Output                                                                                               |)
+
+[//]: # (|:-----------------|:-------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------|)
+
+[//]: # (| `.addHyperLinks` | `Text&#40;'Click here for more info'&#41;.addHyperLinks&#40;hyperLinkTexts: ['here'], onHyperlinkClicked: &#40;word&#41; => {}&#41;` | A `Text` widget with the word "here" as a hyperlink that triggers the `onHyperlinkClicked` function. |)
+
+[//]: # ()
+[//]: # (</details>)
+
+[//]: # ()
+[//]: # (🖍️ **Make your widgets do more with less code!**)
+
+[//]: # ()
+[//]: # (---)
+
+[//]: # ()
+[//]: # (## ⏳ **Coming Soon – The Future is Bright!**)
+
+[//]: # ()
+[//]: # (### 📦 **Animation Extensions – Because Motion is Magic!**)
+
+[//]: # ()
+[//]: # (_&#40;Coming soon… if I ever stop procrastinating.&#41;_)
+
+[//]: # ()
+[//]: # (---)
+
+[//]: # ()
+[//]: # (### 🎭 **Widget Generators – The Magic is Brewing! ☕🔮**)
+
+[//]: # ()
+[//]: # (_&#40;Coming soon... currently summoning the code wizards for this one. 🧙‍♂️✨&#41;_)
+
+[//]: # ()
+[//]: # (---)
 
 ## 🤝 **Contributors**
 
@@ -512,29 +845,20 @@ We love our community! Big thanks to these wizards:
 request.
 ---
 
-[//]: # (## 👥 **Want to Contribute?**)
-
-[//]: # ()
-[//]: # (🛠 Found something cool to add? **Please read our [**Contribution Guidelines**]&#40;CONTRIBUTING.md&#41; before making a pull)
-
-[//]: # (request.**)
-
-[//]: # ()
-[//]: # (👾 **Join the Fun!** We love developers who break things &#40;and then fix them&#41;.)
-
-[//]: # ()
-[//]: # (---)
+<div align="center">
 
 ## 🐝 **License – Go Wild!**
 
-This package is [**licensed under MIT**](https://github.com/KenStarry/flutter_extend/blob/main/LICENSE), meaning you can
+This package is [**licensed under MIT**](https://starrycodes.mintlify.app/flutter_extend_docs/license), meaning you can
 use it, modify it, and show it off to your friends. 🎉
+
+</div>
 
 ---
 
-🎉 **That’s it, folks!** Now go forth and write Flutter code like an absolute **legend**. 🚀💙
-
 <div align="center">
+
+🎉 **That’s it, folks!** Now go forth and write Flutter code like an absolute **legend**. 🚀💙
 
 Made with 💙 by KenStarry
 
