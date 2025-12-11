@@ -59,7 +59,17 @@ extension FileExtensions on File {
   /// ```dart
   /// print(File('/docs/report.pdf').fileNameWithoutExtension()); // "report"
   /// ```
-  String fileNameWithoutExtension() => uri.pathSegments.last.split('.').first;
+  String fileNameWithoutExtension() {
+    final name = uri.pathSegments.last;
+    final dotIndex = name.lastIndexOf('.');
+
+    //  The file name doesn't have an extension
+    if (dotIndex == -1) return name;
+
+    return name.substring(0, dotIndex);
+
+    return uri.pathSegments.last.split('.').first;
+  }
 
   /// Reads the file contents synchronously and converts them to a Base64 encoded string.
   ///
@@ -73,20 +83,4 @@ extension FileExtensions on File {
   /// final base64 = file.fileToBase64String(); // "iVBORw0KGgoAAA..."
   /// ```
   String fileToBase64String() => base64Encode(readAsBytesSync());
-
-  /// Checks if the file is likely an image based on its extension.
-  ///
-  /// Supports common formats: 'jpg', 'jpeg', 'png', 'gif', 'bmp', 'webp'.
-  ///
-  /// @returns True if the file extension matches a recognized image type (case-insensitive).
-  ///
-  /// Example:
-  /// ```dart
-  /// print(File('profile.JPG').isImage()); // true
-  /// ```
-  bool isImage() {
-    final ext = path.split('.').last.toLowerCase();
-
-    return ['jpg', 'jpeg', 'png', 'gif', 'bmp', 'webp'].contains(ext);
-  }
 }

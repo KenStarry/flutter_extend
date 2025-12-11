@@ -24,6 +24,7 @@ part 'animations/list_animation_extensions.dart';
 
 /// File Extensions
 part 'files/file_extensions.dart';
+part 'files/file_type_extensions.dart';
 
 /// Number Extensions
 part 'number/number_duration_extensions.dart';
