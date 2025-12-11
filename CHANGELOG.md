@@ -1,3 +1,11 @@
+## 0.2.1
+FIXES
+
+- Fixed the randomString generator method
+- Fixed the lorem generator method
+
+Moved more things around and refactored files
+
 ## 0.2.0
 * Added Focus Node Extensions
 * Fixed MediaQuery Platform Brightness implementation
