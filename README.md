@@ -835,15 +835,17 @@ Text("Click Me")
 [//]: # ()
 [//]: # (---)
 
+---
+
 ## 🤝 **Contributors**
 
 We love our community! Big thanks to these wizards:
 
 <div> <table style="border: none;"> <tr style="border: none;"> <td style="border: none; text-align: center;"> <a href="https://github.com/KenStarry"> <img src="https://github.com/KenStarry.png" width="60" style="border-radius: 50%;" alt="KenStarry"/><br /> <sub><b>KenStarry</b></sub> </a> </td> <td style="border: none; text-align: center;"> <a href="https://github.com/okelloEnos"> <img src="https://github.com/okelloEnos.png" width="60" style="border-radius: 50%;" alt="Enos Okello"/><br /> <sub><b>Enos Okello</b></sub> </a> </td> <td style="border: none; text-align: center;"> <a href="https://github.com/MohammedHishamFarouk"> <img src="https://github.com/MohammedHishamFarouk.png" width="60" style="border-radius: 50%;" alt="Mohammed Hisham"/><br /> <sub><b>Mohammed Hisham</b></sub> </a> </td> </tr> </table> </div>
+---
 
 🛠 Found something cool to add? **Please read our [**Contribution Guidelines**](CONTRIBUTING.md) before making a pull
 request.
----
 
 <div align="center">
 
