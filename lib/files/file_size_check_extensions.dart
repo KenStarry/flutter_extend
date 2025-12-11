@@ -30,4 +30,60 @@ extension FileSizeCheckExtensions on File {
 
     return "${(bytes / (1024 * 1024 * 1024)).toStringAsFixed(2)} ${fullySizedName ? 'Gigabytes' : 'GB'}";
   }
+
+  /// Returns size in Kilobytes (KB) as a double.
+  double get sizeInBytes => lengthSync().toDouble();
+
+  /// Returns size in Kilobytes (KB) as a double.
+  double get sizeInKB => lengthSync() / 1024;
+
+  /// Returns size in Megabytes (MB) as a double.
+  double get sizeInMB => lengthSync() / (1024 * 1024);
+
+  /// Returns size in Gigabytes (GB) as a double.
+  double get sizeInGB => lengthSync() / (1024 * 1024 * 1024);
+
+
+  bool isLargerThanMb(double mb) {
+    try {
+      final bytes = lengthSync();
+      return bytes > (mb * 1024 * 1024);
+    } catch (e) {
+      return false;
+    }
+  }
+
+  bool isSmallerThanMb(double mb) {
+    try {
+      final bytes = lengthSync();
+      return bytes < (mb * 1024 * 1024);
+    } catch (e) {
+      return false;
+    }
+  }
+
+  bool isLargerThanFile(File other) => lengthSync() > other.lengthSync();
+
+  bool isSmallerThanFile(File other) => lengthSync() < other.lengthSync();
+
+  bool isSameSizeAsFile(File other) => lengthSync() == other.lengthSync();
+
+  bool isSizeBetween({required double minMB, required double maxMB}) {
+    if (!existsSync()) return false;
+
+    final bytes = lengthSync();
+    final minBytes = minMB * 1024 * 1024;
+    final maxBytes = maxMB * 1024 * 1024;
+
+    return bytes >= minBytes && bytes <= maxBytes;
+  }
+
+  double percentageOfLimitMb(double totalLimitMB) {
+    if (!existsSync() || totalLimitMB <= 0) return 0.0;
+
+    final fileMB = lengthSync() / (1024 * 1024);
+    final percent = (fileMB / totalLimitMB) * 100;
+
+    return percent.clamp(0.0, 100.0);
+  }
 }

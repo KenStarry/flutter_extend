@@ -39,4 +39,6 @@ extension FileOperationExtensions on File {
       return null;
     }
   }
+
+  bool isSameFile(File other) => path == other.path || absolute.path == other.absolute.path;
 }
