@@ -24,27 +24,27 @@ extension PulseAnimationExtensions on Widget {
   ///   .pulseSimple(duration: 1500, scaleFactor: 1.05)
   /// ```
   Widget pulseSimple(
-      {int delay = 0,
-        int duration = 500,
-        double scaleFactor = 1.2,
-        bool repeat = true,
-        bool reverse = true,
-        bool autoPlay = true,
-        void Function(AnimationController)? onInit}) =>
+          {int delay = 0,
+          int duration = 500,
+          double scaleFactor = 1.2,
+          bool repeat = true,
+          bool reverse = true,
+          bool autoPlay = true,
+          void Function(AnimationController)? onInit}) =>
       animate(
-          delay: delay.milliSeconds,
-          autoPlay: autoPlay,
-          onInit: onInit,
-          onPlay: (controller) {
-            if (repeat) {
-              controller.repeat(reverse: reverse);
-            }
-          })
+              delay: delay.milliSeconds,
+              autoPlay: autoPlay,
+              onInit: onInit,
+              onPlay: (controller) {
+                if (repeat) {
+                  controller.repeat(reverse: reverse);
+                }
+              })
           .scaleXY(
-          begin: 1.0,
-          end: scaleFactor,
-          duration: duration.milliSeconds,
-          curve: Curves.easeInOut);
+              begin: 1.0,
+              end: scaleFactor,
+              duration: duration.milliSeconds,
+              curve: Curves.easeInOut);
 
   /// Applies a distinct, two-stage bouncing scale animation (scale down -> scale up -> settle).
   ///
@@ -65,21 +65,21 @@ extension PulseAnimationExtensions on Widget {
   /// Text('Success!').pulseAlt(repeat: false, duration: 800)
   /// ```
   Widget pulseAlt(
-      {int delay = 0,
-        int duration = 500,
-        bool repeat = true,
-        void Function(AnimationController)? onInit}) =>
+          {int delay = 0,
+          int duration = 500,
+          bool repeat = true,
+          void Function(AnimationController)? onInit}) =>
       animate(
-          delay: delay.milliSeconds,
-          autoPlay: true,
-          onInit: onInit,
-          onPlay: (controller) {
-            if (repeat) {
-              controller.repeat(reverse: true);
-            }
-          })
+              delay: delay.milliSeconds,
+              autoPlay: true,
+              onInit: onInit,
+              onPlay: (controller) {
+                if (repeat) {
+                  controller.repeat(reverse: true);
+                }
+              })
           .scaleXY(begin: 0.8, end: 1.1, duration: duration.milliSeconds)
           .then()
           .scaleXY(
-          begin: 1.1, end: 1.0, duration: (duration ~/ 2).milliSeconds);
+              begin: 1.1, end: 1.0, duration: (duration ~/ 2).milliSeconds);
 }
