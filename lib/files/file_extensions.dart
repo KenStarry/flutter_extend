@@ -37,8 +37,6 @@ extension FileExtensions on File {
     if (dotIndex == -1) return name;
 
     return name.substring(0, dotIndex);
-
-    return uri.pathSegments.last.split('.').first;
   }
 
   /// Reads the file contents synchronously and converts them to a Base64 encoded string.
