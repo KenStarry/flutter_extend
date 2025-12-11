@@ -12,9 +12,9 @@ import 'package:intl/intl.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 
 /// Enums
-part 'enum/emoji.dart';
-part 'enum/emoji_category.dart';
-part 'enum/currency_direction.dart';
+part 'core/enum/emoji.dart';
+part 'core/enum/emoji_category.dart';
+part 'core/enum/currency_direction.dart';
 
 /// Animation Extensions
 part 'animations/animation_extensions.dart';
