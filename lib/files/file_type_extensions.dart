@@ -11,7 +11,7 @@ extension FileTypeExtensions on File {
   /// ```dart
   /// print(File('profile.JPG').isImage()); // true
   /// ```
-  bool isImage() {
+  bool get isImage {
     final ext = path.split('.').last.toLowerCase();
 
     return ['jpg', 'jpeg', 'png', 'gif', 'bmp', 'webp'].contains(ext);
@@ -21,5 +21,28 @@ extension FileTypeExtensions on File {
     final ext = fileExtension().toLowerCase();
 
     return ['mp3', 'wav', 'aac', 'flac', 'm4a', 'ogg', 'wma'].contains(ext);
+  }
+
+  bool get isVideo {
+    final ext = fileExtension().toLowerCase();
+
+    return ['mp4', 'mkv', 'mov', 'avi', 'webm', 'wmv'].contains(ext);
+  }
+
+  bool get isDocument {
+    final ext = fileExtension().toLowerCase();
+    return [
+      'pdf',
+      'doc',
+      'docx',
+      'txt',
+      'rtf',
+      'xlsx',
+      'xlsx',
+      'ppt',
+      'pptx',
+      'xls',
+      'csv'
+    ].contains(ext);
   }
 }
