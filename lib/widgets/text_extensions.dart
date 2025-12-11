@@ -65,6 +65,4 @@ extension TextExtensions on Text {
 
     return text;
   }
-
-  /// Add Text Marquee
 }
