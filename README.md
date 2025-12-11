@@ -3,6 +3,8 @@
 # 🎩 Flutter Extend
 ### *The Ultimate Cheat Code for Flutter Developers*
 
+![FLUTTER EXTEND](https://github.com/user-attachments/assets/b3a4d7ae-e1b6-4f3d-b485-857567a2cc2b)
+
 [![Mintlify Docs](https://img.shields.io/badge/Documentation-Starry%20Hub-blue?style=for-the-badge&logo=rocket&logoColor=white)](https://docs.yourdomain.com/flutter_extend)
 [![Pub Version](https://img.shields.io/pub/v/flutter_extend?style=for-the-badge&color=blue)](https://pub.dev/packages/flutter_extend)
 [![License](https://img.shields.io/github/license/KenStarry/flutter_extend?style=for-the-badge&color=orange)](https://github.com/KenStarry/flutter_extend/blob/main/LICENSE)
