@@ -19,6 +19,7 @@ part 'enum/currency_direction.dart';
 part 'animations/animation_extensions.dart';
 part 'animations/fade_in_animation_extensions.dart';
 part 'animations/shake_animation_extensions.dart';
+part 'animations/pulse_animation_extensions.dart';
 part 'animations/list_animation_extensions.dart';
 
 /// File Extensions
