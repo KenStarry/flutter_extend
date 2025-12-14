@@ -15,7 +15,7 @@
 <br/>
 `flutter_extend` supercharges your workflow with intuitive extensions for Widgets, Context, Data Generation, and more.
 
-# 🚀 [Read the Full Documentation on Starry Hub](https://starrycodes.mintlify.app/flutter_extend_docs/introduction)
+# 🚀 [Read the Full Documentation on Starry Hub](https://starrycodes.mintlify.app/flutter_extend/introduction)
 **All guides, advanced examples, and API references have moved to our official documentation site.**
 
 </div>
@@ -63,7 +63,7 @@ BOOM. 💥 You’re now **10x more powerful** (results may vary).
 
 ## 🏎️ Quick Start
 
-This is just a taste. [**See all 50+ extensions in the Official Docs.**](https://starrycodes.mintlify.app/flutter_extend_docs/introduction)
+This is just a taste. [**See all 50+ extensions in the Official Docs.**](https://starrycodes.mintlify.app/flutter_extend/introduction)
 
 ---
 
