@@ -153,5 +153,6 @@ extension FileOperationExtensions on File {
   /// final fileB = File('./data.txt').absolute;
   /// print(fileA.isSameFile(fileB)); // Likely true
   /// ```
-  bool isSameFile(File other) => path == other.path || absolute.path == other.absolute.path;
+  bool isSameFile(File other) =>
+      path == other.path || absolute.path == other.absolute.path;
 }
