@@ -196,7 +196,5 @@ extension FileTypeExtensions on File {
   /// ```dart
   /// print(File('.htaccess').isHidden); // true
   /// ```
-  bool get isHidden {
-    return fileNameWithoutExtension().startsWith('.');
-  }
+  bool get isHidden => fileNameWithoutExtension().startsWith('.');
 }
