@@ -1,3 +1,12 @@
+## 0.3.0
+NEW
+
+- File Operation Extensions
+- File Size Check Extensions
+- File type Extensions
+
+Moved more things around and refactored files
+
 ## 0.2.1
 FIXES
 

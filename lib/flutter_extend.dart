@@ -5,15 +5,16 @@ import 'dart:math';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_extend/files/enum/file_type_enum.dart';
 import 'package:flutter_extend/string/regex_string_extensions.dart';
 import 'package:flutter_extend/utils.dart';
 import 'package:intl/intl.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 
 /// Enums
-part 'enum/emoji.dart';
-part 'enum/emoji_category.dart';
-part 'enum/currency_direction.dart';
+part 'core/enum/emoji.dart';
+part 'core/enum/emoji_category.dart';
+part 'core/enum/currency_direction.dart';
 
 /// Animation Extensions
 part 'animations/animation_extensions.dart';
@@ -24,6 +25,9 @@ part 'animations/list_animation_extensions.dart';
 
 /// File Extensions
 part 'files/file_extensions.dart';
+part 'files/file_type_extensions.dart';
+part 'files/file_size_check_extensions.dart';
+part 'files/file_operation_extensions.dart';
 
 /// Number Extensions
 part 'number/number_duration_extensions.dart';
