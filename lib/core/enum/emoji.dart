@@ -1,4 +1,4 @@
-part of '../flutter_extend.dart';
+part of '../../flutter_extend.dart';
 
 class Emoji {
   final String emoji;

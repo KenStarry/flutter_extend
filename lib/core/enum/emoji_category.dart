@@ -1,4 +1,4 @@
-part of '../flutter_extend.dart';
+part of '../../flutter_extend.dart';
 
 enum EmojiCategory { happy, sad, love, angry, food, drink, animal, random }
 
