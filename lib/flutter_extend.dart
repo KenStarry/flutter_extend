@@ -61,9 +61,7 @@ export 'src/extensions/colors/global_color_extensions.dart';
 
 /// Widget Extensions
 export 'src/extensions/widgets/widget_extensions.dart';
-
 export 'src/extensions/widgets/scaffold_extensions.dart';
-
 export 'src/extensions/widgets/text_extensions.dart';
 
 /// Context Extensions
@@ -74,6 +72,3 @@ export 'src/extensions/context/theme_context_extensions.dart';
 export 'src/extensions/context/media_query_context_extensions.dart';
 export 'src/extensions/context/navigator_context_extensions.dart';
 export 'src/extensions/context/platform_context_extensions.dart';
-
-/// currency Extensions
-export 'src/extensions/strings/currency_extensions.dart';
