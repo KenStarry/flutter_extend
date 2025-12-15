@@ -1,4 +1,4 @@
-import 'package:flutter_extend/string/regex_string_extensions.dart';
+import 'package:flutter_extend/src/extensions/strings/regex_string_extensions.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 void main() {

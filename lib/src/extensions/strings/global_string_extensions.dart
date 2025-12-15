@@ -1,0 +1,1 @@
+extension GlobalStringExtensions on String {}

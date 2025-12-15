@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_extend/flutter_extend.dart';
-import 'package:flutter_extend/string/regex_string_extensions.dart';
 
 class WidgetExtensionsExample extends StatelessWidget {
   const WidgetExtensionsExample({super.key});
