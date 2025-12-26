@@ -1,0 +1,1 @@
+enum CurrencyDirection { left, right }

@@ -1,3 +1,9 @@
+## 0.3.1
+NEW
+
+- Updated `intl` Package Version to `0.20.2`
+- Updated `flutter_lints` Package Version to `6.0.0`
+
 ## 0.3.0
 NEW
 

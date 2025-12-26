@@ -1,6 +1,6 @@
 name: flutter_extend
 description: "Simple, Efficient Flutter Extensions! Supercharge your Flutter development with a collection of easy-to-use, lightweight, and practical extension methods."
-version: 0.3.0
+version: 0.3.1
 homepage: https://starrycodes.mintlify.app/flutter_extend/introduction
 
 environment:
@@ -8,7 +8,7 @@ environment:
   flutter: ">=1.17.0"
 
 dependencies:
-  intl: ^0.19.0
+  intl: ^0.20.2
   flutter:
     sdk: flutter
   flutter_animate: ^4.5.2
