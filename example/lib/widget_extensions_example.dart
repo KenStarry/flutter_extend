@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_extend/flutter_extend.dart';
+import 'package:flutter_extend/strings.dart';
+import 'package:flutter_extend/widgets.dart';
+import 'package:flutter_extend/generators.dart';
 
 class WidgetExtensionsExample extends StatelessWidget {
   const WidgetExtensionsExample({super.key});
