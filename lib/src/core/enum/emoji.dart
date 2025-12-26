@@ -1,4 +1,3 @@
-
 import 'emoji_category.dart';
 
 class Emoji {

@@ -3,7 +3,6 @@ import 'dart:ui';
 import 'package:flutter/services.dart';
 import 'package:flutter_extend/src/extensions/generators/int_generator_extensions.dart';
 
-
 import '../enum/card_type.dart';
 
 class ExtendGenerator {
