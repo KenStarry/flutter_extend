@@ -2,7 +2,7 @@
 NEW
 
 - Updated `intl` Package Version to `0.20.2`
-- Updated `flutter_lints` Package Version to `6.0.0`
+- Folder Restructure to decouple the library into chunks of smaller extension files to import.
 
 ## 0.3.0
 NEW
